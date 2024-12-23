@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: light gray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="491.0">
+         <children>
+            <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" text="اختر عنوان التسليم" textAlignment="RIGHT" textOrigin="CENTER" wrappingWidth="490.1000061035156">
+               <font>
+                  <Font name="Cairo Black" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Text>
+            <HBox fx:id="hbox" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" opacity="0.99" prefHeight="45.0" prefWidth="226.0" style="-fx-background-color: gainsboro;" styleClass="hbox" stylesheets="@../Styles/style.css" translateX="210.0">
+               <children>
+                  <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="206.0" promptText="بحث ..">
+                     <font>
+                        <Font name="Cairo Black" size="12.0" />
+                     </font></TextField>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-search-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets left="300.0" />
+               </opaqueInsets>
+            </HBox>
+            <ScrollPane prefHeight="449.0" prefWidth="459.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="478.0">
+                     <children>
+                        <GridPane layoutY="-17.0" prefHeight="461.0" prefWidth="480.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="491.0" spacing="25.0" styleClass="hbox" translateY="10.0">
+               <children>
+                  <VBox fx:id="account" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-user-32%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="order" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-box-50%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="cart" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-shopping-cart-48.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="main" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/black-home-32%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
