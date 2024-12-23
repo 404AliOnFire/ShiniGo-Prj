@@ -26,4 +26,16 @@ public class Controller {
         createAccountStage.setScene(scene);
         createAccountStage.show();
     }
+
+    public void BackToLoginText(MouseEvent mouseEvent) {
+        returnToLogin();
+    }
+
+    public void BackToLoginArrow(MouseEvent mouseEvent) {
+        returnToLogin();
+    }
+    public void returnToLogin(){
+        createAccountStage.close();
+        Driver.loginStage.show();
+    }
 }
