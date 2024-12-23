@@ -15,7 +15,7 @@ public class Driver extends Application {
     /* Shini Extra Online **/
     /*  Developed by Birzeit Students
     -> Ali Hassoneh (1221758)
-    -> Hanade Zareer (???????)
+    -> Hanade Zareer (1222729)
     -> Afnan Manasrah (??????)
     **/
     @Override
