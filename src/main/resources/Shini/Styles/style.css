@@ -1,0 +1,26 @@
+/* Styling for the HBox (search bar) */
+.hbox {
+    -fx-background-color: #f6f6f6;
+    -fx-background-radius: 15;
+    -fx-border-radius: 40;
+    -fx-padding: 2;
+    -fx-spacing: 4;
+    -fx-alignment: center;
+}
+
+/* Styling for the icons */
+.label {
+    -fx-font-family: 'Font Awesome 6 Free Solid';
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+}
+
+/* Styling for the search field */
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: black; /* Sets the prompt text color to black */
+    -fx-font-family: 'Cairo';   /* Changes the font to Cairo */
+    -fx-font-size: 14px;
+}
