@@ -1,0 +1,62 @@
+/* Base Style for ComboBox */
+.combo-box {
+    -fx-background-color: #f7f7f7; /* Light background */
+    -fx-border-color: #ccc; /* Light gray border */
+    -fx-border-radius: 8px; /* Rounded corners */
+    -fx-background-radius: 8px; /* Rounded corners for background */
+    -fx-padding: 0; /* Remove default padding */
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif; /* Modern font */
+    -fx-font-size: 14px; /* Font size */
+    -fx-text-fill: #333; /* Text color */
+}
+
+/* Hover Effect */
+.combo-box:hover {
+    -fx-border-color: #999; /* Darker border on hover */
+}
+
+/* Focus Effect */
+.combo-box:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+    -fx-background-color: #ffffff; /* Pure white background on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(76, 175, 80, 0.3), 10, 0.2, 0, 0);
+}
+
+/* Disabled State */
+.combo-box:disabled {
+    -fx-background-color: #eaeaea; /* Light gray background for disabled state */
+    -fx-border-color: #ddd; /* Lighter border */
+    -fx-text-fill: #999; /* Light gray text */
+}
+
+/* Arrow Button Style */
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Transparent arrow button */
+    -fx-border-color: transparent; /* Transparent border */
+}
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: transparent; /* Transparent on hover */
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #4CAF50; /* Green arrow */
+    -fx-shape: "M 0 0 L 5 5 L 10 0 Z"; /* Optional: Customize arrow shape */
+}
+
+/* List View (Dropdown Menu) */
+.combo-box-popup .list-view {
+    -fx-background-color: white; /* Dropdown background */
+    -fx-border-color: #ccc; /* Dropdown border */
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-text-fill: #333; /* Text color */
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif; /* Consistent font */
+    -fx-font-size: 14px; /* Font size */
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f1f1f1; /* Light gray background on hover */
+}

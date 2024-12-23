@@ -1,0 +1,26 @@
+/* General Button Styles */
+.button {
+    -fx-background-color: black; /* Green background color (eco-friendly, fresh food) */
+    -fx-text-fill: white; /* White text */
+    -fx-border-radius: 30px; /* Rounded corners */
+    -fx-padding: 12px 24px; /* Padding for comfortable size */
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition: all 0.3s ease; /* Smooth transition for hover effects */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2); /* Subtle shadow effect */
+}
+
+/* Button Hover Effect */
+.button:hover {
+    -fx-background-color: #e44d4d; /* Slightly darker green on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 5); /* Slightly stronger shadow on hover */
+    -fx-translate-y: -2px; /* Lift effect on hover */
+}
+
+/* Button Active (Clicked) State */
+.button:pressed {
+    -fx-background-color: #e44d4d; /* Darker green when clicked */
+    -fx-translate-y: 0px; /* Remove lift effect when clicked */
+    -fx-effect: none; /* No shadow when pressed */
+}
+
+

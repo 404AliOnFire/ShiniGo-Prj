@@ -1,0 +1,30 @@
+/* Base Style for TextField */
+.text-field {
+    -fx-background-color: #f7f7f7; /* Light background */
+    -fx-border-color: #ccc; /* Light gray border */
+    -fx-border-radius: 8px; /* Rounded corners */
+    -fx-background-radius: 8px; /* Rounded corners for background */
+    -fx-padding: 8px; /* Padding inside the TextField */
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif; /* Modern font */
+    -fx-font-size: 14px; /* Font size */
+    -fx-text-fill: #333; /* Text color */
+}
+
+/* Hover Effect */
+.text-field:hover {
+    -fx-border-color: #999; /* Darker border on hover */
+}
+
+/* Focus Effect */
+.text-field:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+    -fx-background-color: #ffffff; /* Pure white background on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(76, 175, 80, 0.3), 10, 0.2, 0, 0);
+}
+
+/* Disabled State */
+.text-field:disabled {
+    -fx-background-color: #eaeaea; /* Light gray background for disabled state */
+    -fx-border-color: #ddd; /* Lighter border */
+    -fx-text-fill: #999; /* Light gray text */
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+   <children>
+      <VBox layoutX="2.0" layoutY="-1.0" prefHeight="600.0" prefWidth="606.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="#414040" strokeType="OUTSIDE" strokeWidth="0.0" text="انشاء حساب" wrappingWidth="129.09371185302734">
+                     <font>
+                        <Font name="Cairo Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#8a8a8a" strokeType="OUTSIDE" strokeWidth="0.0" text="ادخل المعلومات أدناه لتتمكن من استخدام التطبيق" wrappingWidth="334.8080747127533">
+                     <font>
+                        <Font name="Cairo Regular" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="#292828" strokeType="OUTSIDE" strokeWidth="0.0" text="الاسم الكامل" textAlignment="CENTER" wrappingWidth="94.4046859741211">
+                     <font>
+                        <Font name="Cairo Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField alignment="TOP_RIGHT" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="306.0" stylesheets="@../Styles/TextFieldUI.css">
+                     <font>
+                        <Font name="Old English Text MT" size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="73.0" prefWidth="549.0">
+               <children>
+                  <Text fill="#292828" strokeType="OUTSIDE" strokeWidth="0.0" text="رقم الموبايل" wrappingWidth="94.4046859741211">
+                     <font>
+                        <Font name="Cairo Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <StackPane alignment="TOP_LEFT" maxWidth="-Infinity" prefHeight="36.0" prefWidth="306.0">
+                     <children>
+                        <TextField alignment="TOP_RIGHT" maxWidth="-Infinity" prefHeight="36.0" prefWidth="313.0" promptText="5XXXXXXXX" stylesheets="@../Styles/TextFieldUI.css" StackPane.alignment="CENTER">
+                           <font>
+                              <Font name="Old English Text MT" size="15.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="86.0" promptText="+972" styleClass="arrow" stylesheets="@../Styles/ComboBoxUI.css" StackPane.alignment="CENTER_LEFT">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                     </children>
+                  </StackPane>
+                  <Text fill="#e44d4d" strokeType="OUTSIDE" strokeWidth="0.0" text=" * يجب أن يبدأ بـ 5" textAlignment="RIGHT" wrappingWidth="96.39501917362213">
+                     <font>
+                        <Font name="Cairo Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="#292828" strokeType="OUTSIDE" strokeWidth="0.0" text="الجنس" textAlignment="CENTER" wrappingWidth="94.4046859741211">
+                     <font>
+                        <Font name="Cairo Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ComboBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="306.0" styleClass="combo-box" stylesheets="@../Styles/GenderCB.css" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="#292828" strokeType="OUTSIDE" strokeWidth="0.0" text="كلمة المرور" wrappingWidth="87.14424896240234">
+                     <font>
+                        <Font name="Cairo Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField alignment="TOP_RIGHT" maxWidth="-Infinity" prefHeight="22.0" prefWidth="307.0" stylesheets="@../Styles/TextFieldUI.css">
+                     <font>
+                        <Font name="Old English Text MT" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#e44d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="* 6 أحرف او أكثر" textAlignment="RIGHT" wrappingWidth="96.39501917362213">
+                     <font>
+                        <Font name="Cairo Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="160.0" stylesheets="@../Styles/LoginButton.css" text="انشاء حساب" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font name="Cairo Black" size="13.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#292828" strokeType="OUTSIDE" strokeWidth="0.0" text="تسجيل الدخول" underline="true" wrappingWidth="113.76607513427734">
+                           <font>
+                              <Font name="Cairo Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="49.0" fitWidth="44.0" layoutX="546.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/ArrowRight.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

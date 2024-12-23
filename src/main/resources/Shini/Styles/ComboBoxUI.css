@@ -1,0 +1,40 @@
+/* Make the ComboBox background and border invisible */
+.combo-box {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-border-color: transparent; /* Transparent border */
+    -fx-padding: 0; /* Remove padding */
+    -fx-font-size: 14px; /* Ensure prompt text has readable font size */
+    -fx-text-fill: gray; /* Default text color for prompt text */
+    -fx-font-family: "Sans-serif"; /* Set the font family */
+}
+
+/* Style the arrow button of the ComboBox */
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Transparent arrow button background */
+    -fx-border-color: transparent; /* Transparent arrow button border */
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: red; /* Red color for the arrow */
+}
+
+/* Style the prompt text inside ComboBox */
+.combo-box .text {
+    -fx-text-fill: gray; /* Correct text color for prompt text */
+}
+
+/* Optional: Style the dropdown menu */
+/*.combo-box .list-cell {*/
+/*    -fx-background-color: white; !* Background for dropdown items *!*/
+/*    -fx-text-fill: black; !* Text color for items *!*/
+/*}*/
+
+/* Keep the arrow button transparent on hover */
+.combo-box:hover .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* Keep the arrow button transparent when focused */
+.combo-box:focused .arrow-button {
+    -fx-background-color: transparent;
+}

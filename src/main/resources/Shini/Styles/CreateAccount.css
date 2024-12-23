@@ -1,0 +1,31 @@
+/* General Button Styles */
+.create-account-button {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-border-color: black; /* Black border */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+    -fx-padding: 12px 24px; /* Padding around the text */
+    -fx-text-fill: black; /* Black text color */
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+.create-account-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1); /* Slight dark background when hovered */
+    -fx-border-color: black; /* Keep the black border */
+    -fx-text-fill: black; /* Ensure text stays black */
+}
+
+/* Button Active (Clicked) State */
+.create-account-button:pressed {
+    -fx-background-color: rgba(0, 0, 0, 0.2); /* Darker background when clicked */
+    -fx-border-color: black; /* Keep the black border */
+    -fx-text-fill: black; /* Ensure text stays black */
+}
+
+/* Button Focused (when selected) */
+.create-account-button:focused {
+    -fx-border-color: #e44d4d; /* Border remains black when focused */
+    -fx-border-width: 1px; /* Ensure border width stays consistent */
+}
