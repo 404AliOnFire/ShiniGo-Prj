@@ -1,6 +1,6 @@
 package Shini;
 
-import com.sun.tools.javac.Main;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -31,7 +31,7 @@ public class Driver extends Application {
         loginStage.setScene(scene);
         loginStage.show();
     }
-    
+
     private void initializeFonts() {
         Font.loadFont(Objects.requireNonNull(Driver.class.getResource("/Shini/Fonts/Cairo-Regular.ttf")).toExternalForm(), 10);
         Font.loadFont(Objects.requireNonNull(Driver.class.getResource("/Shini/Fonts/Cairo-Bold.ttf")).toExternalForm(), 10);
