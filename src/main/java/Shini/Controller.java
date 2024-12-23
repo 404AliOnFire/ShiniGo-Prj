@@ -15,10 +15,8 @@ public class Controller {
         Driver.loginStage.close();
         createAccountStage = new Stage();
 
-        Font.loadFont(Driver.class.getResource("/Shini/Fonts/Cairo-Regular.ttf").toExternalForm(), 10);
-        Font.loadFont(Driver.class.getResource("/Shini/Fonts/Cairo-Bold.ttf").toExternalForm(), 10);
-        Font.loadFont(Driver.class.getResource("/Shini/Fonts/Cairo-SemiBold.ttf").toExternalForm(), 10);
-        Font.loadFont(Driver.class.getResource("/Shini/Fonts/Cairo-Black.ttf").toExternalForm(), 10);
+        // Delete the Fonts Codes imported, because they are useless here
+        // _____________________________________________________________
         FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("/Shini/FXML/CreateAccount.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 606, 600);
