@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="aliTestCommit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Chips.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CornFleks.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Self-care.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/animalCare.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/bread.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/canned.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chilcCare.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chocolateSugars.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/cola.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/frozenProducts.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/fruits.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/games.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/homemadeBread.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/houseCare.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/itemsReady.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/kitchenTools.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/martdela.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/meatAndFish.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/milkAndEggs.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/more.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/oil.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/pasta&amp;rice.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/smoke.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/spices&amp;sauces.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/tea&amp;coffe.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/water.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/redLine.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +23,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="hanadiBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,7 +99,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Ali-Branch",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ALYAMEN.PS/Desktop/Game/jfoenix-9.0.10.jar",
@@ -141,11 +116,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\ALYAMEN.PS\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="dd420174-89b8-4d10-b671-5840f3963ea6" reportId="ShiniGo/qodana/2024-12-23" />
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
@@ -252,5 +222,9 @@
     <MESSAGE value="Delete Fonts codes that they are useless" />
     <MESSAGE value="aliTestCommit" />
     <option name="LAST_COMMIT_MESSAGE" value="aliTestCommit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
