@@ -24,7 +24,7 @@ public class Driver extends Application {
         /* Compile JavaFX Application class with Java 20 **/
         /* Load Fonts, Cairo initialized to Intellij **/
         initializeFonts();
-        FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("/Shini/FXML/LoginUI.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("/Shini/FXML/main.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 606, 600);
         loginStage.setTitle("Shini Extra Online");
@@ -40,7 +40,6 @@ public class Driver extends Application {
     }
 
     public static void main(String[] args) {
-
         launch();
     }
 }
