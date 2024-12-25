@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="606.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="المجلة">
+               <font>
+                  <Font name="Cairo Black Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="160.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle.css" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="7.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+      <ImageView fitHeight="532.0" fitWidth="606.0" layoutY="68.0">
+         <image>
+            <Image url="@../Images/maga.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

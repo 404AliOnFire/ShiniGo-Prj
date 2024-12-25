@@ -16,7 +16,7 @@ public class Driver extends Application {
     /*  Developed by Birzeit Students
     -> Ali Hassoneh (1221758)
     -> Hanade Zareer (1222729)
-    -> Afnan Manasrah (??????)
+    -> Afnan Manasrah (1221150)
     **/
     @Override
     public void start(Stage stage) throws IOException {

@@ -23,7 +23,7 @@
             </Text>
             <ImageView fitHeight="474.0" fitWidth="413.0" pickOnBounds="true" preserveRatio="true" translateX="80.0">
                <image>
-                  <Image url="@../Images/WhatsApp%20Image%202024-12-23%20at%208.33.21%20PM.jpeg" />
+                  <Image url="@../Images/WhatsApp Image 2024-12-23 at 8.33.21 PM.jpeg" />
                </image>
             </ImageView>
             <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="491.0" spacing="25.0" styleClass="hbox" translateY="10.0">
@@ -32,7 +32,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-user-32%20(1).png" />
+                              <Image url="@../Images/icons8-user-32 (1).png" />
                            </image>
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
@@ -46,7 +46,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-box-50%20(1).png" />
+                              <Image url="@../Images/icons8-box-50 (1).png" />
                            </image>
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
@@ -60,7 +60,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/black-shopping-cart-48%20(1).png" />
+                              <Image url="@../Images/black-shopping-cart-48 (1).png" />
                            </image>
                         </ImageView>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
