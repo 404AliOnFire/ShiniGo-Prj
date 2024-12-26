@@ -2,8 +2,10 @@ package Shini;
 
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -12,6 +14,8 @@ import java.util.Objects;
 
 public class Driver extends Application {
     public static Stage loginStage;
+    @FXML
+
     /* Shini Extra Online **/
     /*  Developed by Birzeit Students
     -> Ali Hassoneh (1221758)
@@ -21,6 +25,7 @@ public class Driver extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         loginStage = stage;
+
         /* Compile JavaFX Application class with Java 20 **/
         /* Load Fonts, Cairo initialized to Intellij **/
         initializeFonts();
