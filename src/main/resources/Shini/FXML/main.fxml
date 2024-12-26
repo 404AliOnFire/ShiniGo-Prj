@@ -26,7 +26,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Text>
-            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="491.0">
+
                <children>
                   <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -38,7 +38,7 @@
                         <Font name="Cairo Regular" size="13.0" />
                      </font>
                      <HBox.margin>
-                        <Insets />
+
                      </HBox.margin>
                   </Text>
                </children>
