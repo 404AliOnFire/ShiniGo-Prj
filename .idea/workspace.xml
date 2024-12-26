@@ -4,38 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="aliTestCommit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Chips.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CornFleks.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Self-care.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/animalCare.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/bread.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/canned.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chilcCare.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chocolateSugars.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/cola.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/frozenProducts.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/fruits.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/games.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/homemadeBread.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/houseCare.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/itemsReady.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/kitchenTools.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/martdela.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/meatAndFish.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/milkAndEggs.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/more.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/oil.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/pasta&amp;rice.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/smoke.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/spices&amp;sauces.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/tea&amp;coffe.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/water.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/redLine.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="fxml load to login">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/CreateAccountControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Stages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Sounds/ჩუბინა - Chub1na.Ge ｜ slowed.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CreateAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CreateAccount.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/LoginUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/LoginUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +25,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -73,6 +55,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="aliBranch" />
+                    <option name="lastUsedInstant" value="1735154529" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="Ali-Branch" />
                     <option name="lastUsedInstant" value="1735035293" />
@@ -121,13 +107,18 @@
   "keyToString": {
     "Application.Driver.executor": "Run",
     "Application.HelloApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.Shini.Fonts in ShiniGo.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Ali-Branch",
+    "git-widget-placeholder": "aliBranch",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ALYAMEN.PS/Desktop/Game/jfoenix-9.0.10.jar",
+    "last_opened_file_path": "C:/Users/ALYAMEN.PS/IdeaProjects/ShiniGo/src/main/resources/Shini/Sounds",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -135,28 +126,27 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.38505748",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\ALYAMEN.PS\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="dd420174-89b8-4d10-b671-5840f3963ea6" reportId="ShiniGo/qodana/2024-12-23" />
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Images" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Video" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\FXML" />
-      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Font" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Shini" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -179,6 +169,11 @@
       <workItem from="1734944944371" duration="8430000" />
       <workItem from="1734958855494" duration="11257000" />
       <workItem from="1735035073461" duration="11645000" />
+      <workItem from="1735135432422" duration="8115000" />
+      <workItem from="1735153347820" duration="1058000" />
+      <workItem from="1735154443878" duration="7236000" />
+      <workItem from="1735205657231" duration="3203000" />
+      <workItem from="1735220483273" duration="8008000" />
     </task>
     <task id="LOCAL-00001" summary="Create Fonts Method to make it more readability">
       <option name="closed" value="true" />
@@ -228,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734991176947</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fxml load to login">
+      <option name="closed" value="true" />
+      <created>1735132688691</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735132688691</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +254,20 @@
     <MESSAGE value="Create methods working as a button for back to login stage" />
     <MESSAGE value="Delete Fonts codes that they are useless" />
     <MESSAGE value="aliTestCommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="aliTestCommit" />
+    <MESSAGE value="Ch" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="fxml load to login" />
+    <option name="LAST_COMMIT_MESSAGE" value="fxml load to login" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Shini/LoginController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,7 +1,6 @@
 module shiniproject.shinigo {
-    requires javafx.controls;
-    requires javafx.fxml;
     requires jdk.compiler;
+    requires MaterialFX;
 
     opens Shini to javafx.fxml;
     exports Shini;

@@ -2,6 +2,7 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
 <?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import io.github.palexdev.materialfx.controls.MFXSlider?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.LoginController">
    <children>
       <VBox layoutX="297.0" layoutY="41.0" prefHeight="387.0" prefWidth="294.0" spacing="10.0">
          <children>
@@ -44,12 +45,12 @@
                   </Text>
                   <StackPane alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="20.0" prefWidth="257.0">
                      <children>
-                        <MFXTextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="294.0" promptText="5XXXXXXXX" styleClass="text-field" textLimit="9">
+                        <MFXTextField fx:id="phoneTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="294.0" promptText="5XXXXXXXX" styleClass="text-field" textLimit="9">
                            <font>
                               <Font name="Cairo Regular" size="16.0" />
                            </font>
                         </MFXTextField>
-                        <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="86.0" promptText="+972" styleClass="arrow" stylesheets="@../Styles/ComboBoxUI.css">
+                        <ComboBox id="addressCB" fx:id="addressCB" cache="true" nodeOrientation="LEFT_TO_RIGHT" onAction="#adressHandle" prefHeight="36.0" prefWidth="86.0" promptText="+972" styleClass="arrow" stylesheets="@../Styles/ComboBoxUI.css">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ComboBox>
@@ -61,40 +62,54 @@
                      </font>
                   </Text>
                </children></VBox>
-            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="294.0">
+            <VBox alignment="TOP_RIGHT" prefHeight="196.0" prefWidth="311.0">
                <children>
                   <Text fill="#292828" strokeType="OUTSIDE" strokeWidth="0.0" text="كلمة المرور" wrappingWidth="87.14424896240234">
                      <font>
                         <Font name="Cairo Bold" size="16.0" />
                      </font>
                   </Text>
-                  <MFXPasswordField allowCopy="true" allowPaste="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="290.0" styleClass="text-field" stylesheets="@../Styles/TextFieldUI.css" />
+                  <MFXPasswordField fx:id="passwordTF" allowCopy="true" allowPaste="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="290.0" styleClass="text-field" stylesheets="@../Styles/TextFieldUI.css" />
                   <Text fill="#e44d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="* 6 أحرف او أكثر" textAlignment="RIGHT" wrappingWidth="96.39501917362213">
                      <font>
                         <Font name="Cairo Bold" size="12.0" />
                      </font>
                   </Text>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="123.0" prefWidth="307.0" spacing="40.0">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="309.0" spacing="40.0">
                      <children>
-                        <MFXProgressSpinner prefHeight="37.0" prefWidth="35.0">
-                           <color1>
-                              <Color />
-                           </color1>
-                           <color2>
-                              <Color red="1.0" />
-                           </color2>
-                           <color3>
-                              <Color red="1.0" blue="0.6499999761581421" />
-                           </color3>
-                           <color4>
-                              <Color red="0.4676418602466583" green="0.22138828039169312" blue="0.22138828039169312" />
-                           </color4>
-                        </MFXProgressSpinner>
-                        <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="39.0" prefWidth="150.0" stylesheets="@../Styles/LoginButton.css" text="تسجيل الدخول" textAlignment="RIGHT" textFill="WHITE">
-                           <font>
-                              <Font name="Cairo Black" size="14.0" />
-                           </font>
-                        </Button>
+                        <AnchorPane prefHeight="90.0" prefWidth="307.0">
+                           <children>
+                              <Button alignment="TOP_CENTER" layoutX="143.0" layoutY="17.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="37.0" prefWidth="150.0" stylesheets="@../Styles/LoginButton.css" text="تسجيل الدخول" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cairo Black" size="14.0" />
+                                 </font>
+                              </Button>
+                              <MFXProgressSpinner layoutX="94.0" layoutY="21.0" prefHeight="30.0" prefWidth="31.0" visible="false">
+                                 <color1>
+                                    <Color />
+                                 </color1>
+                                 <color2>
+                                    <Color red="1.0" />
+                                 </color2>
+                                 <color3>
+                                    <Color red="1.0" blue="0.6499999761581421" />
+                                 </color3>
+                                 <color4>
+                                    <Color red="0.4676418602466583" green="0.22138828039169312" blue="0.22138828039169312" />
+                                 </color4>
+                              </MFXProgressSpinner>
+                              <Text fx:id="successText" fill="#3d8d11" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اهلا بعودتك!" visible="false" wrappingWidth="93.5979232788086">
+                                 <font>
+                                    <Font name="Cairo Bold" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="failedText" fill="#e44d4d" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تاكد من البيانات المدخلة!" wrappingWidth="164.58956146240234">
+                                 <font>
+                                    <Font name="Cairo Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </HBox>
                </children></VBox>
@@ -119,7 +134,7 @@
                   </Button>
                </children>
             </VBox>
-            <Text fill="#575454" strokeType="OUTSIDE" strokeWidth="0.0" text="تخطي ←" wrappingWidth="63.74916458129883">
+            <Text fill="#575454" onMouseClicked="#skipLogin" strokeType="OUTSIDE" strokeWidth="0.0" text="تخطي ←" wrappingWidth="63.74916458129883">
                <font>
                   <Font name="Cairo Bold" size="13.0" />
                </font>
@@ -141,5 +156,6 @@
             <Image url="@../Images/ShiniLogo.png" />
          </image>
       </ImageView>
+      <MFXSlider fx:id="slider" layoutX="18.0" layoutY="37.0" rotate="-138.3" />
    </children>
 </AnchorPane>
