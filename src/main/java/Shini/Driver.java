@@ -1,6 +1,7 @@
 package Shini;
 
 
+import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,9 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Driver extends Application {
+
+    public static FXMLLoader fxmlLoader;
+
     public static Stage loginStage;
     @FXML
 
@@ -29,7 +33,7 @@ public class Driver extends Application {
         /* Compile JavaFX Application class with Java 20 **/
         /* Load Fonts, Cairo initialized to Intellij **/
         initializeFonts();
-        FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("/Shini/FXML/LoginUI.fxml"));
+         fxmlLoader = new FXMLLoader(getClass().getResource("/Shini/FXML/LoginUI.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 606, 600);
         loginStage.setTitle("Shini Extra Online");
@@ -38,10 +42,10 @@ public class Driver extends Application {
     }
 
     private void initializeFonts() {
-        Font.loadFont(Objects.requireNonNull(Driver.class.getResource("/Shini/Fonts/Cairo-Regular.ttf")).toExternalForm(), 10);
-        Font.loadFont(Objects.requireNonNull(Driver.class.getResource("/Shini/Fonts/Cairo-Bold.ttf")).toExternalForm(), 10);
-        Font.loadFont(Objects.requireNonNull(Driver.class.getResource("/Shini/Fonts/Cairo-SemiBold.ttf")).toExternalForm(), 10);
-        Font.loadFont(Objects.requireNonNull(Driver.class.getResource("/Shini/Fonts/Cairo-Black.ttf")).toExternalForm(), 10);
+        Font.loadFont(Objects.requireNonNull(getClass().getResource("/Shini/Fonts/Cairo-Regular.ttf")).toExternalForm(), 10);
+        Font.loadFont(Objects.requireNonNull(getClass().getResource("/Shini/Fonts/Cairo-Bold.ttf")).toExternalForm(), 10);
+        Font.loadFont(Objects.requireNonNull(getClass().getResource("/Shini/Fonts/Cairo-SemiBold.ttf")).toExternalForm(), 10);
+        Font.loadFont(Objects.requireNonNull(getClass().getResource("/Shini/Fonts/Cairo-Black.ttf")).toExternalForm(), 10);
     }
 
     public static void main(String[] args) {

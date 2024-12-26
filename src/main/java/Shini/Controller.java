@@ -1,10 +1,8 @@
 package Shini;
 
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -13,8 +11,6 @@ public class Controller {
     public void CreateAccountUI() throws IOException {
         // Implement logic to create account UI
         Driver.loginStage.close();
-
-
 
         // Delete the Fonts Codes imported, because they are useless here
         // _____________________________________________________________
