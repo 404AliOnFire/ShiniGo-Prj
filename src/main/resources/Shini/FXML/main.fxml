@@ -26,23 +26,41 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Text>
-            <HBox fx:id="hbox" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" opacity="0.99" prefHeight="45.0" prefWidth="226.0" style="-fx-background-color: gainsboro;" styleClass="hbox" stylesheets="@../Styles/style.css" translateX="210.0">
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="491.0">
                <children>
-                  <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="206.0" promptText="بحث ..">
+                  <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/morning.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="صباح الخير, علي" textAlignment="CENTER" wrappingWidth="98.89204406738281">
+                     <font>
+                        <Font name="Cairo Regular" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="282.0" style="-fx-background-color: gainsboro;" styleClass="hbox" stylesheets="@../Styles/style.css" translateX="210.0">
+               <children>
+                  <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="433.0" promptText="بحث ..">
                      <font>
                         <Font name="Cairo Black" size="12.0" />
-                     </font></TextField>
-                  <ImageView fitHeight="22.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-search-50.png" />
                      </image>
                   </ImageView>
                </children>
                <VBox.margin>
-                  <Insets bottom="5.0" left="50.0" />
+                  <Insets bottom="5.0" />
                </VBox.margin>
                <opaqueInsets>
-                  <Insets left="300.0" />
+                  <Insets />
                </opaqueInsets>
             </HBox>
             <ScrollPane prefHeight="432.0" prefWidth="491.0">
