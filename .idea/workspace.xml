@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="Fix Create Account bug">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/SubCategoryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/SubCategoryControl.java" afterDir="false" />
-    </list>
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="upload the products images" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -260,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735333170483</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="upload the products images">
+      <option name="closed" value="true" />
+      <created>1735343378245</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1735343378245</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +290,8 @@
     <MESSAGE value="lib files" />
     <MESSAGE value="fix bug java.sql module" />
     <MESSAGE value="Fix Create Account bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Create Account bug" />
+    <MESSAGE value="upload the products images" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload the products images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
