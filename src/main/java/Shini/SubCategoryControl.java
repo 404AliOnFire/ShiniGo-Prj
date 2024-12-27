@@ -54,5 +54,7 @@ public class SubCategoryControl implements Initializable {
                 }
             });
         }
+
+
     }
 }
