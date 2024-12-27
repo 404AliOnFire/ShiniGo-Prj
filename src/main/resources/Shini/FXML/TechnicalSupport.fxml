@@ -9,19 +9,19 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane prefHeight="595.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <children>
-      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="499.0">
          <children>
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="الدعم الفني">
                <font>
                   <Font name="Cairo Black Bold" size="18.0" />
                </font>
                <HBox.margin>
-                  <Insets right="160.0" />
+                  <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle.css" textAlignment="CENTER">
+            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle2.css" textAlignment="CENTER">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT">
                      <image>
@@ -34,12 +34,12 @@
                </HBox.margin>
             </Button>
          </children></HBox>
-      <Label alignment="CENTER" layoutX="199.0" layoutY="158.0" prefHeight="142.0" prefWidth="230.0" text="تواصل معنا عبر الرقم التالي">
+      <Label alignment="CENTER" layoutX="118.0" layoutY="156.0" prefHeight="142.0" prefWidth="296.0" text="تواصل معنا عبر الرقم التالي">
          <font>
             <Font name="Cairo Black Bold" size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="231.0" layoutY="300.0" prefHeight="103.0" prefWidth="192.0" text="+790 593749537">
+      <Label alignment="CENTER" layoutX="154.0" layoutY="298.0" prefHeight="103.0" prefWidth="192.0" text="+790 593749537">
          <font>
             <Font name="Cairo Black Bold" size="24.0" />
          </font>

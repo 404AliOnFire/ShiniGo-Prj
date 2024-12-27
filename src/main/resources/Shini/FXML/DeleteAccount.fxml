@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <children>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
@@ -18,7 +17,7 @@
                   <Font name="Cairo Black Bold" size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="لتأكيد حذف حسابك,انقر فوق &quot;تأكيد&quot;">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="251.0" text="لتأكيد حذف حسابك,انقر فوق &quot;تأكيد&quot;">
                <font>
                   <Font name="Cairo Black" size="14.0" />
                </font>

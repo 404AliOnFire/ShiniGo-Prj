@@ -5,55 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="create main scene">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangeEmail.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangePassword.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/DeleteAccount.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Location.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Magazine.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/MyExtra.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Privacy.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ProductScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/TechnicalSupport.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Terms.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UpdateProfile.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UserProfile.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/helpcenter.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/coupon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-denied-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-email-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-horizontal-line-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-identity-card-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-last-24-hours-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-left-arrow-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-location-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-logout-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-magazine-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-market-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-minus-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-password-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-plus-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-profile-picture-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-profile-picture-96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-question-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-save-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-shield-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-stars-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-to-do-list-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/icons8-x-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/maga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/ButtonsStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/CancleButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/ConfirmButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/SaveButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/ButtonsStyle2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangeEmail.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangePassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/DeleteAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/DeleteAccount.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Location.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Location.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Magazine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Magazine.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/MyExtra.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/MyExtra.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Privacy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Privacy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ProductScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ProductScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/TechnicalSupport.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/TechnicalSupport.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Terms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Terms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UpdateProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UpdateProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UserProfile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myCartEmpty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myCartEmpty.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myCartHasItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myCartHasItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myOrder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myOrder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/Styles/ButtonsStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/ButtonsStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,12 +51,12 @@
     &quot;assignee&quot;: &quot;HanadeZareer&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/404AliOnFire/ShiniGo-Prj.git",
-    "accountId": "eb7f76df-d3ca-479f-b59e-741c287db1f9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/404AliOnFire/ShiniGo-Prj.git&quot;,
+    &quot;accountId&quot;: &quot;eb7f76df-d3ca-479f-b59e-741c287db1f9&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -117,7 +85,7 @@
     "git-widget-placeholder": "AfnanBranch",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/12211/OneDrive/Desktop/ShiniGo1-Prj/src/main/resources/Shini/Images",
+    "last_opened_file_path": "C:/Users/12211/OneDrive/Desktop/ShiniGo1-Prj/src/main/resources/Shini/Styles",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -133,8 +101,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\Images" />
       <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\Styles" />
+      <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\Images" />
       <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\FXML" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />

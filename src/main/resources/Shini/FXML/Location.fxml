@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane prefHeight="595.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <children>
-      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="499.0">
          <children>
-            <Button fx:id="save1button" mnemonicParsing="false" prefHeight="38.0" prefWidth="79.0" stylesheets="@../Styles/ButtonsStyle.css" text="حفظ">
+            <Button fx:id="save1button" mnemonicParsing="false" prefHeight="38.0" prefWidth="79.0" stylesheets="@../Styles/ButtonsStyle2.css" text="حفظ">
                <HBox.margin>
-                  <Insets right="150.0" />
+                  <Insets right="110.0" />
                </HBox.margin>
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0">
@@ -27,15 +27,15 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="العنوان">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="129.0" text="العنوان">
                <font>
                   <Font name="Cairo Black Bold" size="18.0" />
                </font>
                <HBox.margin>
-                  <Insets right="160.0" />
+                  <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle.css" textAlignment="CENTER">
+            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle2.css" textAlignment="CENTER">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT">
                      <image>
@@ -48,7 +48,7 @@
                </HBox.margin>
             </Button>
          </children></HBox>
-      <VBox alignment="CENTER_RIGHT" layoutY="68.0" prefHeight="200.0" prefWidth="606.0">
+      <VBox alignment="CENTER_RIGHT" layoutY="68.0" prefHeight="200.0" prefWidth="499.0">
          <children>
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="العنوان">
                <VBox.margin>

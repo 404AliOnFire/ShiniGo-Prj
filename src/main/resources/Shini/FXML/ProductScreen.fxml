@@ -10,12 +10,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane prefHeight="595.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <children>
-      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="499.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets right="7.0" />
                </HBox.margin>
@@ -29,10 +28,10 @@
             </Button>
          </children>
       </HBox>
-      <Pane fx:id="picpane" layoutY="50.0" prefHeight="221.0" prefWidth="606.0" />
-      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="393.0" layoutY="285.0" prefHeight="50.0" prefWidth="200.0" text="Product discribtion" />
-      <Label alignment="CENTER_RIGHT" layoutX="395.0" layoutY="350.0" prefHeight="50.0" prefWidth="200.0" text="Product Price" />
-      <HBox alignment="CENTER" layoutY="400.0" prefHeight="100.0" prefWidth="606.0">
+      <Pane fx:id="picpane" layoutY="50.0" prefHeight="196.0" prefWidth="499.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="285.0" layoutY="246.0" prefHeight="50.0" prefWidth="200.0" text="Product discribtion" />
+      <Label alignment="CENTER_RIGHT" layoutX="285.0" layoutY="300.0" prefHeight="50.0" prefWidth="200.0" text="Product Price" />
+      <HBox alignment="CENTER" layoutY="373.0" prefHeight="100.0" prefWidth="499.0">
          <children>
             <Button fx:id="minusbutton" mnemonicParsing="false" prefHeight="60.0" prefWidth="50.0" stylesheets="@../Styles/ButtonsStyle.css">
                <graphic>
@@ -62,7 +61,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutY="500.0" prefHeight="100.0" prefWidth="606.0">
+      <HBox alignment="CENTER" layoutY="473.0" prefHeight="100.0" prefWidth="499.0">
          <children>
             <Button fx:id="backbut" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" stylesheets="@../Styles/CancleButton.css" text="تراجع">
                <HBox.margin>

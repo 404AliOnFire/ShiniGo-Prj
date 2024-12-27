@@ -1,5 +1,5 @@
 .button {
-    -fx-background-color: #f4f4f4; /* Default stage color */
+    -fx-background-color: White; /* Default stage color */
     -fx-text-fill: black;          /* Optional: Text color */
-    -fx-border-color: transparent; /* Optional: No border */
+    -fx-border-color: White; /* Optional: No border */
 }
