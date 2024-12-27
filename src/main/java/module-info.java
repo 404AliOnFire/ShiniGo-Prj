@@ -3,6 +3,7 @@ module shiniproject.shinigo {
     requires MaterialFX;
     requires mysql.connector.java;
     requires javafx.controls;
+    requires java.sql;
 
 
     opens Shini to javafx.fxml;
