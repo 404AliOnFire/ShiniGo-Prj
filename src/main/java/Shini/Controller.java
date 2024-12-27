@@ -1,20 +1,16 @@
 package Shini;
 
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class Controller {
-    public Stage createAccountStage;
-    public void CreateAccountUI(ActionEvent actionEvent) throws IOException {
+    public Stage createAccountStage = new Stage();
+    public void CreateAccountUI() throws IOException {
         // Implement logic to create account UI
         Driver.loginStage.close();
-        createAccountStage = new Stage();
 
         // Delete the Fonts Codes imported, because they are useless here
         // _____________________________________________________________
@@ -26,11 +22,11 @@ public class Controller {
         createAccountStage.show();
     }
 
-    public void BackToLoginText(MouseEvent mouseEvent) {
+    public void BackToLoginText() {
         returnToLogin();
     }
 
-    public void BackToLoginArrow(MouseEvent mouseEvent) {
+    public void BackToLoginArrow() {
         returnToLogin();
     }
     public void returnToLogin(){
