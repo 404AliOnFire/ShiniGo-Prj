@@ -1,0 +1,5 @@
+.vbox-red-line {
+    -fx-border-color: transparent transparent red transparent; /* Top, Right, Bottom, Left */
+    -fx-border-width: 0 0 2px 0; /* Width of the bottom border */
+    -fx-border-style: solid;
+}
