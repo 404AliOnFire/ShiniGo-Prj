@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="290d68db-d07d-4c55-9ae2-e1d0fd2b83db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="create category class with its controller">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CategoryImgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/CategoryImgController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CategoryImage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CategoryImage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +26,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="hanadiBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,11 +119,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\ALYAMEN.PS\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="dd420174-89b8-4d10-b671-5840f3963ea6" reportId="ShiniGo/qodana/2024-12-23" />
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
@@ -232,7 +233,7 @@
     <MESSAGE value="Delete Fonts codes that they are useless" />
     <MESSAGE value="aliTestCommit" />
     <MESSAGE value="create category class with its controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="create category class with its controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
