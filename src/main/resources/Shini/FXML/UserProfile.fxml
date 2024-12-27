@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane prefHeight="595.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <children>
-      <HBox alignment="CENTER_RIGHT" layoutY="57.0" prefHeight="150.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="53.0" prefHeight="150.0" prefWidth="499.0">
          <children>
             <VBox alignment="CENTER" prefHeight="87.0" prefWidth="200.0">
                <children>
@@ -38,11 +38,11 @@
             </ImageView>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutY="225.0" prefHeight="50.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" layoutY="235.0" prefHeight="50.0" prefWidth="499.0">
          <children>
-            <Button fx:id="updaitpro1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="updaitpro1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <padding>
-                  <Insets right="390.0" />
+                  <Insets right="290.0" />
                </padding>
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0">
@@ -57,7 +57,7 @@
                   <Font name="Cairo Black" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="updaitprobutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="updaitprobutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets right="7.0" />
                </HBox.margin>
@@ -71,44 +71,11 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutY="275.0" prefHeight="50.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" layoutY="285.0" prefHeight="50.0" prefWidth="499.0">
          <children>
-            <Button fx:id="email1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="chanpassbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <padding>
-                  <Insets right="424.0" />
-               </padding>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0">
-                     <image>
-                        <Image url="@../Images/icons8-left-arrow-48.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Label fx:id="emaillab" text="البريد الالكتروني">
-               <font>
-                  <Font name="Cairo Black" size="12.0" />
-               </font>
-            </Label>
-            <Button fx:id="emailbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-               <HBox.margin>
-                  <Insets right="7.0" />
-               </HBox.margin>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0">
-                     <image>
-                        <Image url="@../Images/icons8-email-48.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutY="325.0" prefHeight="50.0" prefWidth="606.0">
-         <children>
-            <Button fx:id="chanpassbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-               <padding>
-                  <Insets right="418.0" />
+                  <Insets right="317.0" />
                </padding>
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0">
@@ -123,7 +90,7 @@
                   <Font name="Cairo Black" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="chanpass1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="chanpass1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets right="7.0" />
                </HBox.margin>
@@ -137,14 +104,14 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutY="375.0" prefHeight="50.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" layoutY="347.0" prefHeight="50.0" prefWidth="499.0">
          <children>
-            <Button fx:id="location1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="location1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <padding>
-                  <Insets right="472.0" />
+                  <Insets right="365.0" />
                </padding>
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0">
@@ -159,7 +126,7 @@
                   <Font name="Cairo Black" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="locationbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="locationbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets right="7.0" />
                </HBox.margin>
@@ -173,19 +140,19 @@
             </Button>
          </children>
       </HBox>
-      <ImageView fitHeight="50.0" fitWidth="600.0" layoutY="438.0">
+      <ImageView fitHeight="50.0" fitWidth="499.0" layoutX="14.0" layoutY="435.0">
          <image>
             <Image url="@../Images/icons8-horizontal-line-32.png" />
          </image>
       </ImageView>
-      <HBox alignment="CENTER_RIGHT" layoutY="471.0" prefHeight="50.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="7.0" layoutY="471.0" prefHeight="50.0" prefWidth="499.0">
          <children>
             <Label fx:id="deleteaccountlab" text="حذف الحساب">
                <font>
                   <Font name="Cairo Black" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="deleteaccountbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="deleteaccountbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets right="7.0" />
                </HBox.margin>
@@ -199,14 +166,14 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="7.0" prefHeight="53.0" prefWidth="499.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="521.0" text="ملف المستخدم">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="403.0" text="ملف المستخدم">
                <font>
                   <Font name="Cairo Black Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="backbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+            <Button fx:id="backbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
                <HBox.margin>
                   <Insets right="7.0" />
                </HBox.margin>

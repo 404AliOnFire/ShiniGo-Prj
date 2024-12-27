@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane prefHeight="595.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <children>
-      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="606.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="499.0">
          <children>
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="سياسة الخصوصية">
                <font>
                   <Font name="Cairo Black Bold" size="18.0" />
                </font>
                <HBox.margin>
-                  <Insets right="160.0" />
+                  <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle.css" textAlignment="CENTER">
+            <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle2.css" textAlignment="CENTER">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT">
                      <image>
@@ -35,6 +35,6 @@
                </HBox.margin>
             </Button>
          </children></HBox>
-      <TextArea fx:id="texta1" layoutY="68.0" prefHeight="532.0" prefWidth="606.0" />
+      <TextArea fx:id="texta1" layoutY="68.0" prefHeight="527.0" prefWidth="499.0" />
    </children>
 </AnchorPane>
