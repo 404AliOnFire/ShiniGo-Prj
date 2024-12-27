@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="595.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="499.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
+               <HBox.margin>
+                  <Insets right="7.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-x-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Pane fx:id="picpane" layoutY="50.0" prefHeight="196.0" prefWidth="499.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="285.0" layoutY="246.0" prefHeight="50.0" prefWidth="200.0" text="Product discribtion" />
+      <Label alignment="CENTER_RIGHT" layoutX="285.0" layoutY="300.0" prefHeight="50.0" prefWidth="200.0" text="Product Price" />
+      <HBox alignment="CENTER" layoutY="373.0" prefHeight="100.0" prefWidth="499.0">
+         <children>
+            <Button fx:id="minusbutton" mnemonicParsing="false" prefHeight="60.0" prefWidth="50.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../Images/icons8-minus-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="numberlab" text="1.0">
+               <padding>
+                  <Insets left="100.0" right="100.0" />
+               </padding>
+               <font>
+                  <Font name="Cairo Black Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="plusbutton" mnemonicParsing="false" prefHeight="60.0" prefWidth="50.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../Images/icons8-plus-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="473.0" prefHeight="100.0" prefWidth="499.0">
+         <children>
+            <Button fx:id="backbut" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" stylesheets="@../Styles/CancleButton.css" text="تراجع">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="savebut" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" stylesheets="@../Styles/SaveButton.css" text="حفظ">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
