@@ -1,8 +1,8 @@
 module shiniproject.shinigo {
-    requires javafx.controls;
-    requires javafx.fxml;
     requires jdk.compiler;
     requires java.sql;
+    requires MaterialFX;
+    requires mysql.connector.java;
 
     opens Shini to javafx.fxml;
     exports Shini;
