@@ -2,18 +2,24 @@ package Shini;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class CategoryImgController {
     @FXML
-     VBox categoryBox;
+    private VBox categoryBox;
 
     @FXML
-     ImageView categoryImg;
+    private ImageView categoryImg;
 
     @FXML
-     Text categoryName;
+    private Text categoryName;
 
+
+    public void setData(Category category) {
+        categoryImg.setImage(new Image(category.getImagePath()));
+        categoryName.setText(category.getName());
+    }
 }

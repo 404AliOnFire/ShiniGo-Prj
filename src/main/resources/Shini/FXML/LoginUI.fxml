@@ -50,7 +50,7 @@
                               <Font name="Cairo Regular" size="16.0" />
                            </font>
                         </MFXTextField>
-                        <ComboBox id="addressCB" fx:id="addressCB" cache="true" nodeOrientation="LEFT_TO_RIGHT" onAction="#adressHandle" prefHeight="36.0" prefWidth="86.0" promptText="+972" styleClass="arrow" stylesheets="@../Styles/ComboBoxUI.css">
+                        <ComboBox id="addressCB" fx:id="addressCB" cache="true" nodeOrientation="LEFT_TO_RIGHT" onAction="#addressHandle" prefHeight="36.0" prefWidth="86.0" promptText="+972" styleClass="arrow" stylesheets="@../Styles/ComboBoxUI.css">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ComboBox>
@@ -77,37 +77,37 @@
                   </Text>
                   <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="309.0" spacing="40.0">
                      <children>
-                        <AnchorPane prefHeight="90.0" prefWidth="307.0">
+                        <AnchorPane prefHeight="90.0" prefWidth="312.0">
                            <children>
                               <Button alignment="TOP_CENTER" layoutX="143.0" layoutY="17.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="37.0" prefWidth="150.0" stylesheets="@../Styles/LoginButton.css" text="تسجيل الدخول" textAlignment="RIGHT" textFill="WHITE">
                                  <font>
                                     <Font name="Cairo Black" size="14.0" />
                                  </font>
                               </Button>
-                              <MFXProgressSpinner layoutX="94.0" layoutY="21.0" prefHeight="30.0" prefWidth="31.0" visible="false">
-                                 <color1>
-                                    <Color />
-                                 </color1>
-                                 <color2>
-                                    <Color red="1.0" />
-                                 </color2>
-                                 <color3>
-                                    <Color red="1.0" blue="0.6499999761581421" />
-                                 </color3>
-                                 <color4>
-                                    <Color red="0.4676418602466583" green="0.22138828039169312" blue="0.22138828039169312" />
-                                 </color4>
-                              </MFXProgressSpinner>
-                              <Text fx:id="successText" fill="#3d8d11" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اهلا بعودتك!" visible="false" wrappingWidth="93.5979232788086">
+                              <Text fx:id="successText" fill="#3d8d11" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اهلا بعودتك!" visible="false" wrappingWidth="100.03361023867285">
                                  <font>
-                                    <Font name="Cairo Bold" size="15.0" />
+                                    <Font name="Cairo Bold" size="11.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="failedText" fill="#e44d4d" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تاكد من البيانات المدخلة!" wrappingWidth="164.58956146240234">
+                              <Text fx:id="failedText" fill="#e44d4d" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تاكد من البيانات المدخلة!" visible="false" wrappingWidth="164.58956146240234">
                                  <font>
                                     <Font name="Cairo Bold" size="13.0" />
                                  </font>
                               </Text>
+                              <MFXProgressSpinner fx:id="spinner" layoutX="102.0" layoutY="28.0" prefHeight="28.0" prefWidth="32.0" visible="false">
+                                 <color1>
+                                    <Color red="0.9144503474235535" />
+                                 </color1>
+                                 <color2>
+                                    <Color />
+                                 </color2>
+                                 <color3>
+                                    <Color red="0.7655141949653625" green="0.06248366832733154" blue="0.41399893164634705" />
+                                 </color3>
+                                 <color4>
+                                    <Color red="0.24207089841365814" green="1.0" blue="0.6210354566574097" />
+                                 </color4>
+                              </MFXProgressSpinner>
                            </children>
                         </AnchorPane>
                      </children>

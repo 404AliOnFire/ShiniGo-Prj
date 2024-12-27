@@ -1,8 +1,10 @@
 package Shini;
 
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
+import io.github.palexdev.materialfx.controls.MFXProgressSpinner;
 import io.github.palexdev.materialfx.controls.MFXSlider;
 import io.github.palexdev.materialfx.controls.MFXTextField;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +14,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
 import javax.sound.sampled.*;
 import java.io.IOException;
 import java.net.URL;
@@ -37,24 +41,28 @@ public class LoginController implements Initializable {
     @FXML
     private Text successText;
 
+    @FXML
+    private MFXProgressSpinner spinner;
 
     public static LoginController loginController;
 
     public static FXMLLoader loader;
 
+    public static FXMLLoader createLoader;
+
     Clip clip;
     String number = "";
     public static Stage createAccountStage = new Stage();
-    String addressNumber = "";
+    String addressNumber = "+972";
     @FXML
     public void CreateAccountUI() throws IOException {
         // Implement logic to create account UI
         Driver.loginStage.close();
 
         // _____________________________________________________________
-        FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("/Shini/FXML/CreateAccount.fxml"));
+        createLoader = new FXMLLoader(Driver.class.getResource("/Shini/FXML/CreateAccount.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load(), 606, 600);
+        Scene scene = new Scene(createLoader.load(), 606, 600);
         createAccountStage.setTitle("Create Account");
         createAccountStage.setScene(scene);
         createAccountStage.show();
@@ -79,11 +87,6 @@ public class LoginController implements Initializable {
             }
         });
 
-        // addressCB logic
-        addressCB.setOnAction((ActionEvent e) -> {
-            addressNumber = addressCB.getValue();
-        });
-
         // phoneTF logic
         phoneTF.addEventFilter(KeyEvent.KEY_TYPED, event -> {
             String currentText = phoneTF.getText();
@@ -105,6 +108,7 @@ public class LoginController implements Initializable {
                 event.consume();
             }
         });
+
         try {
             URL soundURL = getClass().getResource("/Shini/Sounds/ჩუბინა - Chub1na.Ge ｜ slowed.wav");
             if (soundURL == null) {
@@ -149,33 +153,55 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    void loginButton(ActionEvent event) {
+    void loginButton(ActionEvent event) throws IOException {
         // Implement logic to handle login
         String phone = phoneTF.getText();
         String password = passwordTF.getText();
 
-        if (phone.isEmpty() || password.isEmpty()) {
+
+        if (phone.isEmpty() || password.isEmpty() || phone.length() < 9 || password.length() < 6) {
             successText.setVisible(false);
             failedText.setVisible(true);
+            failedText.setText("تأكد من البيانات المدخلة!");
             return;
         }
 
         // Check if user exists in the database
-//       // if (!Database.checkUserExists(phone, password)) {
-//            System.out.println("Invalid credentials.");
-//            return;
-//        }
+        if (!DatabaseHelper.checkUserExists(addressNumber + phone, password)) {
+            successText.setVisible(false);
+            failedText.setVisible(true);
+            failedText.setText("لا يوجد مستخدم بهذه البيانات.");
+            return;
+        }
+        // Retrieve the user's name from the database
+        String userName = DatabaseHelper.getUserName(addressNumber + phone, password);
 
-        // Open the main UI
-        Driver.loginStage.close();
-        clip.stop();
-       // Stages.openMain();
+        // Display success message with the user's name
+        successText.setVisible(true);
+        failedText.setVisible(false);
+        spinner.setVisible(true);
+        successText.setText("مرحبًا بعودتك " + userName + "!");
+
+
+        PauseTransition pause = new PauseTransition(Duration.seconds(2.6));
+        pause.setOnFinished(e -> {
+            try {
+                Driver.loginStage.close();
+                clip.stop();
+                Stages.openUser();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
+
+        pause.play();
+
     }
     @FXML
-    public void adressHandle() {
+    public void addressHandle() {
         addressNumber = addressCB.getSelectionModel().getSelectedItem();
-        System.out.println(addressNumber);
     }
+
     @FXML
     public void skipLogin() throws IOException {
         Driver.loginStage.close();
