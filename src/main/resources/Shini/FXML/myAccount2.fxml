@@ -28,7 +28,7 @@
                               <Insets right="378.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -37,7 +37,7 @@
                         </Button>
                         <Label fx:id="magalab" text="المجلة">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Label>
                         <Button fx:id="magabutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
@@ -45,7 +45,7 @@
                               <Insets right="7.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-magazine-48.png" />
                                  </image>
@@ -61,7 +61,7 @@
                               <Insets right="369.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -70,12 +70,12 @@
                         </Button>
                         <Label fx:id="branlab" text="فروعنا">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Label>
                         <Button fx:id="branbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-market-48.png" />
                                  </image>
@@ -91,7 +91,7 @@
                               <Insets right="330.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -100,7 +100,7 @@
                         </Button>
                         <Label fx:id="termlab" text="الشروط والأحكام">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Label>
                         <Button fx:id="termbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
@@ -108,7 +108,7 @@
                               <Insets right="7.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-to-do-list-48.png" />
                                  </image>
@@ -124,7 +124,7 @@
                               <Insets right="319.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -133,7 +133,7 @@
                         </Button>
                         <Label fx:id="privlab" text="سياسة الخصوصية">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Label>
                         <Button fx:id="privbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
@@ -141,7 +141,7 @@
                               <Insets right="7.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-shield-48.png" />
                                  </image>
@@ -157,7 +157,7 @@
                               <Insets right="340.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -166,7 +166,7 @@
                         </Button>
                         <Label fx:id="helplab" text="مركز المساعدة">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Label>
                         <Button fx:id="helpbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
@@ -174,7 +174,7 @@
                               <Insets right="7.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-question-48.png" />
                                  </image>
@@ -187,7 +187,7 @@
                      <children>
                         <Button fx:id="tech1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -202,12 +202,12 @@
                         </Button>
                         <Label fx:id="techlab" text="الدعم الفني">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Label>
                         <Button fx:id="techbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/icons8-last-24-hours-48.png" />
                                  </image>
@@ -223,7 +223,7 @@
                      <children>
                         <Button fx:id="lobutton" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle.css" text="تسجيل الدخول">
                            <font>
-                              <Font name="Arial Narrow" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                            <padding>
                               <Insets left="100.0" right="100.0" />
@@ -244,7 +244,7 @@
                         </ImageView>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Text>
                      </children>
@@ -258,7 +258,7 @@
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Text>
                      </children>
@@ -272,7 +272,7 @@
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Text>
                      </children>
@@ -286,7 +286,7 @@
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">
                            <font>
-                              <Font name="Cairo Black" size="12.0" />
+                              <Font name="Cairo Regular" size="12.0" />
                            </font>
                         </Text>
                      </children>
