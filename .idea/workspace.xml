@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="lib files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/product.fxml" afterDir="false" />
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="upload product's data into subCategories using SQL query">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/SubCategoryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/SubCategoryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/fruits.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/fruits.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +122,11 @@
     "project.structure.side.proportion": "0.38505748",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -255,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735314700170</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="upload product's data into subCategories using SQL query">
+      <option name="closed" value="true" />
+      <created>1735390735497</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1735390735497</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +289,8 @@
     <MESSAGE value="fxml load to login" />
     <MESSAGE value="lib files" />
     <MESSAGE value="fix bug java.sql module" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug java.sql module" />
+    <MESSAGE value="upload product's data into subCategories using SQL query" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload product's data into subCategories using SQL query" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
