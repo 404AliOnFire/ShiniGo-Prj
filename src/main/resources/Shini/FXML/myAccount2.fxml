@@ -61,7 +61,7 @@
                               <Insets right="369.0" />
                            </padding>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
+                              <ImageView fitHeight="30.0" fitWidth="32.0">
                                  <image>
                                     <Image url="@../Images/icons8-left-arrow-48.png" />
                                  </image>
@@ -233,7 +233,7 @@
                   </HBox>
                </children>
             </Pane>
-            <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="499.0" spacing="25.0" styleClass="hbox" translateY="10.0">
+            <HBox layoutX="50.0" layoutY="50.0" prefHeight="70.0" prefWidth="499.0" spacing="25.0" styleClass="hbox" translateY="10.0">
                <children>
                   <VBox fx:id="account" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>

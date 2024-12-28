@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane cache="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: ط;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane cache="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: ط;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.SubCategoryControl">
    <children>
       <VBox layoutX="-2.0" prefHeight="595.0" prefWidth="499.0">
          <children>
@@ -36,7 +36,7 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="500.0" style="-fx-background-color: #ececec;">
+            <HBox fx:id="subHB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="500.0" style="-fx-background-color: #ececec;">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="99.0">
                      <children>
@@ -49,7 +49,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="اعشاب وورقيات">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="أعشاب وورقيات">
                            <font>
                               <Font name="Cairo Regular" size="15.0" />
                            </font>
@@ -87,16 +87,19 @@
             </HBox>
             <ScrollPane maxWidth="-Infinity" prefHeight="461.0" prefWidth="499.0">
                <content>
-                  <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="428.0" prefWidth="495.0">
+                  <GridPane fx:id="subCatGrid" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="658.0" prefWidth="484.0" vgap="5.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
                      <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="235.0" minHeight="10.0" prefHeight="235.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="232.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
+                     <padding>
+                        <Insets top="70.0" />
+                     </padding>
                   </GridPane>
                </content>
             </ScrollPane>
