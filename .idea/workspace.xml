@@ -4,18 +4,235 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="fxml load to login">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/CreateAccountControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Stages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Sounds/ჩუბინა - Chub1na.Ge ｜ slowed.wav" afterDir="false" />
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="chang some details">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/as27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/bs47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ds27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/hs27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps51.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps61.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps62.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps63.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps65.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps66.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps67.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps73.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps74.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps75.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ps77.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/rs47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ss46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/ts37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CreateAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CreateAccount.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/LoginUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/LoginUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ChangePassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Chips.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Chips.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CornFleks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/CornFleks.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/DeleteAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/DeleteAccount.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Location.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Location.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Magazine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Magazine.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/MyExtra.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/MyExtra.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Privacy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Privacy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/ProductScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Self-care.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Self-care.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/TechnicalSupport.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/TechnicalSupport.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Terms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Terms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UpdateProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UpdateProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/UserProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/animalCare.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/animalCare.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/bread.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/bread.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/canned.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/canned.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chilcCare.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chilcCare.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chocolateSugars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/chocolateSugars.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/cola.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/cola.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/frozenProducts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/frozenProducts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/fruits.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/fruits.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/games.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/games.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/helpcenter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/helpcenter.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/homemadeBread.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/homemadeBread.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/houseCare.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/houseCare.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/itemsReady.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/itemsReady.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/kitchenTools.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/kitchenTools.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/martdela.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/martdela.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/meatAndFish.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/meatAndFish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/milkAndEggs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/milkAndEggs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/more.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/more.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/myAccount2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/oil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/oil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/pasta&amp;rice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/pasta&amp;rice.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/smoke.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/smoke.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/spices&amp;sauces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/spices&amp;sauces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/tea&amp;coffe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/tea&amp;coffe.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/water.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/water.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,60 +243,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;404AliOnFire&quot;
+    &quot;assignee&quot;: &quot;HanadeZareer&quot;
   }
 }</component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="aliBranch" />
-                    <option name="lastUsedInstant" value="1735154529" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="Ali-Branch" />
-                    <option name="lastUsedInstant" value="1735035293" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1735035292" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/404AliOnFire/ShiniGo-Prj.git&quot;,
-    &quot;accountId&quot;: &quot;6158b55e-0cc2-4ebb-af3d-c95f88d81e3a&quot;
+    &quot;accountId&quot;: &quot;eb7f76df-d3ca-479f-b59e-741c287db1f9&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -107,18 +293,16 @@
   "keyToString": {
     "Application.Driver.executor": "Run",
     "Application.HelloApplication.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.Shini.Fonts in ShiniGo.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "aliBranch",
+    "git-widget-placeholder": "AfnanBranch",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ALYAMEN.PS/IdeaProjects/ShiniGo/src/main/resources/Shini/Sounds",
+    "last_opened_file_path": "C:/Users/12211/OneDrive/Desktop/ShiniGo1-Prj/src/main/resources/Shini/Images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -127,35 +311,37 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.38505748",
+    "project.structure.side.proportion": "0.53103447",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
+      <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\Images" />
+      <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\Styles" />
+      <recent name="C:\Users\12211\OneDrive\Desktop\ShiniGo1-Prj\src\main\resources\Shini\FXML" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Images" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Video" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\FXML" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="Shini" />
+      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Font" />
     </key>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -166,108 +352,30 @@
       <option name="presentableId" value="Default" />
       <updated>1734870993422</updated>
       <workItem from="1734870994549" duration="14001000" />
-      <workItem from="1734944944371" duration="8430000" />
-      <workItem from="1734958855494" duration="11257000" />
-      <workItem from="1735035073461" duration="11645000" />
-      <workItem from="1735135432422" duration="8115000" />
-      <workItem from="1735153347820" duration="1058000" />
-      <workItem from="1735154443878" duration="7236000" />
-      <workItem from="1735205657231" duration="3203000" />
-      <workItem from="1735220483273" duration="8008000" />
+      <workItem from="1734944944371" duration="3581000" />
+      <workItem from="1734971943900" duration="12234000" />
+      <workItem from="1735338701170" duration="24000" />
     </task>
-    <task id="LOCAL-00001" summary="Create Fonts Method to make it more readability">
+    <task id="LOCAL-00001" summary="create main scene">
       <option name="closed" value="true" />
-      <created>1734965273036</created>
+      <created>1734990605053</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1734965273036</updated>
+      <updated>1734990605053</updated>
     </task>
-    <task id="LOCAL-00002" summary="Create Fonts Method to make it more readability">
-      <option name="closed" value="true" />
-      <created>1734965456623</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1734965456623</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Create Fonts Method to make it more readability">
-      <option name="closed" value="true" />
-      <created>1734965483967</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1734965483967</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Create methods working as a button for back to login stage">
-      <option name="closed" value="true" />
-      <created>1734965530111</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1734965530111</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Delete Fonts codes that they are useless">
-      <option name="closed" value="true" />
-      <created>1734965546840</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1734965546840</updated>
-    </task>
-    <task id="LOCAL-00006" summary="aliTestCommit">
-      <option name="closed" value="true" />
-      <created>1734991176947</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1734991176947</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fxml load to login">
-      <option name="closed" value="true" />
-      <created>1735132688691</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1735132688691</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
-    <MESSAGE value="Create Fonts Method to make it more readability" />
-    <MESSAGE value="Create methods working as a button for back to login stage" />
-    <MESSAGE value="Delete Fonts codes that they are useless" />
-    <MESSAGE value="aliTestCommit" />
-    <MESSAGE value="Ch" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <MESSAGE value="fxml load to login" />
-    <option name="LAST_COMMIT_MESSAGE" value="fxml load to login" />
+    <MESSAGE value="create main scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="create main scene" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Shini/LoginController.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
