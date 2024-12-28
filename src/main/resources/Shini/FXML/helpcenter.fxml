@@ -16,7 +16,7 @@
          <children>
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="مركز المساعدة">
                <font>
-                  <Font name="Cairo Black Bold" size="18.0" />
+                  <Font name="Cairo Regular" size="18.0" />
                </font>
                <HBox.margin>
                   <Insets right="110.0" />
@@ -24,7 +24,7 @@
             </Label>
             <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle2.css" textAlignment="CENTER">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT">
+                  <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-left-arrow-48.png" />
                      </image>

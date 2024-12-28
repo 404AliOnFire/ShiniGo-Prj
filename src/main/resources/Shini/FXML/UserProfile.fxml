@@ -18,17 +18,17 @@
                <children>
                   <Label fx:id="usernamelb" alignment="CENTER" prefHeight="20.0" prefWidth="100.0" text="User Name">
                      <font>
-                        <Font name="Cairo Black" size="18.0" />
+                        <Font name="Cairo Regular" size="18.0" />
                      </font>
                   </Label>
                   <Label fx:id="phonenumlab" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="phone Number">
                      <font>
-                        <Font name="Cairo Black" size="18.0" />
+                        <Font name="Cairo Regular" size="18.0" />
                      </font>
                   </Label>
                </children>
             </VBox>
-            <ImageView fitHeight="150.0" fitWidth="150.0">
+            <ImageView fitHeight="150.0" fitWidth="150.0" preserveRatio="true">
                <image>
                   <Image url="@../Images/icons8-profile-picture-96.png" />
                </image>
@@ -54,7 +54,7 @@
             </Button>
             <Label fx:id="updaitprolab" text="تعديل الملف الشخصي">
                <font>
-                  <Font name="Cairo Black" size="12.0" />
+                  <Font name="Cairo Regular" size="12.0" />
                </font>
             </Label>
             <Button fx:id="updaitprobutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
@@ -62,7 +62,7 @@
                   <Insets right="7.0" />
                </HBox.margin>
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                  <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-identity-card-48.png" />
                      </image>
@@ -87,7 +87,7 @@
             </Button>
             <Label fx:id="chanpasslab" text="تغيير كلمة المرور">
                <font>
-                  <Font name="Cairo Black" size="12.0" />
+                  <Font name="Cairo Regular" size="12.0" />
                </font>
             </Label>
             <Button fx:id="chanpass1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
@@ -95,7 +95,7 @@
                   <Insets right="7.0" />
                </HBox.margin>
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                  <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-password-48.png" />
                      </image>
@@ -123,7 +123,7 @@
             </Button>
             <Label fx:id="locationlab" text="العنوان">
                <font>
-                  <Font name="Cairo Black" size="12.0" />
+                  <Font name="Cairo Regular" size="12.0" />
                </font>
             </Label>
             <Button fx:id="locationbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
@@ -131,7 +131,7 @@
                   <Insets right="7.0" />
                </HBox.margin>
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                  <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-location-48.png" />
                      </image>
@@ -149,7 +149,7 @@
          <children>
             <Label fx:id="deleteaccountlab" text="حذف الحساب">
                <font>
-                  <Font name="Cairo Black" size="12.0" />
+                  <Font name="Cairo Regular" size="12.0" />
                </font>
             </Label>
             <Button fx:id="deleteaccountbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">
@@ -157,7 +157,7 @@
                   <Insets right="7.0" />
                </HBox.margin>
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                  <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-denied-48.png" />
                      </image>
@@ -170,7 +170,7 @@
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="403.0" text="ملف المستخدم">
                <font>
-                  <Font name="Cairo Black Bold" size="18.0" />
+                  <Font name="Cairo Regular" size="18.0" />
                </font>
             </Label>
             <Button fx:id="backbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle2.css">

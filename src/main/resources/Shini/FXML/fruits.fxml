@@ -109,7 +109,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-user-32%20(1).png" />
+                              <Image url="@../Images/icons8-user-32 (1).png" />
                            </image>
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
@@ -123,7 +123,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-box-50%20(1).png" />
+                              <Image url="@../Images/icons8-box-50 (1).png" />
                            </image>
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
@@ -151,7 +151,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/black-home-32%20(1).png" />
+                              <Image url="@../Images/black-home-32 (1).png" />
                            </image>
                         </ImageView>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">
