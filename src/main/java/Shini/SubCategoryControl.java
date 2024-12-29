@@ -55,6 +55,7 @@ public class SubCategoryControl implements Initializable {
             vboxSubCategory.getStylesheets().add(css);
 
             vboxSubCategory.setOnMouseClicked(event -> {
+                System.out.println("Helk");
                 subCatGrid.getChildren().clear();
                 for (int j = 0; j < subCategoryCount; j++) {
                     VBox otherVBox = (VBox) subHB.getChildren().get(j);
@@ -71,65 +72,67 @@ public class SubCategoryControl implements Initializable {
                 DatabaseHelper databaseHelper = new DatabaseHelper();
                 String subCategoryName = ((Text)vboxSubCategory.getChildren().get(0)).getText();
 
+                System.out.println(subCategoryName);
                 List<Product> productsOfSubCategory = databaseHelper.getProductsOfSubCategory(subCategoryName);
 
                 int column = 0;
                 int row = 0;
                 try{
-                    for(Product product : productsOfSubCategory){
-
-                        ImageView productImg = new ImageView(new Image(product.getImagePath()));
-                        productImg.setFitHeight(200);
-                        productImg.setFitWidth(200);
-                        Text productDesc = new Text(product.getDescription());
-                        productDesc.setTextAlignment(TextAlignment.RIGHT);
-                        productDesc.setFont(Font.font("Cairo SemiBold", 15));
-
-                        Text isBoycott = new Text();
-                        isBoycott.setTextAlignment(TextAlignment.RIGHT);
-                        isBoycott.setFont(Font.font("Cairo SemiBold"));
-                        isBoycott.setStyle("-fx-text-fill: darkred ");
-                        isBoycott.setFont(Font.font("Cairo SemiBold", 17));
-
-                        if (product.isBoycott())
-                            isBoycott.setText("مقاطع");
-
-                        Text numOfCalories = new Text( product.getCalories()+" cal");
-                        numOfCalories.setTextAlignment(TextAlignment.RIGHT);
-                        numOfCalories.setFont(Font.font("Cairo SemiBold"));
-                        numOfCalories.setFont(Font.font("Cairo SemiBold", 16));
-
-                        Text price = new Text(product.getPrice()+" ILS");
-                        price.setTextAlignment(TextAlignment.RIGHT);
-                        price.setFont(Font.font("Cairo SemiBold", 20));
-
-                        ImageView addIcon = new ImageView(new Image("C:\\Users\\Hanad\\IdeaProjects\\ShiniGo-Prj\\src\\main\\resources\\Shini\\Images\\icons8-add-50.png"));
-                        addIcon.setFitHeight(30);
-                        addIcon.setFitWidth(30);
-
-                        HBox hBox = new HBox(100, price, addIcon);
-
-//                        if(product.getOfferID() != null){
-//                            Text discountPrice = new Text(product.getPrice()+" ILS");
-//                            discountPrice.setTextAlignment(TextAlignment.RIGHT);
-//                            discountPrice.setFont(Font.font("Cairo SemiBold", 20));
+//                    for(Product product : productsOfSubCategory){
+//
+//                        ImageView productImg = new ImageView(new Image(product.getImagePath()));
+//                        productImg.setFitHeight(200);
+//                        productImg.setFitWidth(200);
+//                        Text productDesc = new Text(product.getDescription());
+//                        productDesc.setTextAlignment(TextAlignment.RIGHT);
+//                        productDesc.setFont(Font.font("Cairo SemiBold", 15));
+//
+//                        Text isBoycott = new Text();
+//                        isBoycott.setTextAlignment(TextAlignment.RIGHT);
+//                        isBoycott.setFont(Font.font("Cairo SemiBold"));
+//                        isBoycott.setStyle("-fx-text-fill: darkred ");
+//                        isBoycott.setFont(Font.font("Cairo SemiBold", 17));
+//
+//                        if (product.isBoycott())
+//                            isBoycott.setText("مقاطع");
+//
+//                        Text numOfCalories = new Text( product.getCalories()+" cal");
+//                        numOfCalories.setTextAlignment(TextAlignment.RIGHT);
+//                        numOfCalories.setFont(Font.font("Cairo SemiBold"));
+//                        numOfCalories.setFont(Font.font("Cairo SemiBold", 16));
+//
+//                        Text price = new Text(product.getPrice()+" ILS");
+//                        price.setTextAlignment(TextAlignment.RIGHT);
+//                        price.setFont(Font.font("Cairo SemiBold", 20));
+//
+//                        ImageView addIcon = new ImageView(new Image("C:\\Users\\Hanad\\IdeaProjects\\ShiniGo-Prj\\src\\main\\resources\\Shini\\Images\\icons8-add-50.png"));
+//                        addIcon.setFitHeight(30);
+//                        addIcon.setFitWidth(30);
+//
+//                        HBox hBox = new HBox(100, price, addIcon);
+//
+////                        if(product.getOfferID() != null){
+////                            Text discountPrice = new Text(product.getPrice()+" ILS");
+////                            discountPrice.setTextAlignment(TextAlignment.RIGHT);
+////                            discountPrice.setFont(Font.font("Cairo SemiBold", 20));
+////                        }
+//
+//
+//
+//                        VBox vBox = new VBox(5);
+////                        vBox.getStylesheets().add(style);
+//                        vBox.setAlignment(Pos.CENTER);
+//                        vBox.getChildren().addAll(productImg, productDesc,numOfCalories, isBoycott, hBox);
+//
+//
+//                        if(column == 2){
+//                            column = 0;
+//                            ++row;
 //                        }
-
-
-
-                        VBox vBox = new VBox(5);
-//                        vBox.getStylesheets().add(style);
-                        vBox.setAlignment(Pos.CENTER);
-                        vBox.getChildren().addAll(productImg, productDesc,numOfCalories, isBoycott, hBox);
-
-
-                        if(column == 2){
-                            column = 0;
-                            ++row;
-                        }
-                        subCatGrid.add(vBox, column++, row);
-                        subCatGrid.setMargin(vBox, new Insets(30));
-                    }
+//                        subCatGrid.add(vBox, column++, row);
+//                        System.out.println("added");
+//                        subCatGrid.setMargin(vBox, new Insets(30));
+//                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
