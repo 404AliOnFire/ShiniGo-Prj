@@ -14,21 +14,27 @@
          <children>
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="هل أنت متأكد؟">
                <font>
-                  <Font name="Cairo Black Bold" size="24.0" />
+                  <Font name="Cairo Regular" size="24.0" />
                </font>
             </Label>
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="251.0" text="لتأكيد حذف حسابك,انقر فوق &quot;تأكيد&quot;">
                <font>
-                  <Font name="Cairo Black" size="14.0" />
+                  <Font name="Cairo Regular" size="14.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="cancle" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/CancleButton.css" text="الغاء" />
+                  <Button fx:id="cancle" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/CancleButton.css" text="الغاء">
+                     <font>
+                        <Font name="Cairo Regular" size="12.0" />
+                     </font></Button>
                   <Button fx:id="confirm" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/ConfirmButton.css" text="تأكيد">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Cairo Regular" size="12.0" />
+                     </font>
                   </Button>
                </children>
             </HBox>

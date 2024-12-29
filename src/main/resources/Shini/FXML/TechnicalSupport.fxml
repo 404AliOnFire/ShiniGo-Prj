@@ -15,7 +15,7 @@
          <children>
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="الدعم الفني">
                <font>
-                  <Font name="Cairo Black Bold" size="18.0" />
+                  <Font name="Cairo Regular" size="18.0" />
                </font>
                <HBox.margin>
                   <Insets right="120.0" />
@@ -23,7 +23,7 @@
             </Label>
             <Button fx:id="back2button" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle2.css" textAlignment="CENTER">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT">
+                  <ImageView fitHeight="30.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-left-arrow-48.png" />
                      </image>
@@ -36,12 +36,12 @@
          </children></HBox>
       <Label alignment="CENTER" layoutX="118.0" layoutY="156.0" prefHeight="142.0" prefWidth="296.0" text="تواصل معنا عبر الرقم التالي">
          <font>
-            <Font name="Cairo Black Bold" size="24.0" />
+            <Font name="Cairo Regular" size="20.0" />
          </font>
       </Label>
       <Label alignment="CENTER" layoutX="154.0" layoutY="298.0" prefHeight="103.0" prefWidth="192.0" text="+790 593749537">
          <font>
-            <Font name="Cairo Black Bold" size="24.0" />
+            <Font name="Cairo Regular" size="20.0" />
          </font>
       </Label>
    </children>

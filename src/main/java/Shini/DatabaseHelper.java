@@ -71,8 +71,6 @@ public class DatabaseHelper {
 
     }
 
-//    private Connection connection;
-
     public List<Category> getAllCategories(){
         List<Category> categories = new ArrayList<Category>();
 //        Category(String name, String type, int numOfSubcategory, String imagePath)
@@ -91,4 +89,48 @@ public class DatabaseHelper {
 
         return categories;
     }
+
+    public List<Product> getProductsOfSubCategory(String subCategoryName){
+        List<Product> products = new ArrayList<Product>();
+//        Product(int barcode, String name, String type, String endD, String srtartD, double price, int calories,
+//                   String description, boolean boycott, boolean isEdible, int subcategoryID, Integer offerID, String imagePath)
+        String query = "SELECT P.barcode, P.name, P.type, P.endD, P.srtartD, P.price, P.calories, P.description, " +
+                "P.boycott, P.isEdible, P.subcategory_ID, P.offer_ID, P.image_path " +
+                "FROM Category C " +
+                "JOIN SubCategory SC ON C.ID = SC.category_ID " +
+                "JOIN Product P ON SC.ID = P.subcategory_ID " +
+                "WHERE SC.name LIKE ?;";
+
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
+
+            pstmt.setString(1, "%" + subCategoryName + "%");
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                products.add(new Product(
+                        rs.getInt("barcode"),
+                        rs.getString("name"),
+                        rs.getString("type"),
+                        rs.getDate("endD"),
+                        rs.getDate("srtartD"),
+                        rs.getDouble("price"),
+                        rs.getInt("calories"),
+                        rs.getString("description"),
+                        rs.getBoolean("boycott"),
+                        rs.getBoolean("isEdible"),
+                        rs.getInt("subcategory_ID"),
+                        rs.getObject("offer_ID") != null ? rs.getInt("offer_ID") : null,
+                        rs.getString("image_path")
+                ));
+            }
+
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return products;
+    }
+
+
+
 }
