@@ -22,6 +22,42 @@ public class DatabaseHelper {
         return exists;
     }
 
+    public static Product getProductByBarcode(int barcode) {
+        Product product = null;
+
+        String query = "SELECT barcode, name, type, endD, srtartD, price, calories, description, boycott, isEdible, Subcategory_ID, Offer_ID, image_path FROM product WHERE barcode = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, barcode);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    String name = resultSet.getString("name");
+                    String type = resultSet.getString("type");
+                    Date endD = resultSet.getDate("endD");
+                    Date srtartD = resultSet.getDate("srtartD");
+                    double price = resultSet.getDouble("price");
+                    int calories = resultSet.getInt("calories");
+                    String description = resultSet.getString("description");
+                    boolean boycott = resultSet.getBoolean("boycott");
+                    boolean isEdible = resultSet.getBoolean("isEdible");
+                    int subcategoryID = resultSet.getInt("Subcategory_ID");
+                    Integer offerID = resultSet.getObject("Offer_ID") != null ? resultSet.getInt("Offer_ID") : null;
+                    String imagePath = resultSet.getString("image_path");
+
+                    product = new Product(barcode, name, type, endD, srtartD, price, calories, description, boycott, isEdible, subcategoryID, offerID, imagePath);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return product;
+    }
+
     public static String getUserName(String phone, String password) {
          String userName = "";
          String query = "SELECT Name FROM customer WHERE Phone = ? AND Password = ?";
