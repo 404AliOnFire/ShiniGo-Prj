@@ -8,6 +8,21 @@
     -fx-alignment: center;
 }
 
+/* Styling for the HBox (search bar) */
+.hboxTitle {
+    -fx-background-color: white;
+    /*-fx-background-radius: 15;*/
+    /*-fx-border-radius: 40;*/
+
+    -fx-alignment: center;
+}
+
+.hboxWhite {
+    -fx-background-color: White;
+    -fx-background-radius: 15;
+    -fx-border-radius: 40;
+    -fx-alignment: center;
+}
 /* Styling for the icons */
 .label {
     -fx-font-family: 'Font Awesome 6 Free Solid';
@@ -17,8 +32,10 @@
 
 /* Styling for the search field */
 .text-field {
-    -fx-background-color: transparent;
-    -fx-border-width: 0;
+    -fx-background-color: #f6f6f6;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
     -fx-text-fill: #000000;
     -fx-prompt-text-fill: black; /* Sets the prompt text color to black */
     -fx-font-family: 'Cairo';   /* Changes the font to Cairo */
@@ -30,4 +47,13 @@
     -fx-background-color: white;
     -fx-background-radius: 8; /* حواف مستديرة */
     -fx-padding: 10; /* مساحة داخلية */
+}
+
+.notification-label {
+    -fx-background-color: #FF4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 50%;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
 }
