@@ -80,7 +80,7 @@
                         </ImageView>
                      </children>
                   </StackPane>
-                  <Label fx:id="countProductLabel" layoutX="95.0" layoutY="-4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="notification-label" stylesheets="@../Styles/style.css" text="1">
+                  <Label fx:id="countProductLabel" layoutX="95.0" layoutY="-4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="notification-label" stylesheets="@../Styles/style.css" text="0" visible="false">
                      <font>
                         <Font size="1.0" />
                      </font>
@@ -288,7 +288,7 @@
                                           <Font name="Cairo Bold" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Text fx:id="failedSendOrder" accessibleRole="BUTTON" fill="#bb0000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="Operation" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="422.33537244796753">
+                                    <Text fx:id="failedSendOrder" accessibleRole="BUTTON" fill="#bb0000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="Operation" textAlignment="CENTER" textOrigin="CENTER" visible="false" wrappingWidth="422.33537244796753">
                                        <font>
                                           <Font name="Cairo SemiBold" size="18.0" />
                                        </font>

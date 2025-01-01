@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="add methods database helper test">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/CartController.java" afterDir="false" />
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="add methods database helper v2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Admin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/branch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/businessman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/customer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/logout (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/AdminStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -142,6 +152,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Images" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
@@ -198,7 +209,7 @@
       <workItem from="1735594004137" duration="5741000" />
       <workItem from="1735636715468" duration="21432000" />
       <workItem from="1735667101575" duration="317000" />
-      <workItem from="1735726929878" duration="6219000" />
+      <workItem from="1735726929878" duration="14276000" />
     </task>
     <task id="LOCAL-00001" summary="Create Fonts Method to make it more readability">
       <option name="closed" value="true" />
@@ -312,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735733043590</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add methods database helper v2">
+      <option name="closed" value="true" />
+      <created>1735733296212</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735733296212</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +362,8 @@
     <MESSAGE value="Upload images" />
     <MESSAGE value="update main and add classes" />
     <MESSAGE value="add methods database helper test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add methods database helper test" />
+    <MESSAGE value="add methods database helper v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add methods database helper v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
