@@ -1,10 +1,14 @@
 package Shini;
 
+import io.github.palexdev.materialfx.controls.MFXRadioButton;
+import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -15,25 +19,44 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.security.cert.PolicyNode;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.sql.Date;
 import java.util.HashMap;
 
 public class CartController {
     public static HashMap<Product, Integer> myCartHash = new HashMap<Product, Integer>();
-    double totalPriceNum = 0;
+    static double totalPriceNum = 0;
     public static int countOfProducts = 0;
     int indexOfProduct = 0;
     public final String CURRENCY = "₪ ";
 
+    private static CartController instance = new CartController();
     @FXML
     private VBox account;
+
+    @FXML
+    private Text failedSendOrder;
 
     @FXML
     private VBox account1;
 
     @FXML
+    private Text totalPrice1;
+
+    @FXML
     public  VBox listProductVbox;
+
+    @FXML
+    public  VBox itemsInCartVBox;
+
+    @FXML
+    private MFXRadioButton onlineButton;
+
+    @FXML
+    private MFXRadioButton shopButton;
 
     @FXML
     private VBox cart;
@@ -57,10 +80,25 @@ public class CartController {
     private VBox order1;
 
     @FXML
+    private MFXTextField cityTextField;
+
+    @FXML
+    private Text textID;
+
+    @FXML
+    private ToggleGroup toggleButtonsSO;
+
+    @FXML
+    private MFXTextField addressTextField;
+
+    @FXML
     private Text price;
 
     @FXML
     private HBox productHbox;
+
+    @FXML
+    private VBox confirmOrderVBox;
 
     @FXML
     private Text productName;
@@ -75,10 +113,10 @@ public class CartController {
     private Label countProductLabel;
 
     @FXML
-    private AnchorPane myCart;
+    public AnchorPane myCart;
 
     @FXML
-    private AnchorPane myEmptyCart;
+    public AnchorPane myEmptyCart;
 
     @FXML
     private ImageView boldAccount;
@@ -109,9 +147,14 @@ public class CartController {
 
 
     @FXML
-    public void initialize() {
-        Product product = DatabaseHelper.getProductByBarcode(5);
-        addProductToCart(product);
+    public void initialize() throws IOException {
+        List<Product> productsInCart = DatabaseHelper.getProductsInCart(customerId);
+
+        // إضافة المنتجات إلى السلة
+        for (Product product : productsInCart) {
+            addProductToCart(product);
+        }
+
 //        panes.put("main", mainPane);
         panes.put("cart", myCart);
         panes.put("emptyCart", myEmptyCart);
@@ -130,16 +173,19 @@ public class CartController {
         }
     }
 
-    public void addProductToCart(Product product) {
+    public void addProductToCart(Product product) throws IOException {
+        ProductInCart productInCart = new ProductInCart(product, indexOfProduct, this);
 
-        ProductInCart productInCart = new ProductInCart(product, indexOfProduct);
         myCartHash.put(product, 1);
         countOfProducts++;
         indexOfProduct++;
 
-        HBox hboxProduct = productInCart.getProductHBox();
-        listProductVbox.setPrefHeight(listProductVbox.getPrefHeight() + 100);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Shini/FXML/productInCart.fxml"));
+        loader.setController(productInCart);
+        HBox hboxProduct = loader.load();
+
         listProductVbox.getChildren().add(hboxProduct);
+        listProductVbox.setPrefHeight(listProductVbox.getPrefHeight() + 100);
 
         countProductLabel.setText(countOfProducts + "");
         countProductLabel.setVisible(true);
@@ -196,8 +242,13 @@ public class CartController {
         myEmptyCart.setVisible(true);
     }
 
-
-
+    public void setTotalPrice(double totalPrice){
+        totalPriceNum = totalPrice;
+        this.totalPrice.setText(CURRENCY + totalPriceNum);
+    }
+    public static double getTotalPrice(){
+        return totalPriceNum;
+    }
 
     @FXML
     void accountUI(MouseEvent event) {
@@ -237,6 +288,34 @@ public class CartController {
 
     @FXML
     void confirmButton(ActionEvent event) {
+        itemsInCartVBox.setVisible(false);
+        confirmOrderVBox.setVisible(true);
+        totalPrice1.setText(totalPrice.getText());
+        textID.setText("تاكيد الطلب");
+    }
+
+    @FXML
+    void sendOrder(MouseEvent event) {
+        //check
+        if(!toggleButtonsSO.getSelectedToggle().isSelected()
+           || cityTextField.getText().isEmpty()
+                || addressTextField.getText().isEmpty()){
+            failedSendOrder.setText("الرجاء إملاء البيانات");
+            failedSendOrder.setVisible(true);
+            return;
+        }
+        boolean online = false;
+        online = toggleButtonsSO.getSelectedToggle().equals(onlineButton);
+
+        String city = cityTextField.getText();
+        String address = addressTextField.getText();
+        String receiving = online ? "اونلاين" : "المتجر";
+        Date requestDate = new Date(System.currentTimeMillis()); // Initialize request date at the button press
+        Date arrivalDate = calculateArrivalDate(requestDate); // Calculate arrival date (optional logic)
+        String status = "تمت الموافقة"; // Example status
+
+
+        DatabaseHelper.sendOrder(requestDate, arrivalDate, status, getTotalPrice(), city + ", " + address, countOfProducts, receiving, null, LoginController.customerId);
 
     }
 
@@ -254,6 +333,12 @@ public class CartController {
         boldOrder.setVisible(false);
     }
 
+    private static Date calculateArrivalDate(Date requestDate) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(requestDate);
+        calendar.add(Calendar.DAY_OF_MONTH, 3); // Add 3 days
+        return new Date(calendar.getTimeInMillis());
+    }
 
 //    public void addButton(ActionEvent actionEvent) {
 //        numberOfProduct.setText(String.valueOf(Integer.parseInt(numberOfProduct.toString()) + 1));

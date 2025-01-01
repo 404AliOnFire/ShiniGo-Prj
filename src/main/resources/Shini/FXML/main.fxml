@@ -139,9 +139,9 @@
    <center>
       <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="657.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="myCart" cache="true" layoutX="3.226890652860412" layoutY="-100.84033290188788" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="659.0" style="-fx-background-color: #f6f6f6;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-101.0">
+            <AnchorPane fx:id="myCart" cache="true" layoutX="3.226890652860412" layoutY="-100.84033290188788" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="659.0" style="-fx-background-color: #f6f6f6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-101.0">
                 <children>
-                    <VBox fx:id="itemsInCartVBox" layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                    <VBox fx:id="itemsInCartVBox" layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="648.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
                         <children>
                         <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="34.0" prefWidth="495.0" spacing="10.0" styleClass="hbox" stylesheets="@../Styles/style.css">
                            <children>
@@ -172,65 +172,12 @@
                         </HBox>
                         <MFXScrollPane hbarPolicy="NEVER" prefHeight="319.0" prefWidth="655.0" trackColor="#331e1e" vbarPolicy="NEVER">
                            <content>
-                              <VBox fx:id="listProductVbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="246.0" prefWidth="651.0" style="-fx-background-color: #f6f6f6;" visible="false">
-                                 <children>
-                                    <HBox fx:id="productHbox" prefHeight="56.0" prefWidth="662.0" styleClass="hbox" stylesheets="@../Styles/style.css">
-                                       <VBox.margin>
-                                          <Insets bottom="5.0" />
-                                       </VBox.margin>
-                                       <children>
-                                          <AnchorPane prefHeight="99.0" prefWidth="655.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css">
-                                             <children>
-                                                <Text fx:id="price" layoutX="388.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 7.5" textAlignment="RIGHT" wrappingWidth="126.38846206665039">
-                                                   <font>
-                                                      <Font name="Cairo Regular" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <Text fx:id="productName" layoutX="223.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اسم العنصر" textAlignment="RIGHT" textOrigin="BOTTOM" wrappingWidth="299.51498794555664">
-                                                   <font>
-                                                      <Font name="Cairo Regular" size="15.0" />
-                                                   </font>
-                                                </Text>
-                                                <ImageView fx:id="productImage" fitHeight="104.0" fitWidth="96.0" layoutX="544.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../Images/ShiniLogo.png" />
-                                                   </image>
-                                                </ImageView>
-                                                <Text fill="#a39e9e" layoutX="481.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="piece" wrappingWidth="40.176002502441406">
-                                                   <font>
-                                                      <Font name="Cairo Regular" size="15.0" />
-                                                   </font>
-                                                </Text>
-                                                <HBox alignment="CENTER" layoutX="37.0" layoutY="32.0" prefHeight="40.0" prefWidth="146.0" spacing="15.0">
-                                                   <children>
-                                                      <MFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="57.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.8" text="-" textAlignment="CENTER">
-                                                         <font>
-                                                            <Font name="System Bold" size="17.0" />
-                                                         </font>
-                                                      </MFXButton>
-                                                      <Text fx:id="numberOfProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="10.26016616821289">
-                                                         <font>
-                                                            <Font name="Cairo Regular" size="14.0" />
-                                                         </font>
-                                                      </Text>
-                                                      <MFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="57.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.8" text="+" textAlignment="CENTER">
-                                                         <font>
-                                                            <Font name="System Bold" size="17.0" />
-                                                         </font>
-                                                      </MFXButton>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </AnchorPane>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
+                              <VBox fx:id="listProductVbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="246.0" prefWidth="651.0" style="-fx-background-color: #f6f6f6;" />
                            </content>
                         </MFXScrollPane>
                         <VBox alignment="CENTER" prefHeight="257.0" prefWidth="655.0">
                            <children>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="482.0">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="151.0" prefWidth="490.0">
                                  <children>
                                     <Text layoutX="334.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="المجموع">
                                        <font>
@@ -245,7 +192,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Button>
-                                    <Text fx:id="totalPrice" layoutX="78.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 7.5">
+                                    <Text fx:id="totalPrice" layoutX="78.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 0.0">
                                        <font>
                                           <Font name="Cairo Regular" size="22.0" />
                                        </font>
@@ -256,20 +203,8 @@
                         </VBox>
                         </children>
                     </VBox>
-                  <VBox fx:id="confirmOrderVBox" layoutX="13.0" layoutY="9.0" prefHeight="595.0" prefWidth="499.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox fx:id="confirmOrderVBox" layoutX="13.0" layoutY="9.0" prefHeight="595.0" prefWidth="499.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTitle" stylesheets="@../Styles/style.css">
-                           <children>
-                              <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="تاكيد الطلب" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="490.1000061035156">
-                                 <font>
-                                    <Font name="Cairo SemiBold" size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="-2.0" />
-                                 </HBox.margin>
-                              </Text>
-                           </children>
-                        </HBox>
                         <VBox prefHeight="77.0" prefWidth="499.0">
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="499.0">
@@ -279,7 +214,7 @@
                                           <Font name="Cairo Regular" size="22.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="177.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 7.5">
+                                    <Text fx:id="totalPrice1" layoutX="177.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 0.0">
                                        <font>
                                           <Font name="Cairo Regular" size="22.0" />
                                        </font>
@@ -288,9 +223,9 @@
                               </AnchorPane>
                            </children>
                         </VBox>
-                        <AnchorPane prefHeight="204.0" prefWidth="647.0">
+                        <AnchorPane prefHeight="343.0" prefWidth="656.0">
                            <children>
-                              <VBox alignment="CENTER" layoutX="111.0" layoutY="3.0" prefHeight="361.0" prefWidth="407.0">
+                              <VBox alignment="CENTER" layoutX="111.0" layoutY="-11.0" prefHeight="393.0" prefWidth="424.0" spacing="10.0" AnchorPane.bottomAnchor="-38.0" AnchorPane.topAnchor="-11.0">
                                  <children>
                                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                        <children>
@@ -299,7 +234,7 @@
                                                 <Font name="Cairo SemiBold" size="18.0" />
                                              </font>
                                           </Text>
-                                          <MFXTextField alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="236.0">
+                                          <MFXTextField fx:id="cityTextField" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="236.0">
                                              <font>
                                                 <Font name="Cairo Regular" size="20.0" />
                                              </font>
@@ -334,25 +269,30 @@
                                           </HBox>
                                        </children>
                                     </HBox>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                                        <children>
                                           <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="العنوان" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="117.39420318603516">
                                              <font>
                                                 <Font name="Cairo SemiBold" size="18.0" />
                                              </font>
                                           </Text>
-                                          <MFXTextField alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="236.0">
+                                          <MFXTextField fx:id="addressTextField" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="236.0">
                                              <font>
                                                 <Font name="Cairo Bold" size="20.0" />
                                              </font>
                                           </MFXTextField>
                                        </children>
                                     </VBox>
-                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="53.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="337.0" styleClass="header-bar" stylesheets="@../Styles/confirmOrder.css" text="ارسال" textFill="WHITE">
+                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="53.0" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#sendOrder" prefHeight="65.0" prefWidth="337.0" styleClass="header-bar" stylesheets="@../Styles/confirmOrder.css" text="ارسال" textFill="WHITE">
                                        <font>
                                           <Font name="Cairo Bold" size="18.0" />
                                        </font>
                                     </Button>
+                                    <Text fx:id="failedSendOrder" accessibleRole="BUTTON" fill="#bb0000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="Operation" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="422.33537244796753">
+                                       <font>
+                                          <Font name="Cairo SemiBold" size="18.0" />
+                                       </font>
+                                    </Text>
                                  </children>
                               </VBox>
                            </children>
