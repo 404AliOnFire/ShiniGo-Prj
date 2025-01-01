@@ -132,5 +132,62 @@ public class DatabaseHelper {
     }
 
 
+    public List<Order> getOrders(String phone){
+        List<Order> orders = new ArrayList<Order>();
+        String query = "SELECT O.ID, O.requestdate, O.arrivaldate, O.status, O.totalprice, O.destination, O.numofproducts,O.receiving, O.SSN, O.Customer_ID FROM orderr O, Customer C " +
+                "WHERE C.Phone LIKE ? " +
+                "AND O.Customer_ID = C.Customer_ID " +
+                "AND O.receiving LIKE 'اونلاين';";
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
+            pstmt.setString(1, "%" + phone + "%");
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                orders.add(new Order(
+                      rs.getInt("ID"),
+                        rs.getDate("requestdate"),
+                        rs.getDate("arrivaldate"),
+                        rs.getString("status"),
+                        rs.getDouble("totalprice"),
+                        rs.getString("destination"),
+                        rs.getInt("numofproducts"),
+                        rs.getString("receiving"),
+                        rs.getInt("SSN"),
+                        rs.getInt("Customer_ID")
+                ));
+            }
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
 
+        return orders;
+    }
+    public List<Order> getOrders1(String phone){
+        List<Order> orders = new ArrayList<Order>();
+        String query = "SELECT O.ID, O.requestdate, O.arrivaldate, O.status, O.totalprice, O.destination, O.numofproducts,O.receiving, O.SSN, O.Customer_ID FROM orderr O, Customer C " +
+                "WHERE C.Phone LIKE ? " +
+                "AND O.Customer_ID = C.Customer_ID " +
+                "AND O.receiving LIKE 'المتجر';";
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
+            pstmt.setString(1, "%" + phone + "%");
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                orders.add(new Order(
+                        rs.getInt("ID"),
+                        rs.getDate("requestdate"),
+                        rs.getDate("arrivaldate"),
+                        rs.getString("status"),
+                        rs.getDouble("totalprice"),
+                        rs.getString("destination"),
+                        rs.getInt("numofproducts"),
+                        rs.getString("receiving"),
+                        rs.getInt("SSN"),
+                        rs.getInt("Customer_ID")
+                ));
+            }
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return orders;
+    }
 }

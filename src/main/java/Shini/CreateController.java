@@ -35,6 +35,10 @@ public class CreateController implements Initializable {
     @FXML
     private TextField phoneTF;
 
+    public TextField getPhoneTF() {
+        return phoneTF;
+    }
+
     @FXML
     private Text successText;
 
