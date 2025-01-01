@@ -5,92 +5,254 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper {
-    public static boolean checkUserExists(String phone, String password) {
-        boolean exists = false;
-        String query = "SELECT * FROM customer WHERE Phone =? AND Password =?";
+     public static boolean checkUserExists(String phone, String password) {
+         boolean exists = false;
+         String query = " SELECT * FROM customer WHERE Phone =? AND Password =?";
+
+         try (Connection con = DatabaseConnection.getConnection()) {
+             PreparedStatement pstmt = con.prepareStatement(query);
+             pstmt.setString(1, phone);
+             pstmt.setString(2, password);
+             ResultSet resultSet = pstmt.executeQuery();
+             exists = resultSet.next();
+
+         } catch (SQLException e) {
+             throw new RuntimeException(e);
+         }
+
+         return exists;
+     }
+
+    public static List<Product> getProductsInCart(int customerId) {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT p.* FROM product p " +
+                "JOIN shoppingcart2product sp ON p.barcode = sp.barcode " +
+                "JOIN shoppingcart sc ON sc.Cart_ID = sp.Cart_ID " +
+                "WHERE sc.Customer_ID = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, customerId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    Product product = new Product(
+                            resultSet.getInt("barcode"),
+                            resultSet.getString("name"),
+                            resultSet.getString("type"),
+                            resultSet.getDate("endD"),
+                            resultSet.getDate("srtartD"),
+                            resultSet.getDouble("price"),
+                            resultSet.getInt("calories"),
+                            resultSet.getString("description"),
+                            resultSet.getBoolean("boycott"),
+                            resultSet.getBoolean("isEdible"),
+                            resultSet.getInt("Subcategory_ID"),
+                            resultSet.getObject("Offer_ID", Integer.class),
+                            resultSet.getString("image_path")
+                    );
+                    products.add(product);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+    public static boolean isCartNotEmpty(int customerId) {
+        String query = "SELECT COUNT(*) AS product_count FROM shoppingcart2product sp " +
+                "JOIN shoppingcart sc ON sp.Cart_ID = sc.Cart_ID " +
+                "WHERE sc.Customer_ID = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, customerId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getInt("product_count") > 0;
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static void initializeCart(int customerId, CartController cartController) {
+        List<Product> productsInCart = getProductsInCart(customerId);
+
+        for (Product product : productsInCart) {
+            try {
+                cartController.addProductToCart(product);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    public static Product getProductByBarcode(int barcode) {
+        Product product = null;
+
+        String query = "SELECT barcode, name, type, endD, srtartD, price, calories, description, boycott, isEdible, Subcategory_ID, Offer_ID, image_path FROM product WHERE barcode = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, barcode);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    String name = resultSet.getString("name");
+                    String type = resultSet.getString("type");
+                    Date endD = resultSet.getDate("endD");
+                    Date srtartD = resultSet.getDate("srtartD");
+                    double price = resultSet.getDouble("price");
+                    int calories = resultSet.getInt("calories");
+                    String description = resultSet.getString("description");
+                    boolean boycott = resultSet.getBoolean("boycott");
+                    boolean isEdible = resultSet.getBoolean("isEdible");
+                    int subcategoryID = resultSet.getInt("Subcategory_ID");
+                    Integer offerID = resultSet.getObject("Offer_ID") != null ? resultSet.getInt("Offer_ID") : null;
+                    String imagePath = resultSet.getString("image_path");
+
+                    product = new Product(barcode, name, type, endD, srtartD, price, calories, description, boycott, isEdible, subcategoryID, offerID, imagePath);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return product;
+    }
+
+    public static String getUserName(String phone, String password) {
+        String userName = "";
+        String query = "SELECT Name FROM customer WHERE Phone = ? AND Password = ?";
 
         try (Connection con = DatabaseConnection.getConnection()) {
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, phone);
             pstmt.setString(2, password);
             ResultSet resultSet = pstmt.executeQuery();
-            exists = resultSet.next();
+            if (resultSet.next()) {
+                userName = resultSet.getString("Name");
+            }
+            return userName;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+     public static boolean checkPhoneExists(String phone) {
+         boolean exists = false;
+         String query = "SELECT * FROM customer WHERE Phone =?";
+
+         try (Connection con = DatabaseConnection.getConnection()) {
+             PreparedStatement pstmt = con.prepareStatement(query);
+             pstmt.setString(1, phone);
+             ResultSet resultSet = pstmt.executeQuery();
+             exists = resultSet.next();
+         } catch (SQLException e) {
+             throw new RuntimeException(e);
+         }
+         return exists;
+     }
+
+    public static void createAccount(String name, String phone, String gender, String password) {
+        String query = "INSERT INTO customer (Name, Password, Phone, Gender, CouponCode) " +
+                "VALUES (?,?,?,?,NULL)";
+
+        try (Connection con = DatabaseConnection.getConnection()) {
+            PreparedStatement pstmt = con.prepareStatement(query);
+            pstmt.setString(1, name);
+            pstmt.setString(2, password);
+            pstmt.setString(3, phone);
+            pstmt.setString(4, gender);
+            pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return exists;
-    }
+     }
 
-    public static String getUserName(String phone, String password) {
-         String userName = "";
-         String query = "SELECT Name FROM customer WHERE Phone = ? AND Password = ?";
-
-         try(Connection con = DatabaseConnection.getConnection()) {
-             PreparedStatement pstmt = con.prepareStatement(query);
-             pstmt.setString(1, phone);
-             pstmt.setString(2, password);
-             ResultSet resultSet = pstmt.executeQuery();
-             if(resultSet.next()) {
-                 userName = resultSet.getString("Name");
-             }
-            return userName;
-         } catch (SQLException e) {
-             throw new RuntimeException(e);
-         }
-    }
-
-    public static boolean checkPhoneExists(String phone) {
-        boolean exists = false;
-        String query = "SELECT * FROM customer WHERE Phone =?";
+    public static int getCustomerId(String phone, String password) {
+        String query = "SELECT Customer_ID FROM customer WHERE Phone =? AND Password =?";
 
         try (Connection con = DatabaseConnection.getConnection()) {
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, phone);
+            pstmt.setString(2, password);
             ResultSet resultSet = pstmt.executeQuery();
-            exists = resultSet.next();
+            if(resultSet.next()) {
+                return resultSet.getInt("Customer_ID");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return exists;
+        return -1;
+        }
+
+    public static void sendOrder(Date requestDate, Date arrivalDate, String status, double totalPrice,
+                                 String destination, int numOfProducts,String receving, Integer ssn, int customerId) {
+
+
+        String query = "INSERT INTO orderr (requestdate, arrivaldate, status, totalprice, destination, numofproducts,receving, SSN, Customer_ID) "
+                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+
+            pstmt.setDate(1, new java.sql.Date(requestDate.getTime()));
+            pstmt.setDate(2, new java.sql.Date(arrivalDate.getTime()));
+            pstmt.setString(3, status);
+            pstmt.setDouble(4, totalPrice);
+            pstmt.setString(5, destination);
+            pstmt.setInt(6, numOfProducts);
+            pstmt.setString(7, receving);
+
+
+            if (ssn == null) {
+                pstmt.setNull(8, java.sql.Types.INTEGER);
+            } else {
+                pstmt.setInt(8, ssn);
+            }
+
+            pstmt.setInt(9, customerId);
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Failed to insert order into the database.");
+        }
     }
-    public static void createAccount(String name, String phone, String gender, String password){
-       String query = "INSERT INTO customer (Name, Password, Phone, Gender, CouponCode) " +
-               "VALUES (?,?,?,?,NULL)";
 
-       try (Connection con = DatabaseConnection.getConnection()) {
-           PreparedStatement pstmt = con.prepareStatement(query);
-           pstmt.setString(1, name);
-           pstmt.setString(2, password);
-           pstmt.setString(3, phone);
-           pstmt.setString(4, gender);
-           pstmt.executeUpdate();
-       } catch (SQLException e) {
-           throw new RuntimeException(e);
-       }
 
-    }
-
-    public List<Category> getAllCategories(){
+    public List<Category> getAllCategories() {
         List<Category> categories = new ArrayList<Category>();
 //        Category(String name, String type, int numOfSubcategory, String imagePath)
-        try(Connection con = DatabaseConnection.getConnection()){
+        try (Connection con = DatabaseConnection.getConnection()) {
             String query = "select * from category";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
-            while(rs.next()){
+            while (rs.next()) {
                 categories.add(new Category(rs.getString("name"), rs.getString("type"), rs.getInt("num_Of_Subcategory"), rs.getString("image_path")));
             }
 
-        }catch(SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
         return categories;
     }
 
-    public List<Product> getProductsOfSubCategory(String subCategoryName){
+    public List<Product> getProductsOfSubCategory(String subCategoryName) {
         List<Product> products = new ArrayList<Product>();
 //        Product(int barcode, String name, String type, String endD, String srtartD, double price, int calories,
 //                   String description, boolean boycott, boolean isEdible, int subcategoryID, Integer offerID, String imagePath)
@@ -101,7 +263,7 @@ public class DatabaseHelper {
                 "JOIN Product P ON SC.ID = P.subcategory_ID " +
                 "WHERE SC.name LIKE ?;";
 
-        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
+        try (Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)) {
 
             pstmt.setString(1, "%" + subCategoryName + "%");
             ResultSet rs = pstmt.executeQuery();
@@ -124,7 +286,7 @@ public class DatabaseHelper {
                 ));
             }
 
-        }catch(SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
 

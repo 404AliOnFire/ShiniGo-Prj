@@ -54,6 +54,8 @@ public class LoginController implements Initializable {
 
     public static FXMLLoader createLoader;
 
+    public static int customerId;
+
     Clip clip;
     String number = "";
     public static Stage createAccountStage = new Stage();
@@ -179,6 +181,7 @@ public class LoginController implements Initializable {
         }
         // Retrieve the user's name from the database
         String userName = DatabaseHelper.getUserName(addressNumber + phone, password);
+        customerId = DatabaseHelper.getCustomerId(addressNumber + phone, password);
 
         // Display success message with the user's name
         successText.setVisible(true);
