@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.sql.Date;
 import java.util.HashMap;
+import java.util.List;
 
 public class CartController {
     public static HashMap<Product, Integer> myCartHash = new HashMap<Product, Integer>();
@@ -148,9 +149,8 @@ public class CartController {
 
     @FXML
     public void initialize() throws IOException {
-        List<Product> productsInCart = DatabaseHelper.getProductsInCart(customerId);
+        List<Product> productsInCart = DatabaseHelper.getProductsInCart(LoginController.customerId);
 
-        // إضافة المنتجات إلى السلة
         for (Product product : productsInCart) {
             addProductToCart(product);
         }

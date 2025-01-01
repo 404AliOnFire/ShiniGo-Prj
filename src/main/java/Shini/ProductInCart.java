@@ -22,8 +22,6 @@ public class ProductInCart {
 
     public Product product;
 
-    public FXMLLoader loader;
-
     @FXML
     private Text numberOfProduct;
 
