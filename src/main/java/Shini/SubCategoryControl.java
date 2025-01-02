@@ -1,11 +1,13 @@
 package Shini;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -45,7 +47,6 @@ public class SubCategoryControl implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         subCategoryCount = subHB.getChildren().size();
 
-
         String css = getClass().getResource("/Shini/Styles/redLine.css").toExternalForm();
         String style = getClass().getResource("/Shini/Styles/style.css").toExternalForm();
 
@@ -55,7 +56,6 @@ public class SubCategoryControl implements Initializable {
             vboxSubCategory.getStylesheets().add(css);
 
             vboxSubCategory.setOnMouseClicked(event -> {
-                System.out.println("Helk");
                 subCatGrid.getChildren().clear();
                 for (int j = 0; j < subCategoryCount; j++) {
                     VBox otherVBox = (VBox) subHB.getChildren().get(j);
@@ -72,67 +72,30 @@ public class SubCategoryControl implements Initializable {
                 DatabaseHelper databaseHelper = new DatabaseHelper();
                 String subCategoryName = ((Text)vboxSubCategory.getChildren().get(0)).getText();
 
-                System.out.println(subCategoryName);
-                List<Product> productsOfSubCategory = databaseHelper.getProductsOfSubCategory(subCategoryName);
+
+                List<Product> productsOfSubCategory;
+                    productsOfSubCategory= databaseHelper.getProductsOfSubCategory(subCategoryName);
 
                 int column = 0;
                 int row = 0;
                 try{
-//                    for(Product product : productsOfSubCategory){
-//
-//                        ImageView productImg = new ImageView(new Image(product.getImagePath()));
-//                        productImg.setFitHeight(200);
-//                        productImg.setFitWidth(200);
-//                        Text productDesc = new Text(product.getDescription());
-//                        productDesc.setTextAlignment(TextAlignment.RIGHT);
-//                        productDesc.setFont(Font.font("Cairo SemiBold", 15));
-//
-//                        Text isBoycott = new Text();
-//                        isBoycott.setTextAlignment(TextAlignment.RIGHT);
-//                        isBoycott.setFont(Font.font("Cairo SemiBold"));
-//                        isBoycott.setStyle("-fx-text-fill: darkred ");
-//                        isBoycott.setFont(Font.font("Cairo SemiBold", 17));
-//
-//                        if (product.isBoycott())
-//                            isBoycott.setText("مقاطع");
-//
-//                        Text numOfCalories = new Text( product.getCalories()+" cal");
-//                        numOfCalories.setTextAlignment(TextAlignment.RIGHT);
-//                        numOfCalories.setFont(Font.font("Cairo SemiBold"));
-//                        numOfCalories.setFont(Font.font("Cairo SemiBold", 16));
-//
-//                        Text price = new Text(product.getPrice()+" ILS");
-//                        price.setTextAlignment(TextAlignment.RIGHT);
-//                        price.setFont(Font.font("Cairo SemiBold", 20));
-//
-//                        ImageView addIcon = new ImageView(new Image("C:\\Users\\Hanad\\IdeaProjects\\ShiniGo-Prj\\src\\main\\resources\\Shini\\Images\\icons8-add-50.png"));
-//                        addIcon.setFitHeight(30);
-//                        addIcon.setFitWidth(30);
-//
-//                        HBox hBox = new HBox(100, price, addIcon);
-//
-////                        if(product.getOfferID() != null){
-////                            Text discountPrice = new Text(product.getPrice()+" ILS");
-////                            discountPrice.setTextAlignment(TextAlignment.RIGHT);
-////                            discountPrice.setFont(Font.font("Cairo SemiBold", 20));
-////                        }
-//
-//
-//
-//                        VBox vBox = new VBox(5);
-////                        vBox.getStylesheets().add(style);
-//                        vBox.setAlignment(Pos.CENTER);
-//                        vBox.getChildren().addAll(productImg, productDesc,numOfCalories, isBoycott, hBox);
-//
-//
-//                        if(column == 2){
-//                            column = 0;
-//                            ++row;
-//                        }
-//                        subCatGrid.add(vBox, column++, row);
-//                        System.out.println("added");
-//                        subCatGrid.setMargin(vBox, new Insets(30));
-//                    }
+                    for(Product product : productsOfSubCategory){
+
+                        FXMLLoader loader = new FXMLLoader();
+                        loader.setLocation(getClass().getResource("/Shini/FXML/productCard.fxml"));
+                        AnchorPane pane = loader.load();
+                        ProductController productController = loader.getController();
+
+                        productController.setData(product);
+
+                        if(column == 2){
+                            column = 0;
+                            ++row;
+                        }
+                        subCatGrid.add(pane, column++, row);
+
+                        subCatGrid.setMargin(pane, new Insets(20));
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
