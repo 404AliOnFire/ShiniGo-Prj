@@ -94,7 +94,7 @@ public class DatabaseHelper {
         List<Product> products = new ArrayList<Product>();
 //        Product(int barcode, String name, String type, String endD, String srtartD, double price, int calories,
 //                   String description, boolean boycott, boolean isEdible, int subcategoryID, Integer offerID, String imagePath)
-        String query = "SELECT P.barcode, P.name, P.type, P.endD, P.srtartD, P.price, P.calories, P.description, " +
+        String query = "SELECT P.barcode, P.name, P.type, P.endD, P.startD, P.price, P.calories, P.size,P.description, " +
                 "P.boycott, P.isEdible, P.subcategory_ID, P.offer_ID, P.image_path " +
                 "FROM Category C " +
                 "JOIN SubCategory SC ON C.ID = SC.category_ID " +
@@ -106,15 +106,64 @@ public class DatabaseHelper {
             pstmt.setString(1, "%" + subCategoryName + "%");
             ResultSet rs = pstmt.executeQuery();
 
+//            (String barcode, String name, String type, String endD, String startD, double price, int calories,
+//            String size, String description, boolean boycott, boolean isEdible, int subcategoryId,
+//            int offerId, String imagePath)
+
             while (rs.next()) {
                 products.add(new Product(
                         rs.getInt("barcode"),
                         rs.getString("name"),
                         rs.getString("type"),
                         rs.getDate("endD"),
-                        rs.getDate("srtartD"),
+                        rs.getDate("startD"),
                         rs.getDouble("price"),
                         rs.getInt("calories"),
+                        rs.getString("size"),
+                        rs.getString("description"),
+                        rs.getBoolean("boycott"),
+                        rs.getBoolean("isEdible"),
+                        rs.getInt("subcategory_ID"),
+                        rs.getObject("offer_ID") != null ? rs.getInt("offer_ID") : null,
+                        rs.getString("image_path")
+                ));
+            }
+
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return products;
+    }
+
+    public List<Product> getAllProductsOfSubCategory(String categName){
+        System.out.println(categName);
+        List<Product> products = new ArrayList<Product>();
+//        Product(int barcode, String name, String type, String endD, String srtartD, double price, int calories,
+//                   String description, boolean boycott, boolean isEdible, int subcategoryID, Integer offerID, String imagePath)
+        String query = """
+            SELECT P.barcode, P.name, P.type, P.endD, P.startD, P.price, P.calories, P.size, 
+                   P.description, P.boycott, P.isEdible, P.subcategory_ID, P.offer_ID, P.image_path
+            FROM Product P
+            JOIN Subcategory SC ON P.Subcategory_ID = SC.id
+            JOIN Category C ON SC.category_ID = C.ID
+            WHERE C.ID = (SELECT ID FROM Category WHERE name = ?);
+            """;
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
+
+            pstmt.setString(1, categName);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                products.add(new Product(
+                        rs.getInt("barcode"),
+                        rs.getString("name"),
+                        rs.getString("type"),
+                        rs.getDate("endD"),
+                        rs.getDate("startD"),
+                        rs.getDouble("price"),
+                        rs.getInt("calories"),
+                        rs.getString("size"),
                         rs.getString("description"),
                         rs.getBoolean("boycott"),
                         rs.getBoolean("isEdible"),
@@ -132,5 +181,55 @@ public class DatabaseHelper {
     }
 
 
+    public Offer getDiscountPercentage(int offerNum){
 
+        Offer offer = new Offer();
+        String query = "Select * from offer where Offer_ID = ?;";
+
+//        Offer (Offer_ID, StartDate, EndDate, Percentage)
+        try(Connection con = DatabaseConnection.getConnection();
+            PreparedStatement pstmt = con.prepareStatement(query)){
+
+            pstmt.setInt(1, offerNum);
+            ResultSet rs = pstmt.executeQuery();
+
+
+                if(rs.next()){
+                    offer.setOfferId(rs.getInt("offer_ID"));
+                    offer.setStartDate(rs.getDate("StartDate"));
+                    offer.setEndDate(rs.getDate("EndDate"));
+                    offer.setPercentage(rs.getDouble("Percentage"));
+                }
+
+
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return offer;
+    }
+
+
+    public List<String> getSubCategories(String categName) {
+        List<String> subCategories = new ArrayList<>();
+
+        String query = "select SC.name \n" +
+                "from Subcategory SC, Category C\n" +
+                "where Sc.category_ID = c.ID\n" +
+                "and c.ID = (select ID from Category where name = ? );";
+
+
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
+
+            pstmt.setString(1, categName);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                subCategories.add(rs.getString("name"));
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return subCategories;
+    }
 }

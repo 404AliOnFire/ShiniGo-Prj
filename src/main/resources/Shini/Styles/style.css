@@ -1,6 +1,6 @@
 /* Styling for the HBox (search bar) */
 .hbox {
-    -fx-background-color: #f6f6f6;
+    -fx-background-color: #cccaca;
     -fx-background-radius: 15;
     -fx-border-radius: 40;
     -fx-padding: 2;
@@ -30,4 +30,60 @@
     -fx-background-color: white;
     -fx-background-radius: 8; /* حواف مستديرة */
     -fx-padding: 10; /* مساحة داخلية */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
+    position: relative; /* Ensure the element is positioned relative to apply the shadow correctly */
+}
+
+.anchor-pane-with-shadow {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 4);
+}
+
+.product-card {
+    width: 250px;
+    background: #d7cfcf;
+    border-radius: 50px; /* Curve for card edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden; /* Ensures child elements don't overflow the card */
+    text-align: center;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 12px; /* Slight curve for the image */
+    object-fit: cover; /* Ensures the image fits nicely inside the container */
+    margin-bottom: 10px;
+}
+.custom-anchor-pane {
+    -fx-background-color: white; /* Background color */
+    -fx-background-radius: 30;   /* Corner radius */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0); /* Drop shadow effect */
+    -fx-padding: 10;             /* Optional: Padding inside the pane */
+}
+
+.oval-vbox {
+    -fx-background-color: #ffffff; /* Background color of the VBox */
+    -fx-border-color: #e0e0e0; /* Optional: Add a border */
+    -fx-border-width: 1px; /* Border thickness */
+    -fx-background-radius: 30px; /* Makes the VBox edges rounded (oval) */
+    -fx-border-radius: 50px; /* Matches the background radius */
+    -fx-padding: 20px; /* Adds padding inside the VBox */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 4); /* Adds a shadow effect */
+}
+
+.pane {
+    -fx-background-image: url("../Images/blood.png");
 }
