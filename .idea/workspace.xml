@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="add methods database helper v2">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Admin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/branch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/businessman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/customer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/logout (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Images/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/AdminStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +14,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="FxmlFile" />
-        <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="hanadiBranch" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -57,11 +46,6 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="aliBranch" />
-                    <option name="lastUsedInstant" value="1735333759" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1735333260" />
                   </RecentBranch>
                 </list>
               </option>
@@ -113,54 +97,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Driver.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.driver.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.Shini.Fonts in ShiniGo.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;aliBranch&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ALYAMEN.PS/IdeaProjects/ShiniGo/src/main/resources/Shini/Images&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38505748&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Images" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Fonts" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Images" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Sounds" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini" />
+      <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Images" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\Video" />
       <recent name="C:\Users\ALYAMEN.PS\IdeaProjects\ShiniGo\src\main\resources\Shini\FXML" />
     </key>
@@ -202,14 +155,6 @@
       <workItem from="1735154443878" duration="7236000" />
       <workItem from="1735205657231" duration="3203000" />
       <workItem from="1735220483273" duration="8008000" />
-      <workItem from="1735388009911" duration="7408000" />
-      <workItem from="1735415227157" duration="7621000" />
-      <workItem from="1735466785535" duration="2979000" />
-      <workItem from="1735559174334" duration="20897000" />
-      <workItem from="1735594004137" duration="5741000" />
-      <workItem from="1735636715468" duration="21432000" />
-      <workItem from="1735667101575" duration="317000" />
-      <workItem from="1735726929878" duration="14276000" />
     </task>
     <task id="LOCAL-00001" summary="Create Fonts Method to make it more readability">
       <option name="closed" value="true" />
@@ -291,47 +236,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735390735497</updated>
     </task>
-    <task id="LOCAL-00011" summary="Pull to  aliBranch from main">
+    <task id="LOCAL-00011" summary="create main scene">
       <option name="closed" value="true" />
-      <created>1735333787630</created>
+      <created>1735818129115</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1735333787630</updated>
+      <updated>1735818129115</updated>
     </task>
-    <task id="LOCAL-00012" summary="Upload images">
+    <task id="LOCAL-00012" summary="create main scene">
       <option name="closed" value="true" />
-      <created>1735550233992</created>
+      <created>1735818629291</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1735550233992</updated>
+      <updated>1735818629291</updated>
     </task>
-    <task id="LOCAL-00013" summary="update main and add classes">
+    <task id="LOCAL-00013" summary="create main scene">
       <option name="closed" value="true" />
-      <created>1735655648521</created>
+      <created>1735818778593</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1735655648521</updated>
+      <updated>1735818778593</updated>
     </task>
-    <task id="LOCAL-00014" summary="add methods database helper test">
+    <task id="LOCAL-00014" summary="create main scene">
       <option name="closed" value="true" />
-      <created>1735733043590</created>
+      <created>1735819023751</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1735733043590</updated>
+      <updated>1735819023751</updated>
     </task>
-    <task id="LOCAL-00015" summary="add methods database helper v2">
-      <option name="closed" value="true" />
-      <created>1735733296212</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1735733296212</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,16 +296,12 @@
     <MESSAGE value="fxml load to login" />
     <MESSAGE value="lib files" />
     <MESSAGE value="fix bug java.sql module" />
-    <MESSAGE value="Upload images" />
-    <MESSAGE value="update main and add classes" />
-    <MESSAGE value="add methods database helper test" />
-    <MESSAGE value="add methods database helper v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add methods database helper v2" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line" />
+
       </breakpoints>
     </breakpoint-manager>
   </component>

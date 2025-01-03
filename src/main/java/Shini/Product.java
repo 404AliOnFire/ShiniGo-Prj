@@ -1,42 +1,46 @@
 package Shini;
 
-
 import java.sql.Date;
 
 public class Product {
     private int barcode;
     private String name;
     private String type;
-    private Date endD; // Use java.util.Date or java.time.LocalDate if needed
-    private Date srtartD; // Use java.util.Date or java.time.LocalDate if needed
+    private Date endD;
+    private Date startD;
     private double price;
     private int calories;
+    private String size;
     private String description;
     private boolean boycott;
     private boolean isEdible;
-    private int subcategoryID;
-    private Integer offerID; // Nullable if no offer is present
+    private int subcategoryId;
+    private Integer offerId;
     private String imagePath;
 
-
-    // Parameterized constructor
-    public Product(int barcode, String name, String type, Date endD, Date srtartD, double price, int calories,
-                   String description, boolean boycott, boolean isEdible, int subcategoryID, Integer offerID, String imagePath) {
+    // Constructor
+    public Product(int barcode, String name, String type, Date endD, Date startD, double price, int calories,
+                   String size, String description, boolean boycott, boolean isEdible, int subcategoryId,
+                   Integer offerId, String imagePath) {
         this.barcode = barcode;
         this.name = name;
         this.type = type;
         this.endD = endD;
-        this.srtartD = srtartD;
+        this.startD = startD;
         this.price = price;
         this.calories = calories;
+        this.size = size;
         this.description = description;
         this.boycott = boycott;
         this.isEdible = isEdible;
-        this.subcategoryID = subcategoryID;
-        this.offerID = offerID;
+        this.subcategoryId = subcategoryId;
+        this.offerId = offerId;
         this.imagePath = imagePath;
     }
 
+    // Default constructor
+    public Product() {
+    }
 
     // Getters and Setters
     public int getBarcode() {
@@ -71,12 +75,12 @@ public class Product {
         this.endD = endD;
     }
 
-    public Date getSrtartD() {
-        return srtartD;
+    public Date getStartD() {
+        return startD;
     }
 
-    public void setSrtartD(Date srtartD) {
-        this.srtartD = srtartD;
+    public void setStartD(Date startD) {
+        this.startD = startD;
     }
 
     public double getPrice() {
@@ -93,6 +97,14 @@ public class Product {
 
     public void setCalories(int calories) {
         this.calories = calories;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public String getDescription() {
@@ -115,24 +127,24 @@ public class Product {
         return isEdible;
     }
 
-    public void setEdible(boolean isEdible) {
-        this.isEdible = isEdible;
+    public void setEdible(boolean edible) {
+        isEdible = edible;
     }
 
-    public int getSubcategoryID() {
-        return subcategoryID;
+    public int getSubcategoryId() {
+        return subcategoryId;
     }
 
-    public void setSubcategoryID(int subcategoryID) {
-        this.subcategoryID = subcategoryID;
+    public void setSubcategoryId(int subcategoryId) {
+        this.subcategoryId = subcategoryId;
     }
 
-    public Integer getOfferID() {
-        return offerID;
+    public Integer getOfferId() {
+        return offerId;
     }
 
-    public void setOfferID(Integer offerID) {
-        this.offerID = offerID;
+    public void setOfferId(Integer offerId) {
+        this.offerId = offerId;
     }
 
     public String getImagePath() {
@@ -143,21 +155,23 @@ public class Product {
         this.imagePath = imagePath;
     }
 
+    // toString Method
     @Override
     public String toString() {
         return "Product{" +
-                "barcode=" + barcode +
+                "barcode='" + barcode + '\'' +
                 ", name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", endD='" + endD + '\'' +
-                ", srtartD='" + srtartD + '\'' +
+                ", startD='" + startD + '\'' +
                 ", price=" + price +
                 ", calories=" + calories +
+                ", size='" + size + '\'' +
                 ", description='" + description + '\'' +
                 ", boycott=" + boycott +
                 ", isEdible=" + isEdible +
-                ", subcategoryID=" + subcategoryID +
-                ", offerID=" + offerID +
+                ", subcategoryId=" + subcategoryId +
+                ", offerId=" + offerId +
                 ", imagePath='" + imagePath + '\'' +
                 '}';
     }

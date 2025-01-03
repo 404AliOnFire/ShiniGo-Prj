@@ -36,6 +36,7 @@ public class Driver extends Application {
          fxmlLoader = new FXMLLoader(getClass().getResource("/Shini/FXML/Main.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 659, 606);
+
         loginStage.setTitle("Shini Extra Online");
         loginStage.setScene(scene);
         loginStage.show();
