@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import io.github.palexdev.materialfx.controls.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
@@ -7,11 +8,26 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.CartController">
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="600.0" spacing="25.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css" BorderPane.alignment="CENTER">
+
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: light gray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.CategoryController">
+   <children>
+      <VBox layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="491.0">
          <children>
+
             <VBox fx:id="account1" accessibleRole="BUTTON" alignment="CENTER" onMouseClicked="#accountUI" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -32,11 +48,33 @@
                      </cursor>
                   </StackPane>
                   <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
+
+            <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" text="اختر عنوان التسليم" textAlignment="RIGHT" textOrigin="CENTER" wrappingWidth="490.1000061035156">
+               <font>
+                  <Font name="Cairo Black" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Text>
+
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/morning.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="صباح الخير, علي" textAlignment="CENTER" wrappingWidth="98.89204406738281">
+
                      <font>
-                        <Font name="Cairo Black" size="12.0" />
+                        <Font name="Cairo Regular" size="13.0" />
                      </font>
+                     <HBox.margin>
+
+                     </HBox.margin>
                   </Text>
                </children>
+
             </VBox>
             <VBox fx:id="order1" accessibleRole="BUTTON" alignment="CENTER" onMouseClicked="#orderUI" prefHeight="53.0" prefWidth="127.0">
                <children>
@@ -58,27 +96,91 @@
                      </cursor>
                   </StackPane>
                   <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
+            </HBox>
+            <HBox fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="282.0" style="-fx-background-color: gainsboro;" styleClass="hbox" stylesheets="@../Styles/style.css" translateX="210.0">
+               <children>
+                  <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="433.0" promptText="بحث ..">
+
                      <font>
                         <Font name="Cairo Black" size="12.0" />
                      </font>
-                  </Text>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-search-50.png" />
+                     </image>
+                  </ImageView>
                </children>
             </VBox>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#cartUI" onMousePressed="#cartUI" prefHeight="49.0" prefWidth="154.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <ScrollPane prefHeight="432.0" prefWidth="491.0">
+               <content>
+                  <GridPane fx:id="categoryGrid" prefHeight="428.0" prefWidth="488.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="104.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="283.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="163.0" minHeight="0.0" prefHeight="138.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="243.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="55.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="78.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="243.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="491.0" spacing="25.0" styleClass="hbox" translateY="10.0">
                <children>
-                  <StackPane layoutX="25.0" layoutY="-23.0" prefHeight="73.0" prefWidth="123.0">
+                  <VBox fx:id="account" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
                         <ImageView fx:id="boldCart" fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
+
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+
                            <image>
-                              <Image url="@../Images/black-shopping-cart-48 (1).png" />
+                              <Image url="@../Images/icons8-user-32 (1).png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="lightCart" fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="order" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+
                            <image>
-                              <Image url="@../Images/icons8-shopping-cart-48.png" />
+                              <Image url="@../Images/icons8-box-50 (1).png" />
                            </image>
                         </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
                      </children>
+
                   </StackPane>
                   <Label fx:id="countProductLabel" layoutX="95.0" layoutY="-4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="notification-label" stylesheets="@../Styles/style.css" text="0" visible="false">
                      <font>
@@ -104,15 +206,28 @@
             <VBox fx:id="main1" accessibleRole="BUTTON" alignment="CENTER" onMouseClicked="#mainUI" prefHeight="53.0" prefWidth="127.0">
                <children>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
+                  </VBox>
+                  <VBox fx:id="cart" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+
                      <children>
                         <ImageView fx:id="boldMain" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/black-home-32%20(1).png" />
+                              <Image url="@../Images/icons8-shopping-cart-48.png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="lightMain" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="main" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-home-32.png" />
+                              <Image url="@../Images/black-home-32 (1).png" />
                            </image>
                         </ImageView>
                      </children>
@@ -330,10 +445,19 @@
                   <Insets bottom="-2.0" />
                </HBox.margin>
                 </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
          </children>
-         <BorderPane.margin>
-            <Insets bottom="100.0" />
-         </BorderPane.margin>
-      </HBox>
-   </top>
-</BorderPane>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -3,3 +3,37 @@
     -fx-text-fill: black;          /* Optional: Text color */
     -fx-border-color: White; /* Optional: No border */
 }
+.but1{
+-fx-border-color:red;
+-fx-background-color: White;
+-fx-border-width:0px 0px 3px 0px;
+}
+.but2{
+-fx-border-color:white;
+-fx-background-color: White;
+-fx-border-width:0px 0px 3px 0px;
+}
+.but3{/* for preperation*/
+-fx-border-color:none;
+-fx-background-color: #32C6A6;
+-fx-text-fill: white;
+-fx-background-radius:30;
+}
+.but4{
+-fx-border-color:none;
+-fx-background-color:#D0D0D0;
+-fx-text-fill: black;
+-fx-background-radius:30;
+}
+.but5{/* Dona and in delivery*/
+-fx-border-color:none;
+-fx-background-color:#D9534F;
+-fx-text-fill: white;
+-fx-background-radius:30;
+}
+.but6{/* approved*/
+-fx-border-color:none;
+-fx-background-color:#6A4C9C;
+-fx-text-fill: white;
+-fx-background-radius:30;
+}

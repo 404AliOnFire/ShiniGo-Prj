@@ -35,6 +35,10 @@ public class LoginController implements Initializable {
     @FXML
     private MFXTextField phoneTF;
 
+    public MFXTextField getPhoneTF() {
+        return phoneTF;
+    }
+
     @FXML
     private MFXSlider slider;
 
