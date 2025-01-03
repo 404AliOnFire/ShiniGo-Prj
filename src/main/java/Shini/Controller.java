@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -38,10 +39,14 @@ public class Controller implements Initializable {
     int indexOfProduct = 0;
     public final String CURRENCY = "₪ ";
     private final HashMap<String, Pane> panes = new HashMap<>();
-    private String currentPane = "emptyCart";
+    private String currentPane = "main";
 
     @FXML
     private Text GMUser;
+
+    @FXML
+    private AnchorPane topAnchorPane;
+
 
     @FXML
     private VBox account1;
@@ -208,12 +213,11 @@ public class Controller implements Initializable {
         }
 
         panes.put("main", mainScene);
-        panes.put("cart", myCart);
+        panes.put("cart", myEmptyCart);
         panes.put("emptyCart", myEmptyCart);
+        // pane.put("account", myAccount);
 
         // Hanadi
-        myEmptyCart.setVisible(false);
-        myCart.setVisible(false);
 
 
         List<Category> categories = databaseHelper.getAllCategories();
@@ -353,6 +357,13 @@ public class Controller implements Initializable {
         boldCart.setVisible(true);
 
         showPane("cart");
+        showHbox("cartBox");
+    }
+
+    private void showHbox(String hbox) {
+        for (Node node : topAnchorPane.getChildren()) {
+            node.setVisible(node.getId().equals(hbox));
+        }
     }
 
     @FXML
@@ -361,7 +372,8 @@ public class Controller implements Initializable {
         hideAllBold();
         boldMain.setVisible(true);
 
-        //showPane("main");
+        showPane("main");
+        showHbox("searchVbox");
     }
 
     @FXML
