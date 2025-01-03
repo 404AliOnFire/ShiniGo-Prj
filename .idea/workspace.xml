@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="add product to cart and merge our work into Controller.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CategoryImgController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/productCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/productCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/ProductInCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/ProductInCart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +297,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735819023751</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add product to cart and merge our work into Controller.java">
+      <option name="closed" value="true" />
+      <created>1735926251218</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735926251219</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add product to cart and merge our work into Controller.java">
+      <option name="closed" value="true" />
+      <created>1735926285736</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1735926285736</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

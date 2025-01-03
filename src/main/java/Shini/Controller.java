@@ -32,11 +32,10 @@ import java.util.ResourceBundle;
 
 
 public class Controller implements Initializable {
-    HashMap<Product, Integer> myCartHash = new HashMap<Product, Integer>();
-    double totalPriceNum = 0;
-    int countOfProducts = 0;
+    static HashMap<Product, Integer>  myCartHash = new HashMap<Product, Integer>();
+    static double totalPriceNum = 0;
+    static int countOfProducts = 0;
     int indexOfProduct = 0;
-
     public final String CURRENCY = "₪ ";
     private final HashMap<String, Pane> panes = new HashMap<>();
     private String currentPane = "emptyCart";
@@ -108,7 +107,7 @@ public class Controller implements Initializable {
     private ImageView lightOrder;
 
     @FXML
-    private VBox listProductVbox;
+     VBox listProductVbox;
 
     @FXML
     private VBox main1;
@@ -117,10 +116,10 @@ public class Controller implements Initializable {
     private AnchorPane mainScene;
 
     @FXML
-    private AnchorPane myCart;
+     AnchorPane myCart;
 
     @FXML
-    private AnchorPane myEmptyCart;
+     AnchorPane myEmptyCart;
 
     @FXML
     private AnchorPane noSearch;
@@ -200,7 +199,12 @@ public class Controller implements Initializable {
         List<Product> productsInCart = DatabaseHelper.getProductsInCart(LoginController.customerId);
 
         for (Product product : productsInCart) {
-            addProductToCart(product);
+
+            try {
+                addProductToCart(product);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         panes.put("cart", myCart);
