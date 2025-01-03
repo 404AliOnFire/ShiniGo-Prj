@@ -2,7 +2,6 @@ package Shini;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -12,7 +11,7 @@ import java.io.IOException;
 
 
 public class ProductInCart {
-    private CartController cartController;
+    private Controller controller;
 
     public double currentTotal;
 
@@ -45,14 +44,14 @@ public class ProductInCart {
     @FXML
     private void initialize() throws IOException {
         totalPrice += product.getPrice();
-        cartController.setTotalPrice(totalPrice);
+        controller.setTotalPrice(totalPrice);
         setData();
     }
 
-    public ProductInCart(Product product, int indexOfProduct, CartController cartController) {
+    public ProductInCart(Product product, int indexOfProduct, Controller controller) {
         this.product = product;
         this.indexOfProductInCart = indexOfProduct;
-        this.cartController = cartController;
+        this.controller = controller;
     }
 
 
@@ -74,12 +73,12 @@ public class ProductInCart {
         numberOfProduct.setText(String.valueOf(count));
         price.setText(CURRENCY + product.getPrice() * count);
 
-        currentTotal = CartController.getTotalPrice();
+        currentTotal = Controller.getTotalPrice();
         totalPrice = product.getPrice() * count;
 
-        cartController.setTotalPrice(currentTotal + product.getPrice());
-        CartController.myCartHash.put(this.product, count);
-        CartController.countOfProducts++;
+        controller.setTotalPrice(currentTotal + product.getPrice());
+        Controller.myCartHash.put(this.product, count);
+        Controller.countOfProducts++;
     }
 
     @FXML
@@ -90,24 +89,24 @@ public class ProductInCart {
             numberOfProduct.setText(String.valueOf(count));
             price.setText(CURRENCY + (product.getPrice() * count));
 
-            currentTotal = CartController.getTotalPrice();
+            currentTotal = Controller.getTotalPrice();
             totalPrice = product.getPrice() * count;
 
-            cartController.setTotalPrice(currentTotal - product.getPrice());
-            CartController.myCartHash.put(this.product, count);
-            CartController.countOfProducts--;
+            controller.setTotalPrice(currentTotal - product.getPrice());
+            Controller.myCartHash.put(this.product, count);
+            Controller.countOfProducts--;
         } else {
-            currentTotal = CartController.getTotalPrice();
-            cartController.setTotalPrice(currentTotal - product.getPrice());
-            CartController.myCartHash.remove(this.product);
-            CartController.countOfProducts--;
+            currentTotal = Controller.getTotalPrice();
+            controller.setTotalPrice((double) (currentTotal - product.getPrice()));
+            Controller.myCartHash.remove(this.product);
+            Controller.countOfProducts--;
 
-            if(CartController.countOfProducts == 0) {
-                cartController.myEmptyCart.setVisible(true);
-                cartController.myCart.setVisible(false);
+            if(Controller.countOfProducts == 0) {
+                controller.myEmptyCart.setVisible(true);
+                controller.myCart.setVisible(false);
             }
 
-            cartController.listProductVbox.getChildren().remove(indexOfProductInCart);
+            controller.listProductVbox.getChildren().remove(indexOfProductInCart);
         }
     }
 }

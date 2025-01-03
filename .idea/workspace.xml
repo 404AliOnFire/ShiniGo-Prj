@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +17,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="hanadiBranch" />
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -97,6 +96,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -268,7 +268,6 @@
       <option name="project" value="LOCAL" />
       <updated>1735819023751</updated>
     </task>
-
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +299,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
 
       </breakpoints>
     </breakpoint-manager>
