@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="create main scene">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Main.fxml" afterDir="false" />
+    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="add product to cart and merge our work into Controller.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/CategoryImgController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/productCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/productCard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +30,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="hanadiBranch" />
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -109,7 +117,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "hanadiBranch",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ALYAMEN.PS/IdeaProjects/ShiniGo/src/main/resources/Shini/Sounds",
@@ -325,14 +333,15 @@
     <MESSAGE value="fix bug java.sql module" />
     <MESSAGE value="upload product's data into subCategories using SQL query" />
     <MESSAGE value="create main scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="create main scene" />
+    <MESSAGE value="add product to cart and merge our work into Controller.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add product to cart and merge our work into Controller.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java</url>
-          <line>39</line>
+          <line>205</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

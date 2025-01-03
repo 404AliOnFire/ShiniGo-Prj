@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Date;
 import java.time.LocalDate;
@@ -16,54 +17,63 @@ import java.time.format.DateTimeFormatter;
 public class ProductController {
 
     @FXML
-    private ImageView addProduct;
-
-    @FXML
     private AnchorPane anchorPane;
 
     @FXML
-    private Text calorie;
+    private ImageView btAddProduct;
 
     @FXML
-    private Text desc;
+    private HBox discountBox;
 
     @FXML
-    private Text size;
-
-    @FXML
-    private Text discountPer;
-
-    @FXML
-    private Text discountPrice;
-
-    @FXML
-    private Text isBoycott;
-
-    @FXML
-    private Text price;
+    private Text txtIsBoycott;
 
     @FXML
     private ImageView productImg;
 
     @FXML
-    private HBox discountBox;
+    private Text txtBarCode;
+
+    @FXML
+    private Text txtCalorie;
+
+    @FXML
+    private Text txtDesc;
+
+    @FXML
+    private Text txtDiscountPer;
+
+    @FXML
+    private Text txtDiscountPrice;
+
+    @FXML
+    private Text txtPrice;
+
+    @FXML
+    private Text txtSize;
+
+    private boolean added = false;
+    private Controller controller;
 
     public void setData(Product product) {
 
         DatabaseHelper databaseHelper = new DatabaseHelper();
 
         productImg.setImage(new Image(product.getImagePath()));
-        calorie.setText(product.getCalories()+" cal");
+        txtCalorie.setText(product.getCalories()+" cal");
 
-        desc.setText(product.getDescription());
+        txtDesc.setText(product.getDescription());
 
-        size.setText(product.getSize());
+        txtSize.setText(product.getSize());
 
+        txtBarCode.setText(product.getBarcode()+"");
         if(product.isBoycott())
-            isBoycott.setText("مقاطع");
+            txtIsBoycott.setText("مقاطع");
 
 
-        price.setText(product.getPrice()+" ILS");
+        txtPrice.setText(product.getPrice()+" ILS");
+
+
 
         if(product.getOfferId() != null && product.getOfferId() > 0){
             LocalDate currentDate = LocalDate.now();
@@ -73,10 +83,10 @@ public class ProductController {
                 double prevPrice = product.getPrice();
                 double newPrice = product.getPrice() *  (1- offer.getPercentage()/100);
 
-                price.setStyle("-fx-fill: #7a0808; -fx-strikethrough: true;");
+                txtPrice.setStyle("-fx-fill: #7a0808; -fx-strikethrough: true;");
 
-                discountPer.setText(offer.getPercentage()+" %");
-                discountPrice.setText(String.format("%.2f", newPrice)+" ILS");
+                txtDiscountPer.setText(offer.getPercentage()+" %");
+                txtDiscountPrice.setText(String.format("%.2f", newPrice)+" ILS");
 
             }
         }else
@@ -87,16 +97,29 @@ public class ProductController {
 
     @FXML
     void addProductToMyCart(MouseEvent event) {
-        Product product = (Product) event.getSource();
-        System.out.println(product);
+
+
+
+        if(added == true){
+
+        }
+        int barcode = Integer.parseInt(txtBarCode.getText());
         DatabaseHelper databaseHelper = new DatabaseHelper();
+        Product product = databaseHelper.getProductByBarcode(barcode);
 
-        System.out.println("Helloooooooo");
+//        LoginController.customerId
 
-//        try(Connection con = databaseHelper.getCon)
+        if(controller != null && product != null){
+            try{
 
+                controller.addProductToCart(product);
+                databaseHelper.insertProductToCart(LoginController.customerId, product);
 
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
 
+        }
     }
 
 
