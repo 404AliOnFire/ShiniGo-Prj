@@ -119,7 +119,7 @@ public class Controller implements Initializable {
      AnchorPane myCart;
 
     @FXML
-     AnchorPane myEmptyCart;
+      AnchorPane myEmptyCart;
 
     @FXML
     private AnchorPane noSearch;
@@ -207,6 +207,7 @@ public class Controller implements Initializable {
             }
         }
 
+        panes.put("main", mainScene);
         panes.put("cart", myCart);
         panes.put("emptyCart", myEmptyCart);
 
