@@ -1,10 +1,222 @@
 package Shini;
 
+import Shini.Admin.Employee;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper {
+
+    public static boolean addEmployee(Employee employee) {
+        String query = "INSERT INTO employee ( name, address, email, birthdayDate, hireDate, salary, role, phone, workshiftTime, advisor, gender) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, employee.getName());
+            stmt.setString(2, employee.getAddress());
+            stmt.setString(3, employee.getEmail());
+            stmt.setDate(4, employee.getBirthdayDate());
+            stmt.setDate(5, employee.getHireDate());
+            stmt.setDouble(6, employee.getSalary());
+            stmt.setString(7, employee.getRole());
+            stmt.setString(8, employee.getPhone());
+            stmt.setInt(9, employee.getWorkShiftTime());
+            stmt.setInt(10, employee.getAdvisor());
+            stmt.setString(11, employee.getGender());
+
+            int rowsInserted = stmt.executeUpdate();
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static boolean deleteEmployee(String ssn) {
+        String query = "DELETE FROM employee WHERE ssn = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, ssn);
+
+            int rowsDeleted = stmt.executeUpdate();
+            return rowsDeleted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static boolean updateEmployee(Employee employee) {
+        String query = "UPDATE employee SET name = ?, address = ?, email = ?, birthdayDate = ?, hireDate = ?, salary = ?, " +
+                "role = ?, phone = ?, workshiftTime = ?, advisor = ?, gender = ? WHERE ssn = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, employee.getName());
+            stmt.setString(2, employee.getAddress());
+            stmt.setString(3, employee.getEmail());
+            stmt.setDate(4, employee.getBirthdayDate());
+            stmt.setDate(5, employee.getHireDate());
+            stmt.setDouble(6, employee.getSalary());
+            stmt.setString(7, employee.getRole());
+            stmt.setString(8, employee.getPhone());
+            stmt.setInt(9, employee.getWorkShiftTime());
+            stmt.setInt(10, employee.getAdvisor());
+            stmt.setString(11, employee.getGender());
+            stmt.setString(12, employee.getSsn());
+
+            int rowsUpdated = stmt.executeUpdate();
+            return rowsUpdated > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static List<Employee> getAllEmployees() {
+        List<Employee> employees = new ArrayList<>();
+        String query = "SELECT * FROM employee";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                Employee employee = new Employee(
+                        resultSet.getString("ssn"),
+                        resultSet.getString("name"),
+                        resultSet.getString("address"),
+                        resultSet.getString("email"),
+                        resultSet.getDate("birthdayDate"),
+                        resultSet.getDate("hireDate"),
+                        resultSet.getDouble("salary"),
+                        resultSet.getString("role"),
+                        resultSet.getString("phone"),
+                        resultSet.getInt("workshifttime"),
+                        resultSet.getInt("advisor"),
+                        resultSet.getString("gender")
+                );
+                employees.add(employee);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employees;
+    }
+
+
+    public static List<Product> getProductsInCart(int customerId) {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT p.* FROM product p " +
+                "JOIN shoppingcart2product sp ON p.barcode = sp.barcode " +
+                "JOIN shoppingcart sc ON sc.Cart_ID = sp.Cart_ID " +
+                "WHERE sc.Customer_ID = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, customerId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    Product product = new Product(
+                            resultSet.getInt("barcode"),
+                            resultSet.getString("name"),
+                            resultSet.getString("type"),
+                            resultSet.getDate("endD"),
+                            resultSet.getDate("srtartD"),
+                            resultSet.getDouble("price"),
+                            resultSet.getInt("calories"),
+                            resultSet.getString("description"),
+                            resultSet.getBoolean("boycott"),
+                            resultSet.getBoolean("isEdible"),
+                            resultSet.getInt("Subcategory_ID"),
+                            resultSet.getObject("Offer_ID", Integer.class),
+                            resultSet.getString("image_path")
+                    );
+                    products.add(product);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+    public static boolean isCartNotEmpty(int customerId) {
+        String query = "SELECT COUNT(*) AS product_count FROM shoppingcart2product sp " +
+                "JOIN shoppingcart sc ON sp.Cart_ID = sc.Cart_ID " +
+                "WHERE sc.Customer_ID = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, customerId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getInt("product_count") > 0;
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static void initializeCart(int customerId, CartController cartController) {
+        List<Product> productsInCart = getProductsInCart(customerId);
+
+        for (Product product : productsInCart) {
+            try {
+                cartController.addProductToCart(product);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    public static Product getProductByBarcode(int barcode) {
+        Product product = null;
+
+        String query = "SELECT barcode, name, type, endD, srtartD, price, calories, description, boycott, isEdible, Subcategory_ID, Offer_ID, image_path FROM product WHERE barcode = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, barcode);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    String name = resultSet.getString("name");
+                    String type = resultSet.getString("type");
+                    Date endD = resultSet.getDate("endD");
+                    Date srtartD = resultSet.getDate("srtartD");
+                    double price = resultSet.getDouble("price");
+                    int calories = resultSet.getInt("calories");
+                    String description = resultSet.getString("description");
+                    boolean boycott = resultSet.getBoolean("boycott");
+                    boolean isEdible = resultSet.getBoolean("isEdible");
+                    int subcategoryID = resultSet.getInt("Subcategory_ID");
+                    Integer offerID = resultSet.getObject("Offer_ID") != null ? resultSet.getInt("Offer_ID") : null;
+                    String imagePath = resultSet.getString("image_path");
+
+                    product = new Product(barcode, name, type, endD, srtartD, price, calories, description, boycott, isEdible, subcategoryID, offerID, imagePath);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return product;
+    }
+
+    public static String getUserName(String phone, String password) {
+        String userName = "";
+        String query = "SELECT Name FROM customer WHERE Phone = ? AND Password = ?";
+      
     public static boolean checkUserExists(String phone, String password) {
         boolean exists = false;
         String query = "SELECT * FROM customer WHERE Phone =? AND Password =?";

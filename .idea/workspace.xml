@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ac3264-7adf-4763-8bc1-f503bc11fc26" name="Changes" comment="create main scene">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Main.fxml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +14,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -50,11 +46,6 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="aliBranch" />
-                    <option name="lastUsedInstant" value="1735314796" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1735314661" />
                   </RecentBranch>
                 </list>
               </option>
@@ -69,6 +60,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/404AliOnFire/ShiniGo-Prj.git&quot;,
     &quot;accountId&quot;: &quot;6158b55e-0cc2-4ebb-af3d-c95f88d81e3a&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;404AliOnFire&quot;,
+    &quot;repository&quot;: &quot;ShiniGo-Prj&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -96,34 +97,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Driver.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.driver.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.Shini.Fonts in ShiniGo.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ALYAMEN.PS/IdeaProjects/ShiniGo/src/main/resources/Shini/Sounds",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.38505748",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -295,7 +268,7 @@
       <option name="project" value="LOCAL" />
       <updated>1735819023751</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,18 +296,12 @@
     <MESSAGE value="fxml load to login" />
     <MESSAGE value="lib files" />
     <MESSAGE value="fix bug java.sql module" />
-    <MESSAGE value="upload product's data into subCategories using SQL query" />
-    <MESSAGE value="create main scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="create main scene" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
+
       </breakpoints>
     </breakpoint-manager>
   </component>
