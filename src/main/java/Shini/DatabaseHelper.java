@@ -1,5 +1,7 @@
 package Shini;
 
+import Shini.Admin.Employee;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,103 @@ public class DatabaseHelper {
 
          return exists;
      }
+    public static boolean addEmployee(Employee employee) {
+        String query = "INSERT INTO employee ( name, address, email, birthdayDate, hireDate, salary, role, phone, workshiftTime, advisor, gender) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, employee.getName());
+            stmt.setString(2, employee.getAddress());
+            stmt.setString(3, employee.getEmail());
+            stmt.setDate(4, employee.getBirthdayDate());
+            stmt.setDate(5, employee.getHireDate());
+            stmt.setDouble(6, employee.getSalary());
+            stmt.setString(7, employee.getRole());
+            stmt.setString(8, employee.getPhone());
+            stmt.setInt(9, employee.getWorkShiftTime());
+            stmt.setInt(10, employee.getAdvisor());
+            stmt.setString(11, employee.getGender());
+
+            int rowsInserted = stmt.executeUpdate();
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static boolean deleteEmployee(String ssn) {
+        String query = "DELETE FROM employee WHERE ssn = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, ssn);
+
+            int rowsDeleted = stmt.executeUpdate();
+            return rowsDeleted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static boolean updateEmployee(Employee employee) {
+        String query = "UPDATE employee SET name = ?, address = ?, email = ?, birthdayDate = ?, hireDate = ?, salary = ?, " +
+                "role = ?, phone = ?, workshiftTime = ?, advisor = ?, gender = ? WHERE ssn = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, employee.getName());
+            stmt.setString(2, employee.getAddress());
+            stmt.setString(3, employee.getEmail());
+            stmt.setDate(4, employee.getBirthdayDate());
+            stmt.setDate(5, employee.getHireDate());
+            stmt.setDouble(6, employee.getSalary());
+            stmt.setString(7, employee.getRole());
+            stmt.setString(8, employee.getPhone());
+            stmt.setInt(9, employee.getWorkShiftTime());
+            stmt.setInt(10, employee.getAdvisor());
+            stmt.setString(11, employee.getGender());
+            stmt.setString(12, employee.getSsn());
+
+            int rowsUpdated = stmt.executeUpdate();
+            return rowsUpdated > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static List<Employee> getAllEmployees() {
+        List<Employee> employees = new ArrayList<>();
+        String query = "SELECT * FROM employee";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                Employee employee = new Employee(
+                        resultSet.getString("ssn"),
+                        resultSet.getString("name"),
+                        resultSet.getString("address"),
+                        resultSet.getString("email"),
+                        resultSet.getDate("birthdayDate"),
+                        resultSet.getDate("hireDate"),
+                        resultSet.getDouble("salary"),
+                        resultSet.getString("role"),
+                        resultSet.getString("phone"),
+                        resultSet.getInt("workshifttime"),
+                        resultSet.getInt("advisor"),
+                        resultSet.getString("gender")
+                );
+                employees.add(employee);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employees;
+    }
+
 
     public static List<Product> getProductsInCart(int customerId) {
         List<Product> products = new ArrayList<>();

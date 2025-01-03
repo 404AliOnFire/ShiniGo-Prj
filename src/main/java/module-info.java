@@ -8,4 +8,6 @@ module shiniproject.shinigo {
 
     opens Shini to javafx.fxml;
     exports Shini;
+    exports Shini.Admin;
+    opens Shini.Admin to javafx.fxml;
 }
