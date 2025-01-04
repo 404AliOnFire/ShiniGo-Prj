@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
    <bottom>
-      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="645.0" spacing="25.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="600.0" spacing="25.0" styleClass="hboxWhite" stylesheets="@../../IdeaProjects/ShiniGo-Prj/src/main/resources/Shini/Styles/style.css" BorderPane.alignment="CENTER">
          <children>
             <VBox fx:id="account1" accessibleRole="BUTTON" alignment="CENTER" onMouseClicked="#accountUI" prefHeight="200.0" prefWidth="100.0">
                <children>
@@ -18,7 +31,7 @@
                      <children>
                         <ImageView fx:id="boldAccount" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../Images/black-user-32.png" />
+                              <Image url="@../../IdeaProjects/ShiniGo-Prj/src/main/resources/Shini/Images/black-user-32.png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="lightAccount" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -64,9 +77,9 @@
                   </Text>
                </children>
             </VBox>
-            <AnchorPane fx:id="cartUI" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#cartUI" onMousePressed="#cartUI" prefHeight="49.0" prefWidth="154.0">
+            <AnchorPane fx:id="cart1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#cartUI" onMousePressed="#cartUI" prefHeight="49.0" prefWidth="154.0">
                <children>
-                  <StackPane fx:id="cart" layoutY="-11.0" prefHeight="51.0" prefWidth="173.0">
+                  <StackPane layoutX="25.0" layoutY="-23.0" prefHeight="73.0" prefWidth="123.0">
                      <children>
                         <ImageView fx:id="boldCart" fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
@@ -139,33 +152,6 @@
    <center>
       <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="657.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="mainScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="659.0">
-               <children>
-                  <VBox prefHeight="495.0" prefWidth="659.0">
-                     <children>
-                        <MFXScrollPane hbarPolicy="NEVER" prefHeight="478.0" prefWidth="620.0" vbarPolicy="NEVER">
-                           <content>
-                              <GridPane fx:id="categoryGrid" hgap="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="483.0" prefWidth="598.0">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                              </GridPane>
-                           </content>
-                        </MFXScrollPane>
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="myCart" cache="true" layoutX="3.226890652860412" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="654.0" style="-fx-background-color: #f6f6f6;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
                 <children>
                     <VBox fx:id="itemsInCartVBox" layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="648.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
@@ -230,7 +216,7 @@
                         </VBox>
                         </children>
                     </VBox>
-                  <VBox fx:id="confirmOrderVBox" layoutX="13.0" layoutY="9.0" prefHeight="595.0" prefWidth="499.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox fx:id="confirmOrderVBox" layoutX="13.0" layoutY="9.0" prefHeight="595.0" prefWidth="499.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <VBox prefHeight="77.0" prefWidth="499.0">
                            <children>
@@ -330,40 +316,58 @@
             </AnchorPane>
             <AnchorPane fx:id="myEmptyCart" cache="true" layoutX="-1.613445326430206" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="659.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
                <children>
-                  <ImageView fitHeight="485.0" fitWidth="334.0" layoutX="171.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="486.0" fitWidth="330.0" layoutX="171.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Images/WhatsApp Image 2024-12-23 at 8.33.21 PM.jpeg" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="subCategoryScene" prefHeight="476.0" prefWidth="594.0" visible="false">
+            <AnchorPane fx:id="mainScene" prefHeight="190.0" prefWidth="176.0">
                <children>
-                  <VBox layoutX="-4.0" layoutY="-50.0" prefHeight="524.0" prefWidth="587.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-50.0">
+                  <VBox prefHeight="566.0" prefWidth="594.0">
                      <children>
-                        <HBox fx:id="subCategoryBox" prefHeight="31.0" prefWidth="594.0" style="-fx-background-color: #ececec;">
-                           <children>
-                              <MFXScrollPane prefHeight="40.0" prefWidth="597.0" vbarPolicy="NEVER" />
-                           </children>
-                           <opaqueInsets>
-                              <Insets bottom="10.0" top="3.0" />
-                           </opaqueInsets>
-                           <VBox.margin>
-                              <Insets bottom="5.0" top="5.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <MFXScrollPane hbarPolicy="NEVER" prefHeight="477.0" prefWidth="587.0" vbarPolicy="NEVER" visible="false">
+                        <MFXScrollPane hbarPolicy="NEVER" prefHeight="477.0" prefWidth="594.0" vbarPolicy="NEVER">
                            <content>
-                              <GridPane fx:id="subCategoryGrid" prefHeight="1600.0" prefWidth="588.0" vgap="15.0">
+                              <GridPane fx:id="categoryGrid" alignment="CENTER" hgap="15.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="112.0" prefWidth="505.0" vgap="15.0">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                        </MFXScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="subCategoryScene" prefHeight="491.0" prefWidth="594.0" visible="false">
+               <children>
+                  <VBox layoutX="-4.0" layoutY="-1.0" prefHeight="477.0" prefWidth="594.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <MFXScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="594.0" vbarPolicy="NEVER">
+                           <content>
+                              <HBox fx:id="subCategoryBox" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="594.0" style="-fx-background-color: #ececec;">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" top="3.0" />
+                                 </opaqueInsets>
+                              </HBox>
+                           </content>
+                        </MFXScrollPane>
+                        <MFXScrollPane hbarPolicy="NEVER" prefHeight="477.0" prefWidth="587.0" vbarPolicy="NEVER">
+                           <content>
+                              <GridPane fx:id="subCategoryGrid" hgap="15.0" prefHeight="105.0" prefWidth="597.0" vgap="15.0">
+                                 <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                  </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
                               </GridPane>
                            </content>
                         </MFXScrollPane>
@@ -373,29 +377,27 @@
             </AnchorPane>
             <AnchorPane fx:id="searchScene" prefHeight="1600.0" prefWidth="595.0" visible="false">
                <children>
-                  <GridPane fx:id="productFoundGrid" prefHeight="1600.0" prefWidth="588.0" vgap="15.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
+                  <MFXScrollPane hbarPolicy="NEVER" layoutY="16.0" prefHeight="473.0" prefWidth="599.0" vbarPolicy="NEVER">
+                     <content>
+                        <GridPane fx:id="productFoundGrid" prefHeight="171.0" prefWidth="602.0" vgap="15.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </MFXScrollPane>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="noSearch" prefHeight="477.0" prefWidth="595.0" visible="false">
                <children>
-                  <StackPane layoutY="-11.0" prefHeight="478.0" prefWidth="587.0" visible="false" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-11.0">
+                  <StackPane layoutY="-11.0" prefHeight="478.0" prefWidth="587.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-11.0">
                      <children>
                         <ImageView fx:id="notProductFound" fitHeight="414.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/WhatsApp%20Image%202025-01-02%20at%204.29.54%20PM.jpeg" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="writeToFind" fitHeight="476.0" fitWidth="489.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                        <ImageView fx:id="writeToFind" fitHeight="476.0" fitWidth="489.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/WhatsApp%20Image%202025-01-02%20at%204.05.05%20PM.jpeg" />
                            </image>
@@ -416,7 +418,19 @@
    <top>
       <AnchorPane fx:id="topAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="660.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="searchVbox" prefHeight="83.0" prefWidth="659.0" spacing="4.0">
+            <HBox fx:id="cartLabel" alignment="CENTER" prefHeight="83.0" prefWidth="659.0" styleClass="hboxTitle" stylesheets="@../Styles/style.css" visible="false">
+               <children>
+                  <Text fx:id="textID" accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="سلتي" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="407.1000061035156">
+                     <font>
+                        <Font name="Cairo SemiBold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="-2.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <VBox fx:id="searchProduct" prefHeight="83.0" prefWidth="659.0" spacing="4.0" visible="false">
                <children>
                   <HBox fx:id="searchLabel" prefHeight="47.0" prefWidth="659.0" style="-fx-background-color: light gray;">
                      <opaqueInsets>
@@ -435,9 +449,9 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <HBox fx:id="searchBox2" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="354.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" styleClass="oval-vbox" stylesheets="@../Styles/style.css" translateX="150.0">
+                  <HBox fx:id="searchBox2" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#searchingOn" prefHeight="41.0" prefWidth="354.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" styleClass="oval-vbox" stylesheets="@../Styles/style.css" translateX="150.0">
                      <children>
-                        <TextField fx:id="searchFeild" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="319.0" promptText="اسم المنتج" styleClass="text-field" stylesheets="@../Styles/style.css">
+                        <TextField fx:id="searchFeild" alignment="CENTER_RIGHT" onAction="#searchingOn" prefHeight="19.0" prefWidth="319.0" promptText="اسم المنتج" styleClass="text-field" stylesheets="@../Styles/style.css">
                            <font>
                               <Font name="Cairo SemiBold" size="20.0" />
                            </font>
@@ -453,7 +467,7 @@
             </VBox>
             <HBox fx:id="searchBackBox" prefHeight="51.0" prefWidth="659.0" spacing="85.0" visible="false">
                <children>
-                  <ImageView fx:id="searchIcon" fitHeight="34.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+                  <ImageView fx:id="searchIcon" fitHeight="34.0" fitWidth="46.0" onMouseClicked="#searchOnProduct" pickOnBounds="true" preserveRatio="true" translateX="5.0">
                      <image>
                         <Image url="@../Images/icons8-search-50.png" />
                      </image>
@@ -463,7 +477,7 @@
                   </ImageView>
                   <Text fx:id="categoryName" strokeType="OUTSIDE" strokeWidth="0.0" text="خضار وفواكه" textAlignment="CENTER" wrappingWidth="365.31800842285156">
                      <font>
-                        <Font name="Cairo Regular" size="23.0" />
+                        <Font name="Cairo ExtraBold" size="23.0" />
                      </font>
                   </Text>
                   <ImageView fx:id="backBt" fitHeight="44.0" fitWidth="48.0" onMouseClicked="#backToMain" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
@@ -478,7 +492,7 @@
             </HBox>
             <HBox fx:id="cartBox" alignment="CENTER" prefHeight="57.0" prefWidth="659.0" styleClass="hboxTitle" stylesheets="@../Styles/style.css" visible="false">
                <children>
-                  <Text fx:id="textID" accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="سلتي" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="407.1000061035156">
+                  <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="سلتي" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="490.1000061035156">
                      <font>
                         <Font name="Cairo SemiBold" size="20.0" />
                      </font>
@@ -488,9 +502,9 @@
                   </Text>
                </children>
             </HBox>
-            <HBox fx:id="searchBox" alignment="CENTER_RIGHT" layoutX="350.0" prefHeight="47.0" prefWidth="299.0" style="-fx-background-color: CFCBCBFF;" styleClass="hbox" stylesheets="@../Styles/style.css" translateY="14.0" visible="false">
+            <HBox fx:id="searchBox" alignment="CENTER_RIGHT" layoutX="350.0" prefHeight="47.0" prefWidth="299.0" style="-fx-background-color: CFCBCBFF;" styleClass="hbox" stylesheets="@../Styles/style.css" translateY="14.0">
                <children>
-                  <TextField alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="252.0" promptText="بحث .." styleClass="text-field" stylesheets="@../Styles/style.css">
+                  <TextField alignment="CENTER_RIGHT" onMouseClicked="#searchOnProduct" prefHeight="36.0" prefWidth="252.0" promptText="بحث .." styleClass="text-field" stylesheets="@../Styles/style.css">
                      <font>
                         <Font name="Cairo SemiBold" size="20.0" />
                      </font>
@@ -505,16 +519,20 @@
                   <Insets />
                </opaqueInsets>
             </HBox>
-            <Text fx:id="GMUser" layoutX="15.0" layoutY="-2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="صباح الخير , هنادي" textAlignment="RIGHT" translateX="50.0" translateY="40.0" visible="false" wrappingWidth="114.68000030517578">
-               <font>
-                  <Font name="Cairo SemiBold" size="13.0" />
-               </font>
-            </Text>
-            <ImageView fx:id="goodMorningImg" fitHeight="43.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" translateX="22.0" translateY="12.0" visible="false">
-               <image>
-                  <Image url="@../Images/morning.png" />
-               </image>
-            </ImageView>
+            <HBox fx:id="goodMorningBox" prefHeight="54.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="goodMorningImg" fitHeight="43.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@../Images/morning.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="GMUser" strokeType="OUTSIDE" strokeWidth="0.0" text="صباح الخير , هنادي" textAlignment="RIGHT" translateY="15.0" wrappingWidth="114.68000030517578">
+                     <font>
+                        <Font name="Cairo SemiBold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </top>
