@@ -24,7 +24,7 @@ public class Driver extends Application {
     /*  Developed by Birzeit Students
     -> Ali Hassoneh (1221758)
     -> Hanade Zareer (1222729)
-    -> Afnan Manasrah (??????)
+    -> Afnan Manasrah (1221150)
     **/
     @Override
     public void start(Stage stage) throws IOException {
@@ -33,9 +33,10 @@ public class Driver extends Application {
         /* Compile JavaFX Application class with Java 20 **/
         /* Load Fonts, Cairo initialized to Intellij **/
         initializeFonts();
-         fxmlLoader = new FXMLLoader(getClass().getResource("/Shini/FXML/LoginUI.fxml"));
+         fxmlLoader = new FXMLLoader(getClass().getResource("/Shini/FXML/main.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load(), 606, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 659, 606);
+
         loginStage.setTitle("Shini Extra Online");
         loginStage.setScene(scene);
         loginStage.show();

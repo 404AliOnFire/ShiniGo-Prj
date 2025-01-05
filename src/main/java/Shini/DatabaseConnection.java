@@ -7,7 +7,13 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     private static final String url = "jdbc:mysql://localhost:3306/Shini_SuperMarket";
     private static final String user = "root";
-    private static final String password = "root1234";
+//    private static final String password = "root1234";
+
+    // Hanade Password
+    private static final String password = "Ha122@sQL";
+  // afnan
+  //  private static final String password = "0568784624";
+
 
     // Private constructor to prevent instantiation
     private DatabaseConnection() {}

@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane cache="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: ط;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane cache="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Shini.SubCategoryControl">
    <children>
       <VBox layoutX="-2.0" prefHeight="595.0" prefWidth="499.0">
          <children>
@@ -36,7 +36,7 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="500.0" style="-fx-background-color: #ececec;">
+            <HBox fx:id="subHB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="500.0" style="-fx-background-color: #ececec;">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="99.0">
                      <children>
@@ -49,7 +49,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="اعشاب وورقيات">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="أعشاب وورقيات">
                            <font>
                               <Font name="Cairo Regular" size="15.0" />
                            </font>
@@ -85,18 +85,21 @@
                   </VBox>
                </children>
             </HBox>
-            <ScrollPane maxWidth="-Infinity" prefHeight="461.0" prefWidth="499.0">
+            <ScrollPane hbarPolicy="NEVER" maxWidth="-Infinity" prefHeight="461.0" prefWidth="499.0" vbarPolicy="NEVER">
                <content>
-                  <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="428.0" prefWidth="495.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
+                  <GridPane fx:id="subCatGrid" hgap="12.0" prefHeight="1191.0" prefWidth="481.0" vgap="20.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
                   </GridPane>
                </content>
             </ScrollPane>
@@ -106,7 +109,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-user-32%20(1).png" />
+                              <Image url="@../Images/icons8-user-32 (1).png" />
                            </image>
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
@@ -120,7 +123,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/icons8-box-50%20(1).png" />
+                              <Image url="@../Images/icons8-box-50 (1).png" />
                            </image>
                         </ImageView>
                         <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
@@ -148,7 +151,7 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/black-home-32%20(1).png" />
+                              <Image url="@../Images/black-home-32 (1).png" />
                            </image>
                         </ImageView>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">

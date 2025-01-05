@@ -24,3 +24,10 @@
     -fx-font-family: 'Cairo';   /* Changes the font to Cairo */
     -fx-font-size: 14px;
 }
+
+.vbox {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 2, 2);
+    -fx-background-color: white;
+    -fx-background-radius: 8; /* حواف مستديرة */
+    -fx-padding: 10; /* مساحة داخلية */
+}
