@@ -4,13 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="368ae8d2-25df-4b30-9c64-6a89cc7a7a74" name="Changes" comment="finally my work completed -&gt; add search action">
+    <list default="true" id="368ae8d2-25df-4b30-9c64-6a89cc7a7a74" name="Changes" comment="unknown">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/DynamicTableView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/GenericTableView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/Subcategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/barchart-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="main" />
@@ -24,22 +45,22 @@
     &quot;assignee&quot;: &quot;HanadeZareer&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/404AliOnFire/ShiniGo-Prj",
-    "accountId": "6eacae18-6768-4763-a291-c9d2302ca06b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/404AliOnFire/ShiniGo-Prj&quot;,
+    &quot;accountId&quot;: &quot;6eacae18-6768-4763-a291-c9d2302ca06b&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "404AliOnFire",
-    "repository": "ShiniGo-Prj"
+    &quot;owner&quot;: &quot;404AliOnFire&quot;,
+    &quot;repository&quot;: &quot;ShiniGo-Prj&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -54,9 +75,10 @@
     "Application.Driver.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#15 on hanadiBranch",
+    "git-widget-placeholder": "hanadiBranch",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Hanad/OneDrive/Desktop/DB Driver/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -100,7 +122,9 @@
       <option name="presentableId" value="Default" />
       <updated>1735971950907</updated>
       <workItem from="1735971967389" duration="21002000" />
-      <workItem from="1736017311031" duration="9918000" />
+      <workItem from="1736017311031" duration="12488000" />
+      <workItem from="1736084095058" duration="26704000" />
+      <workItem from="1736160472682" duration="18029000" />
     </task>
     <task id="LOCAL-00003" summary="finally my work completed -&gt; add search action">
       <option name="closed" value="true" />
@@ -110,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736030791462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="unknown">
+      <option name="closed" value="true" />
+      <created>1736074856091</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736074856091</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +163,7 @@
     <MESSAGE value="fix bugs" />
     <MESSAGE value="hanadi works." />
     <MESSAGE value="finally my work completed -&gt; add search action" />
-    <option name="LAST_COMMIT_MESSAGE" value="finally my work completed -&gt; add search action" />
+    <MESSAGE value="unknown" />
+    <option name="LAST_COMMIT_MESSAGE" value="unknown" />
   </component>
 </project>

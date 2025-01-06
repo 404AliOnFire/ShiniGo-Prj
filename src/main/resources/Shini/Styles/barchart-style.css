@@ -1,0 +1,77 @@
+/* Style for the BarChart */
+.bar-chart {
+    -fx-background-color: transparent;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+}
+
+/* Style for the chart title */
+.chart-title {
+    -fx-text-fill: #333; /* Dark gray color for the title */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* Style for the category axis (x-axis) */
+.axis .axis-label {
+    -fx-text-fill: #555; /* Medium gray for axis labels */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.axis .tick-mark {
+    -fx-stroke: #bbb; /* Light gray for tick marks */
+}
+
+.axis .tick-label {
+    -fx-text-fill: #666; /* Slightly darker gray for tick labels */
+    -fx-font-size: 12px;
+}
+
+/* Style for the number axis (y-axis) */
+.axis .tick-mark {
+    -fx-stroke: #bbb;
+}
+
+/* Style for the bars */
+.default-color0.chart-bar {
+    -fx-bar-fill: #007bff; /* Blue color for the bars */
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #28a745; /* Green color for another series */
+}
+
+.default-color2.chart-bar {
+    -fx-bar-fill: #ffc107; /* Yellow color for another series */
+}
+
+.default-color3.chart-bar {
+    -fx-bar-fill: #dc3545; /* Red color for another series */
+}
+
+/* Add hover effect to bars */
+.chart-bar:hover {
+    -fx-bar-fill: #0056b3; /* Darker blue when hovered */
+    -fx-cursor: hand;
+}
+
+/* Style for legend */
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.chart-legend-item-symbol {
+    -fx-background-radius: 2px; /* Rounded corners for legend symbols */
+}
+
+/* Optional: Add a subtle shadow to the bars */
+.chart-bar {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+}
