@@ -15,6 +15,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -45,13 +46,13 @@ public class AdminController {
     private Group addEmployee;
 
     @FXML
+    private Group iloveyou;
+
+    @FXML
     private MFXTextField addressEmp;
 
     @FXML
     private MFXTextField advisor;
-
-    @FXML
-    private ChoiceBox<String> columnsEmp; // Changed to MFXCheckComboBox
 
     @FXML
     private MFXButton deleteEmp;
@@ -97,8 +98,6 @@ public class AdminController {
     void initialize() throws IOException {
         loadEmployees();
         setupColumns();
-        populateColumnsEmp();
-        setupColumnsEmpListener();
         setupTableView();
         setupTableViewListener();
         loadEmployeesInTableView();
@@ -108,10 +107,10 @@ public class AdminController {
     void addEmplHandle(ActionEvent event) throws IOException {
         Employee newEmployee = getEmployeeFromFields();
         if (newEmployee != null) {
-            DatabaseHelper.addEmployee(newEmployee); // Assuming this method exists in DatabaseHelper
+            DatabaseHelper.addEmployee(newEmployee);
             employeeObservableList.add(newEmployee);
             clearFields();
-            refreshEmployees();
+
         }
     }
 
@@ -122,7 +121,6 @@ public class AdminController {
             DatabaseHelper.deleteEmployee(selectedEmployee.getSsn()); // Assuming this method exists in DatabaseHelper
             employeeObservableList.remove(selectedEmployee);
             clearFields();
-            refreshEmployees();
         }
     }
 
@@ -132,11 +130,10 @@ public class AdminController {
         if (selectedEmployee != null) {
             Employee updatedEmployee = getEmployeeFromFields();
             if (updatedEmployee != null) {
-                DatabaseHelper.updateEmployee(updatedEmployee); // Assuming this method exists in DatabaseHelper
+                DatabaseHelper.updateEmployee(updatedEmployee);
                 employeeObservableList.set(employeeObservableList.indexOf(selectedEmployee), updatedEmployee);
                 tableViewEmp.refresh();
                 clearFields();
-                refreshEmployees();
             }
         }
     }
@@ -150,25 +147,13 @@ public class AdminController {
 
     }
 
-    private void populateColumnsEmp() {
-        List<String> columnNames = List.of("SSN", "Name", "Address", "Email", "Birthday", "Hire Date",
-                "Salary", "Role", "Phone", "Work Shift Time", "Advisor", "Gender");
-        columnsEmp.setItems(FXCollections.observableArrayList(columnNames));
-    }
 
-    private void setupColumnsEmpListener() {
-        columnsEmp.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            if (newSelection != null) {
-                updateTableViewColumn(newSelection);
-            }
-        });
-    }
 
     private void updateTableViewColumn(String selectedColumn) {
-        tableViewEmp.getColumns().clear(); // Clear current columns
+        tableViewEmp.getColumns().clear();
         TableColumn<Employee, ?> column = allColumns.get(selectedColumn);
         if (column != null) {
-            tableViewEmp.getColumns().add(column); // Add only the selected column
+            tableViewEmp.getColumns().add(column);
         }
     }
 
@@ -212,6 +197,10 @@ public class AdminController {
         TableColumn<Employee, String> genderColumn = new TableColumn<>("Gender");
         genderColumn.setCellValueFactory(new PropertyValueFactory<>("gender"));
 
+        // Add columns to tableView
+        tableViewEmp.getColumns().addAll(ssnColumn, nameColumn, addressColumn, emailColumn, birthdayColumn, hireDateColumn,
+                salaryColumn, roleColumn, phoneColumn, shiftColumn, advisorColumn, genderColumn);
+
         // Add all columns to the map
         allColumns.put("SSN", ssnColumn);
         allColumns.put("Name", nameColumn);
@@ -245,7 +234,6 @@ public class AdminController {
                     , role, phone, workshiftTime, advisorId, gender);
 
         } catch (Exception e) {
-            // Handle invalid input
             return null;
         }
     }
@@ -282,7 +270,7 @@ public class AdminController {
         AnchorPane anchorPane = loader.load();
 
         listEmployee.getChildren().add(anchorPane);
-        listEmployee.setPrefHeight(listEmployee.getPrefHeight() + 56);
+        listEmployee.setPrefHeight(listEmployee.getPrefHeight() + 20);
 
     }
 
@@ -302,6 +290,12 @@ public class AdminController {
                 populateFields(newSelection);
             }
         });
+    }
+    @FXML
+    void backToAli(MouseEvent event) throws IOException {
+        addEmployee.setVisible(false);
+        EmployeesPane.setVisible(true);
+        refreshEmployees();
     }
 
     private void populateFields(Employee employee) {

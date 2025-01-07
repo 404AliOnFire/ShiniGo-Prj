@@ -3,7 +3,7 @@ package Shini.Admin;
 import java.sql.Date;
 
 public class Employee {
-    private String ssn;
+    private int ssn;
     private String name;
     private String address;
     private String email;
@@ -17,7 +17,7 @@ public class Employee {
     private String gender;
 
     // Constructor
-    public Employee(String ssn, String name, String address, String email, Date birthdayDate,
+    public Employee(int ssn, String name, String address, String email, Date birthdayDate,
                     Date hireDate ,double salary, String role, String phone,
                     int workShiftTime, int advisor, String gender) {
         this.ssn = ssn;
@@ -51,11 +51,11 @@ public class Employee {
     }
 
 
-    public String getSsn() {
+    public int getSsn() {
         return ssn;
     }
 
-    public void setSsn(String ssn) {
+    public void setSsn(int ssn) {
         this.ssn = ssn;
     }
 
