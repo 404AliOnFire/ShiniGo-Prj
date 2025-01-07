@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
-<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,128 +11,48 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: #f6f6f6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.CartController">
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: light gray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <VBox layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="499.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="491.0">
             <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTitle" stylesheets="@../Styles/style.css">
+                <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="490.1000061035156">
+                    <font>
+                        <Font name="Cairo SemiBold" size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Text>
+            <HBox prefHeight="34.0" prefWidth="489.0">
                <children>
-                      <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="سلتي" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="490.1000061035156">
-                          <font>
-                              <Font name="Cairo SemiBold" size="20.0" />
-                          </font>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="حذف الكل" underline="true">
                      <HBox.margin>
-                        <Insets bottom="-2.0" />
+                        <Insets left="5.0" />
                      </HBox.margin>
-                      </Text>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="34.0" prefWidth="495.0" spacing="10.0" styleClass="hbox" stylesheets="@../Styles/style.css">
-               <children>
-                  <AnchorPane prefHeight="40.0" prefWidth="488.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css">
-                     <children>
-                        <Text layoutX="14.0" layoutY="19.0" onMousePressed="#deleteAllVbox" strokeType="OUTSIDE" strokeWidth="0.0" text="حذف الكل" underline="true">
-                           <font>
-                              <Font name="Cairo Regular" size="14.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="436.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="أصناف">
-                           <font>
-                              <Font name="Cairo Regular" size="14.0" />
-                           </font>
-                        </Text>
-                     </children>
+                     <font>
+                        <Font name="Cairo Medium" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="أصناف" translateX="395.0">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="10.0" />
                      </HBox.margin>
-                  </AnchorPane>
+                     <font>
+                        <Font name="Cairo Medium" size="12.0" />
+                     </font>
+                  </Text>
                </children>
                <VBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
             </HBox>
-            <MFXScrollPane hbarPolicy="NEVER" prefHeight="488.0" prefWidth="512.0" trackColor="#331e1e" vbarPolicy="NEVER">
-               <content>
-                  <VBox fx:id="listProductVbox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="897.0" prefWidth="496.0" style="-fx-background-color: #f6f6f6;">
-                     <children>
-                        <HBox fx:id="productHbox" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../Styles/style.css">
-                           <VBox.margin>
-                              <Insets bottom="5.0" />
-                           </VBox.margin>
-                           <children>
-                              <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="497.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css">
-                                 <children>
-                                    <Text fx:id="price" layoutX="244.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 7.5" textAlignment="RIGHT" wrappingWidth="126.38846206665039">
-                                       <font>
-                                          <Font name="Cairo Regular" size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="productName" layoutX="77.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اسم العنصر" textAlignment="RIGHT" textOrigin="BOTTOM" wrappingWidth="299.51498794555664">
-                                       <font>
-                                          <Font name="Cairo Regular" size="15.0" />
-                                       </font>
-                                    </Text>
-                                    <ImageView fx:id="productImage" fitHeight="104.0" fitWidth="96.0" layoutX="400.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Images/ShiniLogo.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Text fill="#a39e9e" layoutX="335.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="piece" wrappingWidth="40.176002502441406">
-                                       <font>
-                                          <Font name="Cairo Regular" size="15.0" />
-                                       </font>
-                                    </Text>
-                                    <HBox alignment="CENTER" layoutX="37.0" layoutY="32.0" prefHeight="40.0" prefWidth="146.0" spacing="15.0">
-                                       <children>
-                                          <MFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL4" minHeight="-Infinity" minWidth="-Infinity" onAction="#subButton" prefHeight="40.0" prefWidth="57.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.8" text="-" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="17.0" />
-                                             </font>
-                                          </MFXButton>
-                                          <Text fx:id="numberOfProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="10.26016616821289">
-                                             <font>
-                                                <Font name="Cairo Regular" size="14.0" />
-                                             </font>
-                                          </Text>
-                                          <MFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL4" minHeight="-Infinity" minWidth="-Infinity" onAction="#addButton" prefHeight="40.0" prefWidth="57.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.8" text="+" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="17.0" />
-                                             </font>
-                                          </MFXButton>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </content>
-            </MFXScrollPane>
-            <VBox prefHeight="248.0" prefWidth="499.0">
+            <ScrollPane prefHeight="481.0" prefWidth="491.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Text layoutX="334.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="المجموع">
-                           <font>
-                              <Font name="Cairo Regular" size="22.0" />
-                           </font>
-                        </Text>
-                        <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="51.0" mnemonicParsing="false" onAction="#confirmButton" prefHeight="53.0" prefWidth="465.0" styleClass="header-bar" stylesheets="@../Styles/confirmOrder.css" text="تأكيد الطلبية                                                                   ←" textFill="WHITE">
-                           <font>
-                              <Font name="Cairo Bold" size="19.0" />
-                           </font>
-                        </Button>
-                        <Text fx:id="totalPrice" layoutX="78.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 7.5">
-                           <font>
-                              <Font name="Cairo Regular" size="22.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
+                  <ComboBox prefHeight="25.0" prefWidth="487.0" />
                </children>
             </VBox>
-                <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="491.0" spacing="25.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css" translateY="10.0">
+                <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="491.0" spacing="25.0" styleClass="hbox" translateY="10.0">
                     <children>
                         <VBox fx:id="account" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                             <children>
@@ -199,143 +117,5 @@
                 </HBox>
             </children>
         </VBox>
-      <VBox layoutX="13.0" layoutY="9.0" prefHeight="595.0" prefWidth="499.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTitle" stylesheets="@../Styles/style.css">
-               <children>
-                  <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="تاكيد الطلب" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="490.1000061035156">
-                     <font>
-                        <Font name="Cairo SemiBold" size="20.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="-2.0" />
-                     </HBox.margin>
-                  </Text>
-               </children>
-            </HBox>
-            <VBox prefHeight="77.0" prefWidth="499.0">
-               <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="499.0">
-                     <children>
-                        <Text layoutX="377.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="المجموع">
-                           <font>
-                              <Font name="Cairo Regular" size="22.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="78.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₪ 7.5">
-                           <font>
-                              <Font name="Cairo Regular" size="22.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </VBox>
-            <AnchorPane prefHeight="453.0" prefWidth="506.0">
-               <children>
-                  <VBox alignment="CENTER" layoutX="55.0" layoutY="10.0" prefHeight="378.0" prefWidth="407.0">
-                     <children>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="المدينة" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="117.39420318603516">
-                                 <font>
-                                    <Font name="Cairo SemiBold" size="18.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="236.0">
-                                 <font>
-                                    <Font name="Cairo Regular" size="20.0" />
-                                 </font>
-                              </MFXTextField>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Text accessibleRole="BUTTON" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hboxTitle" text="العنوان" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="117.39420318603516">
-                                 <font>
-                                    <Font name="Cairo SemiBold" size="18.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="236.0">
-                                 <font>
-                                    <Font name="Cairo Bold" size="20.0" />
-                                 </font>
-                              </MFXTextField>
-                           </children>
-                        </VBox>
-                        <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="53.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="337.0" styleClass="header-bar" stylesheets="@../Styles/confirmOrder.css" text="ارسال" textFill="WHITE">
-                           <font>
-                              <Font name="Cairo Bold" size="18.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
-            <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="491.0" spacing="25.0" styleClass="hboxWhite" stylesheets="@../Styles/style.css" translateY="10.0">
-               <children>
-                  <VBox fx:id="account1" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/icons8-user-32 (1).png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-                  <VBox fx:id="order1" accessibleRole="BUTTON" alignment="CENTER" prefHeight="53.0" prefWidth="115.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/icons8-box-50 (1).png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-                  <VBox fx:id="cart1" accessibleRole="BUTTON" alignment="CENTER" prefHeight="53.0" prefWidth="123.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/black-shopping-cart-48 (1).png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#070707" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-                  <VBox fx:id="main1" accessibleRole="BUTTON" alignment="CENTER" prefHeight="53.0" prefWidth="127.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/icons8-home-32.png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </HBox>
-         </children>
-      </VBox>
     </children>
 </AnchorPane>

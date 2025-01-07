@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="56.0" prefWidth="257.0" styleClass="pane-red-line" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="name" fill="WHITE" layoutX="66.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ali Hassoneh" wrappingWidth="187.1596578659039">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="image" fitHeight="48.0" fitWidth="48.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/icons8-profile-picture-96.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="role" fill="#d9d9d9" layoutX="66.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="118.99156951904297">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Text>
+      <HBox layoutX="160.0" layoutY="23.0" prefHeight="22.0" prefWidth="86.0" spacing="5.0">
+         <children>
+            <Text fx:id="₪" fill="#9b1a06" strokeType="OUTSIDE" strokeWidth="0.0" text="₪">
+               <font>
+                  <Font name="Cairo Regular" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="salary" fill="#d9d9d9" strokeType="OUTSIDE" strokeWidth="0.0" text="3200 " wrappingWidth="62.52098846435547">
+               <font>
+                  <Font name="Cairo Regular" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

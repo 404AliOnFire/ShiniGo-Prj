@@ -33,8 +33,8 @@ public class Driver extends Application {
         /* Compile JavaFX Application class with Java 20 **/
         /* Load Fonts, Cairo initialized to Intellij **/
         initializeFonts();
-         fxmlLoader = new FXMLLoader(getClass().getResource("/Shini/FXML/main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 981, 594);
+         fxmlLoader = new FXMLLoader(getClass().getResource("/Shini/FXML/myAccount.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 606, 600);
         loginStage.setTitle("Shini Extra Online");
         loginStage.setScene(scene);
         loginStage.show();

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ordap" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: light gray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.MyOrderController">
+   <children>
+      <VBox alignment="CENTER" layoutX="3.0" layoutY="-1.0" prefHeight="586.0" prefWidth="491.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="162.0" text="طلباتي">
+               <font>
+                  <Font name="Cairo Regular" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="marbut" mnemonicParsing="false" onAction="#markethandle" prefHeight="50.0" prefWidth="245.0" styleClass="but2" stylesheets="@../Styles/ButtonsStyle.css" text="المتجر">
+                     <font>
+                        <Font name="Cairo Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="onlinebut" mnemonicParsing="false" onAction="#onlinehandle" prefHeight="50.0" prefWidth="245.0" styleClass="but1" stylesheets="@../Styles/ButtonsStyle.css" text="أونلاين">
+                     <font>
+                        <Font name="Cairo Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <ScrollPane fx:id="scpane" prefHeight="487.0" prefWidth="491.0">
+               <content>
+                  <GridPane fx:id="grpane" prefHeight="16.0" prefWidth="28.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="50.0" prefHeight="55.0" prefWidth="491.0" spacing="25.0" styleClass="hbox" translateY="10.0">
+               <children>
+                  <VBox fx:id="account" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-user-32 (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="order" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-box-50.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="cart" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-shopping-cart-48.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="main" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-home-32.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية" textAlignment="CENTER">
+                           <font>
+                              <Font name="Cairo Black" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
