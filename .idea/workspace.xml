@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="368ae8d2-25df-4b30-9c64-6a89cc7a7a74" name="Changes" comment="unknown">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/DynamicTableView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/GenericTableView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/Subcategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/barchart-style.css" afterDir="false" />
+    <list default="true" id="368ae8d2-25df-4b30-9c64-6a89cc7a7a74" name="Changes" comment="create some statistics for product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/Admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/Styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +62,7 @@
     "Application.Driver.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "hanadiBranch",
+    "git-widget-placeholder": "#18 on hanadiBranch",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Hanad/OneDrive/Desktop/DB Driver/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar",
     "list.type.of.created.stylesheet": "CSS",
@@ -124,7 +111,7 @@
       <workItem from="1735971967389" duration="21002000" />
       <workItem from="1736017311031" duration="12488000" />
       <workItem from="1736084095058" duration="26704000" />
-      <workItem from="1736160472682" duration="18029000" />
+      <workItem from="1736160472682" duration="21422000" />
     </task>
     <task id="LOCAL-00003" summary="finally my work completed -&gt; add search action">
       <option name="closed" value="true" />
@@ -142,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736074856091</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create some statistics for product">
+      <option name="closed" value="true" />
+      <created>1736195318962</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736195318962</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +159,7 @@
     <MESSAGE value="hanadi works." />
     <MESSAGE value="finally my work completed -&gt; add search action" />
     <MESSAGE value="unknown" />
-    <option name="LAST_COMMIT_MESSAGE" value="unknown" />
+    <MESSAGE value="create some statistics for product" />
+    <option name="LAST_COMMIT_MESSAGE" value="create some statistics for product" />
   </component>
 </project>
