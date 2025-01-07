@@ -449,7 +449,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <HBox fx:id="searchBox2" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#searchingOn" prefHeight="41.0" prefWidth="354.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" styleClass="oval-vbox" stylesheets="@../Styles/style.css" translateX="150.0">
+                  <HBox fx:id="searchBox2" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="354.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" styleClass="oval-vbox" stylesheets="@../Styles/style.css" translateX="150.0">
                      <children>
                         <TextField fx:id="searchFeild" alignment="CENTER_RIGHT" onAction="#searchingOn" prefHeight="19.0" prefWidth="319.0" promptText="اسم المنتج" styleClass="text-field" stylesheets="@../Styles/style.css">
                            <font>

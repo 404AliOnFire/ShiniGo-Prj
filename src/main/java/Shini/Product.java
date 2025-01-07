@@ -1,5 +1,7 @@
 package Shini;
 
+import javafx.scene.control.DatePicker;
+
 import java.sql.Date;
 
 public class Product {
@@ -17,6 +19,7 @@ public class Product {
     private int subcategoryId;
     private Integer offerId;
     private String imagePath;
+    private  boolean shown = true;
 
     // Constructor
     public Product(int barcode, String name, String type, Date endD, Date startD, double price, int calories,
@@ -38,9 +41,30 @@ public class Product {
         this.imagePath = imagePath;
     }
 
+    public Product(String name, String type, Date endD, Date startD, double price, int calories,
+                   String size, String description, boolean boycott, boolean isEdible, int subcategoryId,
+                   Integer offerId, String imagePath, boolean shown) {
+        this.name = name;
+        this.type = type;
+        this.endD = endD;
+        this.startD = startD;
+        this.price = price;
+        this.calories = calories;
+        this.size = size;
+        this.description = description;
+        this.boycott = boycott;
+        this.isEdible = isEdible;
+        this.subcategoryId = subcategoryId;
+        this.offerId = offerId;
+        this.imagePath = imagePath;
+        this.shown = shown;
+    }
+
     // Default constructor
     public Product() {
     }
+
+
 
     // Getters and Setters
     public int getBarcode() {
@@ -153,6 +177,14 @@ public class Product {
 
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
+    }
+
+    public boolean getShown() {
+        return shown;
+    }
+
+    public void setShown(boolean shown) {
+        this.shown = shown;
     }
 
     // toString Method

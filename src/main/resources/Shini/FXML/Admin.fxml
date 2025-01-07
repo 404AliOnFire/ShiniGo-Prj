@@ -1,16 +1,342 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="595.0" prefWidth="1200.0" style="-fx-background-color: #F9F6EE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Admin.AdminController">
    <children>
+      <TabPane fx:id="productTabPane" layoutX="241.0" prefHeight="594.0" prefWidth="959.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="productTab" text="Product Manage">
+            <content>
+              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="960.0">
+                     <children>
+                        <Group fx:id="productM" layoutX="2.0" layoutY="-8.0" AnchorPane.topAnchor="12.0">
+                           <children>
+                              <TableView fx:id="tableViewProd" layoutY="-44.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="318.0" prefWidth="943.0" stylesheets="@../Styles/style.css" tableMenuButtonVisible="true" translateY="87.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <styleClass>
+                                    <String fx:value="table-container" />
+                                    <String fx:value="table" />
+                                 </styleClass>
+                              </TableView>
+                              <HBox layoutX="7.0" layoutY="387.0" prefHeight="161.0" prefWidth="955.0" spacing="10.0">
+                                 <children>
+                                    <VBox prefHeight="161.0" prefWidth="199.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="66.51043701171875">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXTextField fx:id="tfNameProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="117.0">
+                                                   <font>
+                                                      <Font name="Cairo Regular" size="12.0" />
+                                                   </font>
+                                                </MFXTextField>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" wrappingWidth="69.26116943359375">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXTextField fx:id="tfTypeProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="112.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price    " wrappingWidth="62.77362060546875">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXTextField fx:id="tfPriceProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="112.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="161.0" prefWidth="199.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MFD ">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <DatePicker fx:id="startD" prefHeight="27.0" prefWidth="100.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="EXP ">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <DatePicker fx:id="endD" prefHeight="27.0" prefWidth="106.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="calories">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXTextField fx:id="tfCaloriesProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="89.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="161.0" prefWidth="152.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="size" wrappingWidth="55.7769775390625">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXTextField fx:id="tfSizeProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="70.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="isEdible">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXComboBox fx:id="cbxIsEdibleProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="74.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="boycott" wrappingWidth="70.4019775390625">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXComboBox fx:id="cbxBoycottProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="71.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="161.0" prefWidth="253.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="description" wrappingWidth="102.06787109375">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXTextField fx:id="tfDescProd" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="120.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subcategory_ID">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXComboBox fx:id="cbxSubCID" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="80.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Offer_ID" wrappingWidth="115.0">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXComboBox fx:id="cbxOfferIDProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="79.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="161.0" prefWidth="152.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <ImageView fx:id="addProdImg" fitHeight="29.0" fitWidth="29.0" onMouseClicked="#chooseImg" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Images/icons8-upload-image-30.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <MFXTextField fx:id="tfImgPath" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="87.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="shown">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="17.0" />
+                                                   </font>
+                                                </Text>
+                                                <MFXComboBox fx:id="cbxVisibility" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="75.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <MFXButton fx:id="updateProd" layoutX="485.0" layoutY="542.0" onAction="#updateProdHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: gray; -fx-font-family: Century Gothic;" text="Update">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <MFXButton fx:id="addProd" layoutX="616.0" layoutY="542.0" onAction="#addProdlHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: green; -fx-font-family: Century Gothic;" text="Add">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fx:id="backToLife" fitHeight="48.0" fitWidth="110.0" layoutX="869.0" layoutY="514.0" onMouseClicked="#backToAli" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/ArrowRight.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="813.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
+                                 <font>
+                                    <Font name="Century Gothic" size="17.0" />
+                                 </font>
+                              </Text>
+                              <MFXButton fx:id="deleteProd" layoutX="359.0" layoutY="542.0" onAction="#deleteProdHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: red; -fx-font-family: Century Gothic;" text="Delete">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <HBox fx:id="searchBox2" alignment="CENTER" layoutX="40.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="234.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" styleClass="oval-vbox" stylesheets="@../Styles/style.css">
+                                 <children>
+                                    <ImageView fitHeight="37.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/icons8-search-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="searchFeild" prefHeight="19.0" prefWidth="319.0" promptText="search.." styleClass="text-field" stylesheets="@../Styles/style.css">
+                                       <font>
+                                          <Font name="Cairo SemiBold" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Group>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-carton-of-orange-juice-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab fx:id="CategoryTap" text="Category Manage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-product-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="subCategoryTab" text="SubCategory Manage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-product-management-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="OfferTab" text="Offer Manage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-hot-price-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="Statistics" text="Statistics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MFXScrollPane hbarPolicy="NEVER" prefHeight="568.0" prefWidth="951.0" vbarPolicy="NEVER">
+                           <content>
+                              <BarChart fx:id="barChartProduct" prefHeight="487.0" prefWidth="934.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </content>
+                        </MFXScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons8-combo-chart-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
       <VBox prefHeight="594.0" prefWidth="240.0" spacing="15.0" style="-fx-background-color: brown;">
          <children>
             <VBox alignment="CENTER" prefHeight="152.0" prefWidth="240.0">
@@ -132,7 +458,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </MFXButton>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Products">
+            <MFXButton fx:id="productsAdmin" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Products">
                <font>
                   <Font name="Cairo Black" size="15.0" />
                </font>
@@ -163,7 +489,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </MFXButton>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Customers">
+            <MFXButton fx:id="customerAdmin" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Customers">
                <font>
                   <Font name="Cairo Black" size="15.0" />
                </font>
@@ -383,7 +709,7 @@
             </Text>
          </children>
       </Group>
-      <Group fx:id="addEmployee" layoutX="250.0" layoutY="23.0">
+      <Group fx:id="addEmployee" layoutX="250.0" layoutY="23.0" visible="false">
          <children>
             <TableView fx:id="tableViewEmp" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="344.0" prefWidth="943.0" stylesheets="@../Styles/employeeStyle.css" tableMenuButtonVisible="true">
                <opaqueInsets>
