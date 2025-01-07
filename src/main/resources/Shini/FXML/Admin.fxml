@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="594.0" prefWidth="1200.0" style="-fx-background-color: #F9F6EE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.AdminController">
+    <children>
+        <VBox prefHeight="594.0" prefWidth="240.0" spacing="15.0" style="-fx-background-color: brown;">
+            <children>
+                <VBox alignment="CENTER" prefHeight="152.0" prefWidth="240.0">
+                    <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="132.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/ShiniLogo.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </StackPane>
+                        <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" text="ADMIN">
+                            <font>
+                                <Font name="Cairo Black" size="15.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <MFXButton fx:id="dashboardbutton" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" rippleAnimateShadow="true" text="Dashboard">
+                    <font>
+                        <Font name="Cairo Regular" size="15.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/dashboard.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Employees">
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/businessman.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006691031984268851">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="1.0" blue="0.7333333492279053" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton fx:id="branchesbutton" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Branches">
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/branch.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.5623401403427124" green="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Products">
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.5458015703383521">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.7867907881736755" green="0.4869735836982727" blue="0.4869735836982727" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/box.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Customers">
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.015267181920018191">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="0.7833333611488342" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/customer.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="40.0" prefWidth="200.0" rippleAnimateBackground="false" rippleAnimateShadow="true" style="-fx-background-color: black;" text="←                      Sign out" textFill="WHITE">
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <rippleColor>
+                        <RadialGradient centerX="1.0" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006691031984268851">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.9999999888825887">
+                                    <color>
+                                        <Color green="0.3333333432674408" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="0.3333333432674408" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </RadialGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" © Copyrights for Birzeit's Students">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="10.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+      <AnchorPane fx:id="BranchesPane" layoutX="240.0" prefHeight="594.0" prefWidth="960.0">
+         <children>
+            <GridPane fx:id="branchgridpane">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

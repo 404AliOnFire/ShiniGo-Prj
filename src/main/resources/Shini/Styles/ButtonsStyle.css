@@ -1,16 +1,16 @@
 .button {
-    -fx-background-color: White; /* Default stage color */
+    -fx-background-color: #F4F4F4; /* Default stage color */
     -fx-text-fill: black;          /* Optional: Text color */
-    -fx-border-color: White; /* Optional: No border */
+    -fx-border-color: #F4F4F4; /* Optional: No border */
 }
 .but1{
 -fx-border-color:red;
--fx-background-color: White;
+-fx-background-color: #F4F4F4;
 -fx-border-width:0px 0px 3px 0px;
 }
 .but2{
--fx-border-color:white;
--fx-background-color: White;
+-fx-border-color:#F4F4F4;
+-fx-background-color: #F4F4F4;
 -fx-border-width:0px 0px 3px 0px;
 }
 .but3{/* for preperation*/

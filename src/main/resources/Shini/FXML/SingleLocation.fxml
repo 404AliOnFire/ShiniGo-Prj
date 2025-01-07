@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.SingleLocationController">
+   <children>
+      <ImageView fitHeight="168.0" fitWidth="200.0">
+         <image>
+            <Image url="@../Images/shinilocation.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="Locationnlabel" alignment="CENTER" layoutX="47.0" layoutY="168.0" prefHeight="32.0" prefWidth="107.0" text="Location" textFill="#b7b2b2">
+         <font>
+            <Font name="Cairo Regular" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

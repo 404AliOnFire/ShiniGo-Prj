@@ -16,8 +16,8 @@ public class Stages {
     static FXMLLoader fxmlLoader;
 
     public static void openUser() throws IOException {
-         fxmlLoader = new FXMLLoader(Stages.class.getResource("/Shini/FXML/main.fxml"));
-         userStage = new Stage();
+        fxmlLoader = new FXMLLoader(Stages.class.getResource("/Shini/FXML/main.fxml"));
+        userStage = new Stage();
 
         Scene scene = new Scene(fxmlLoader.load(), 500, 595);
         userStage.setTitle("Shini Extra Online");
