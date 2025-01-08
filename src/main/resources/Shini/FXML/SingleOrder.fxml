@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="myordan" prefHeight="101.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.SingleOController">
+<AnchorPane fx:id="myordan" prefHeight="101.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.SingleOController">
    <children>
-      <HBox alignment="CENTER" layoutX="3.0" layoutY="-3.0" prefHeight="33.0" prefWidth="493.0">
+      <HBox alignment="CENTER" layoutX="-1.0" prefHeight="33.0" prefWidth="657.0">
          <children>
             <Label fx:id="totpricbut" alignment="CENTER" prefHeight="23.0" prefWidth="78.0" text="السعر">
                <font>
@@ -26,7 +26,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="TOP_CENTER" layoutY="33.0" prefHeight="33.0" prefWidth="493.0">
+      <HBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="34.0" prefHeight="33.0" prefWidth="657.0">
          <children>
             <Button fx:id="statusbut" mnemonicParsing="false" onAction="#arrddisplay" prefHeight="25.0" prefWidth="117.0" styleClass="but3" stylesheets="@../Styles/ButtonsStyle.css" text="حال الطلب">
                <HBox.margin>

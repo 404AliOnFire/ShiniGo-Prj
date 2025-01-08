@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
@@ -26,6 +27,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
+import java.sql.SQLOutput;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -189,6 +191,15 @@ public class Controller implements Initializable {
     @FXML
     private ImageView writeToFind;
 
+    @FXML
+    private AnchorPane cart1;
+
+    @FXML
+    private VBox searchProduct;
+
+    @FXML
+    private HBox goodMorningBox;
+
     private VBox vBox;
 
     public Stage createAccountStage = new Stage();
@@ -213,9 +224,12 @@ public class Controller implements Initializable {
         }
 
         panes.put("main", mainScene);
-        panes.put("cart", myEmptyCart);
+        panes.put("cart", myCart);
         panes.put("emptyCart", myEmptyCart);
         // pane.put("account", myAccount);
+        panes.put("search",searchScene);
+        panes.put("noSearch",noSearch);
+        panes.put("subCategory", subCategoryScene);
 
         // Hanadi
 
@@ -225,7 +239,7 @@ public class Controller implements Initializable {
         int row = 0;
         try{
             for(Category category : categories){
-
+//                URL imageUrl = getClass().getClassLoader().getResource(category.getImagePath());
                 ImageView categoryImg = new ImageView(new Image(category.getImagePath()));
                 categoryImg.setFitHeight(150);
                 categoryImg.setFitWidth(150);
@@ -374,6 +388,7 @@ public class Controller implements Initializable {
 
         showPane("main");
         showHbox("searchVbox");
+        showHbox("goodMorningBox");
     }
 
     @FXML
@@ -443,20 +458,23 @@ public class Controller implements Initializable {
 
     // Hanadi
     private void handleImageClick(MouseEvent event, String categName){
-        System.out.println(categName);
         categoryName.setText(categName);
+
+
 
         List<String> subCategoriesName = databaseHelper.getSubCategories(categName);
 
-        searchBox.setVisible(false);
-        cartBox.setVisible(false);
-        mainScene.setVisible(false);
-        GMUser.setVisible(false);
-        categoryGrid.setVisible(false);
-        goodMorningImg.setVisible(false);
-        searchBackBox.setVisible(true);
-        subCategoryScene.setVisible(true);
-        mainScene.setVisible(false);
+        showPane("subCategory");
+        showHbox("searchBackBox");
+//        searchBox.setVisible(false);
+//        cartBox.setVisible(false);
+//        mainScene.setVisible(false);
+//        GMUser.setVisible(false);
+//        categoryGrid.setVisible(false);
+//        goodMorningImg.setVisible(false);
+//        searchBackBox.setVisible(true);
+//        subCategoryScene.setVisible(true);
+//        mainScene.setVisible(false);
 
         String css = getClass().getResource("/Shini/Styles/redLine.css").toExternalForm();
         String style = getClass().getResource("/Shini/Styles/style.css").toExternalForm();
@@ -487,8 +505,9 @@ public class Controller implements Initializable {
         subCategoryBox.getChildren().add(vbox2);
 
         DatabaseHelper databaseHelper = new DatabaseHelper();
-        productsOfSubCategory = databaseHelper.getAllProductsOfSubCategory(categName);
-        loadProduct(productsOfSubCategory);
+
+        productsOfSubCategory = databaseHelper.getAllProductsOfCategory(categName);
+        loadProduct(productsOfSubCategory, subCategoryGrid);
 
         for (int i = 0; i < (subCategoriesName.size() + 1); i++) {
             VBox vboxSubCategory = (VBox) subCategoryBox.getChildren().get(i);
@@ -516,17 +535,17 @@ public class Controller implements Initializable {
 
 
                 if(subCategoryName.equals("الجميع"))
-                    productsOfSubCategory = databaseHelper.getAllProductsOfSubCategory(categName);
+                    productsOfSubCategory = databaseHelper.getAllProductsOfCategory(categName);
 
                 else{
                     productsOfSubCategory= databaseHelper.getProductsOfSubCategory(subCategoryName);
                 }
-                loadProduct(productsOfSubCategory);
+                loadProduct(productsOfSubCategory, subCategoryGrid);
             });
         }
     }
 
-    private void loadProduct(List<Product> productsOfSubCategory) {
+    private void loadProduct(List<Product> productsOfSubCategory, GridPane subCategoryGrid) {
         int column = 0;
         int row = 0;
         try{
@@ -545,7 +564,7 @@ public class Controller implements Initializable {
                 }
                 subCategoryGrid.add(pane, column++, row);
 
-                subCategoryGrid.setMargin(pane, new Insets(20));
+                subCategoryGrid.setMargin(pane, new Insets(10));
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -583,17 +602,50 @@ public class Controller implements Initializable {
 
     @FXML
     void backToMain(MouseEvent event) {
+        showPane("main");
+        showHbox("goodMorningBox");
+//        showHbox("searchBox");
         searchBox.setVisible(true);
-        cartBox.setVisible(false);
-        mainScene.setVisible(true);
-        GMUser.setVisible(true);
-        categoryGrid.setVisible(true);
-        goodMorningImg.setVisible(true);
-        subCategoryScene.setVisible(false);
-        mainScene.setVisible(true);
-        searchBackBox.setVisible(false);
+//        cartBox.setVisible(false);
+//        mainScene.setVisible(true);
+//        GMUser.setVisible(true);
+//        categoryGrid.setVisible(true);
+//        goodMorningImg.setVisible(true);
+//        subCategoryScene.setVisible(false);
+//        mainScene.setVisible(true);
+//        searchBackBox.setVisible(false);
 
     }
+
+    @FXML
+    void searchOnProduct(MouseEvent event) {
+        searchFeild.clear();
+        showPane("noSearch");
+        writeToFind.setVisible(true);
+        searchProduct.setVisible(true);
+        searchBox.setVisible(false);
+        goodMorningBox.setVisible(false);
+        searchBackBox.setVisible(false);
+
+//        showHbox("searchLabel");
+
+    }
+
+@FXML
+void searchingOn(ActionEvent event) {
+    productFoundGrid.getChildren().clear();
+    List<Product> products =  databaseHelper.getWantedProduct(searchFeild.getText().trim());
+    if(products.size() > 0){
+        showPane("search");
+        loadProduct(products, productFoundGrid);
+    }else{
+        showPane("noSearch");
+        writeToFind.setVisible(false);
+        notProductFound.setVisible(true);
+    }
+
+}
+
 
 
 }

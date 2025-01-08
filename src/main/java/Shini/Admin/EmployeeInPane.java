@@ -32,6 +32,6 @@ public class EmployeeInPane {
     }
 
     EmployeeInPane(Employee employee){
-       this.employee = employee;
+        this.employee = employee;
     }
 }

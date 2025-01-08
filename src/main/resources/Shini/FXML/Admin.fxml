@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
-<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
-<?import io.github.palexdev.materialfx.controls.MFXTextField?>
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.chart.BarChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
@@ -30,848 +15,229 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="595.0" prefWidth="1200.0" style="-fx-background-color: #F9F6EE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Admin.AdminController">
-   <children>
-      <TabPane fx:id="productTabPane" layoutX="241.0" prefHeight="594.0" prefWidth="959.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab fx:id="productTab" text="Product Manage">
-            <content>
-              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="960.0">
-                     <children>
-                        <Group fx:id="productM" layoutX="2.0" layoutY="-8.0" AnchorPane.topAnchor="12.0">
-                           <children>
-                              <TableView fx:id="tableViewProd" layoutY="-44.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="318.0" prefWidth="943.0" stylesheets="@../Styles/style.css" tableMenuButtonVisible="true" translateY="87.0">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <styleClass>
-                                    <String fx:value="table-container" />
-                                    <String fx:value="table" />
-                                 </styleClass>
-                              </TableView>
-                              <HBox layoutX="7.0" layoutY="387.0" prefHeight="161.0" prefWidth="955.0" spacing="10.0">
-                                 <children>
-                                    <VBox prefHeight="161.0" prefWidth="199.0">
-                                       <children>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="66.51043701171875">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXTextField fx:id="tfNameProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="117.0">
-                                                   <font>
-                                                      <Font name="Cairo Regular" size="12.0" />
-                                                   </font>
-                                                </MFXTextField>
-                                             </children>
-                                             <padding>
-                                                <Insets left="5.0" />
-                                             </padding>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" wrappingWidth="69.26116943359375">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXTextField fx:id="tfTypeProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="112.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price    " wrappingWidth="62.77362060546875">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXTextField fx:id="tfPriceProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="112.0" />
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox prefHeight="161.0" prefWidth="199.0">
-                                       <children>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MFD ">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <DatePicker fx:id="startD" prefHeight="27.0" prefWidth="100.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="EXP ">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <DatePicker fx:id="endD" prefHeight="27.0" prefWidth="106.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="calories">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXTextField fx:id="tfCaloriesProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="89.0" />
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox prefHeight="161.0" prefWidth="152.0">
-                                       <children>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="size" wrappingWidth="55.7769775390625">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXTextField fx:id="tfSizeProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="70.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="isEdible">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXComboBox fx:id="cbxIsEdibleProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="74.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="boycott" wrappingWidth="70.4019775390625">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXComboBox fx:id="cbxBoycottProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="71.0" />
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox prefHeight="161.0" prefWidth="253.0">
-                                       <children>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="description" wrappingWidth="102.06787109375">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXTextField fx:id="tfDescProd" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="120.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subcategory_ID">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXComboBox fx:id="cbxSubCID" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="80.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Offer_ID" wrappingWidth="115.0">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXComboBox fx:id="cbxOfferIDProd" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="79.0" />
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox prefHeight="161.0" prefWidth="152.0">
-                                       <children>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <ImageView fx:id="addProdImg" fitHeight="29.0" fitWidth="29.0" onMouseClicked="#chooseImg" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../Images/icons8-upload-image-30.png" />
-                                                   </image>
-                                                </ImageView>
-                                                <MFXTextField fx:id="tfImgPath" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="87.0" />
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="shown">
-                                                   <font>
-                                                      <Font name="Century Gothic" size="17.0" />
-                                                   </font>
-                                                </Text>
-                                                <MFXComboBox fx:id="cbxVisibility" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="75.0" />
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <MFXButton fx:id="updateProd" layoutX="485.0" layoutY="542.0" onAction="#updateProdHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: gray; -fx-font-family: Century Gothic;" text="Update">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </MFXButton>
-                              <MFXButton fx:id="addProd" layoutX="616.0" layoutY="542.0" onAction="#addProdlHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: green; -fx-font-family: Century Gothic;" text="Add">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </MFXButton>
-                              <ImageView fx:id="backToLife" fitHeight="48.0" fitWidth="110.0" layoutX="869.0" layoutY="514.0" onMouseClicked="#backToAli" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Images/ArrowRight.png" />
-                                 </image>
-                              </ImageView>
-                              <Text layoutX="813.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXButton fx:id="deleteProd" layoutX="359.0" layoutY="542.0" onAction="#deleteProdHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: red; -fx-font-family: Century Gothic;" text="Delete">
-                                 <cursor>
-                                    <Cursor fx:constant="OPEN_HAND" />
-                                 </cursor>
-                              </MFXButton>
-                              <HBox fx:id="searchBox2" alignment="CENTER" layoutX="40.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="234.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" styleClass="oval-vbox" stylesheets="@../Styles/style.css">
-                                 <children>
-                                    <ImageView fitHeight="37.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Images/icons8-search-50.png" />
-                                       </image>
-                                    </ImageView>
-                                    <TextField fx:id="searchFeild" prefHeight="19.0" prefWidth="319.0" promptText="search.." styleClass="text-field" stylesheets="@../Styles/style.css">
-                                       <font>
-                                          <Font name="Cairo SemiBold" size="20.0" />
-                                       </font>
-                                    </TextField>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </Group>
-                     </children>
-                  </AnchorPane>
-            </content>
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/icons8-carton-of-orange-juice-64.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-          </Tab>
-          <Tab fx:id="CategoryTap" text="Category Manage">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/icons8-product-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-          </Tab>
-            <Tab fx:id="subCategoryTab" text="SubCategory Manage">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/icons8-product-management-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Tab>
-            <Tab fx:id="OfferTab" text="Offer Manage">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/icons8-hot-price-30.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Tab>
-            <Tab fx:id="Statistics" text="Statistics">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <MFXScrollPane hbarPolicy="NEVER" prefHeight="568.0" prefWidth="951.0" vbarPolicy="NEVER">
-                           <content>
-                              <BarChart fx:id="barChartProduct" prefHeight="487.0" prefWidth="934.0">
-                                <xAxis>
-                                  <CategoryAxis side="BOTTOM" />
-                                </xAxis>
-                                <yAxis>
-                                  <NumberAxis side="LEFT" />
-                                </yAxis>
-                              </BarChart>
-                           </content>
-                        </MFXScrollPane>
-                     </children>
-                  </AnchorPane>
-              </content>
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/icons8-combo-chart-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <VBox prefHeight="594.0" prefWidth="240.0" spacing="15.0" style="-fx-background-color: brown;">
-         <children>
-            <VBox alignment="CENTER" prefHeight="152.0" prefWidth="240.0">
-               <children>
-                  <StackPane prefHeight="150.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="132.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/ShiniLogo.png" />
-                           </image>
+    <children>
+        <VBox prefHeight="594.0" prefWidth="240.0" spacing="15.0" style="-fx-background-color: brown;">
+            <children>
+                <VBox alignment="CENTER" prefHeight="152.0" prefWidth="240.0">
+                    <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="132.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/ShiniLogo.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </StackPane>
+                        <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" text="ADMIN">
+                            <font>
+                                <Font name="Cairo Black" size="15.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                    <font>
+                        <Font name="Cairo Regular" size="15.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/dashboard.png" />
+                            </image>
                         </ImageView>
-                     </children>
-                  </StackPane>
-                  <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" text="ADMIN">
-                     <font>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Employees">
+                    <font>
                         <Font name="Cairo Black" size="15.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <MFXButton alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" rippleAnimateShadow="true" text="Dashboard">
-               <font>
-                  <Font name="Cairo Regular" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/dashboard.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <rippleColor>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </rippleColor>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Employees">
-               <font>
-                  <Font name="Cairo Black" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/businessman.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <rippleColor>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006691031984268851">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color green="1.0" blue="0.7333333492279053" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </rippleColor>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Branches">
-               <font>
-                  <Font name="Cairo Black" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/branch.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <rippleColor>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.5623401403427124" green="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </rippleColor>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
-            <MFXButton fx:id="productsAdmin" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Products">
-               <font>
-                  <Font name="Cairo Black" size="15.0" />
-               </font>
-               <rippleColor>
-                  <LinearGradient endX="1.0" endY="1.0" startX="0.5458015703383521">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.7867907881736755" green="0.4869735836982727" blue="0.4869735836982727" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </rippleColor>
-               <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/box.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
-            <MFXButton fx:id="customerAdmin" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="55.0" prefWidth="225.0" text="Customers">
-               <font>
-                  <Font name="Cairo Black" size="15.0" />
-               </font>
-               <rippleColor>
-                  <LinearGradient endX="1.0" endY="1.0" startX="0.015267181920018191">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="0.7833333611488342" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </rippleColor>
-               <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/customer.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="40.0" prefWidth="200.0" rippleAnimateBackground="false" rippleAnimateShadow="true" style="-fx-background-color: black;" text="←                      Sign out" textFill="WHITE">
-               <font>
-                  <Font name="Cairo Black" size="15.0" />
-               </font>
-               <rippleColor>
-                  <RadialGradient centerX="1.0" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006691031984268851">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.9999999888825887">
-                           <color>
-                              <Color green="0.3333333432674408" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color green="0.3333333432674408" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </rippleColor>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" © Copyrights for Birzeit's Students">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="10.0" />
-               </font>
-            </Text>
-         </children>
-      </VBox>
-      <Group fx:id="EmployeesPane" layoutX="233.0" layoutY="-6.0" visible="false" AnchorPane.rightAnchor="205.19323130396833">
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/businessman.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006691031984268851">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="1.0" blue="0.7333333492279053" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/branch.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.5623401403427124" green="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.5458015703383521">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.7867907881736755" green="0.4869735836982727" blue="0.4869735836982727" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/box.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <rippleColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.015267181920018191">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="0.7833333611488342" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </rippleColor>
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/customer.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="40.0" prefWidth="200.0" rippleAnimateBackground="false" rippleAnimateShadow="true" style="-fx-background-color: black;" text="←                      Sign out" textFill="WHITE">
+                    <font>
+                        <Font name="Cairo Black" size="15.0" />
+                    </font>
+                    <rippleColor>
+                        <RadialGradient centerX="1.0" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006691031984268851">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.9999999888825887">
+                                    <color>
+                                        <Color green="0.3333333432674408" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="0.3333333432674408" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </RadialGradient>
+                    </rippleColor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </MFXButton>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" © Copyrights for Birzeit's Students">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="10.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
          <children>
-            <AnchorPane layoutX="24.210098266601562" layoutY="131.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane_1111" stylesheets="@../Styles/AdminStyle.css">
-               <children>
-                  <Text fill="WHITE" layoutX="7.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employees Count" wrappingWidth="155.69747739686431">
-                     <font>
-                        <Font name="Century Gothic" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="employeeCountv1" fill="WHITE" layoutX="10.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="179.89919858827056">
-                     <font>
-                        <Font name="Century Gothic" size="28.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <Text layoutX="25.210098266601562" layoutY="52.82421875" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management Panel">
-               <font>
-                  <Font name="Century Gothic Bold" size="30.0" />
-               </font>
-            </Text>
-            <Text layoutX="27.210098266601562" layoutY="91.923828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage employee details, roles, and records efficiently !">
-               <font>
-                  <Font name="Century Gothic" size="13.0" />
-               </font>
-            </Text>
-            <AnchorPane layoutX="345.0" layoutY="131.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="278.0" styleClass="pane_1" stylesheets="@../Styles/AdminStyle.css">
-               <children>
-                  <MFXScrollPane hbarPolicy="NEVER" layoutX="39.529410497540056" layoutY="2.420167989645309" prefHeight="197.0" prefWidth="271.0" styleClass="pane_1" vbarPolicy="NEVER" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0">
-                     <content>
-                        <VBox fx:id="listEmployee" prefHeight="190.0" prefWidth="269.0">
-                           <children>
-                              <AnchorPane minWidth="-Infinity" prefHeight="56.0" prefWidth="187.0" styleClass="pane-red-line">
-                                 <children>
-                                    <Text fill="WHITE" layoutX="62.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I Love YOU &lt;3" wrappingWidth="200.0672204773456">
-                                       <font>
-                                          <Font name="Century Gothic Bold" size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Images/icons8-profile-picture-96.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Text fill="#d9d9d9" layoutX="62.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="144.8066635131836">
-                                       <font>
-                                          <Font name="Century Gothic" size="14.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fill="#d9d9d9" layoutX="181.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3200 ₪" wrappingWidth="73.41176235257444">
-                                       <font>
-                                          <Font name="Cairo Regular" size="14.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </VBox>
-                     </content>
-                  </MFXScrollPane>
-               </children>
-            </AnchorPane>
-            <ImageView fitHeight="295.0" fitWidth="317.0" layoutX="467.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/Innovation-amico.png" />
-               </image>
-            </ImageView>
-            <AnchorPane layoutX="17.210098266601562" layoutY="393.0" prefHeight="58.0" prefWidth="303.0" styleClass="pane_1" stylesheets="@../Styles/AdminStyle.css">
-               <children>
-                  <Text layoutX="89.0" layoutY="24.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee">
-                     <font>
-                        <Font name="Century Gothic Bold" size="25.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="89.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data">
-                     <font>
-                        <Font name="Century Gothic Bold" size="15.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="48.0" fitWidth="64.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/customer-relationship-management_14379094.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </AnchorPane>
-            <AnchorPane layoutX="17.210098266601562" layoutY="489.0" prefHeight="58.0" prefWidth="302.0" styleClass="pane_1" stylesheets="@../Styles/AdminStyle.css">
-               <children>
-                  <Text layoutX="92.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee">
-                     <font>
-                        <Font name="Century Gothic Bold" size="25.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="91.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary">
-                     <font>
-                        <Font name="Century Gothic Bold" size="16.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="48.0" fitWidth="72.0" layoutX="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/cash_1991860.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </AnchorPane>
          </children>
-      </Group>
-      <Group fx:id="iloveyou" layoutX="241.0" layoutY="-1.0" visible="false">
-         <children>
-            <ImageView fitHeight="595.0" fitWidth="959.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../Images/pixalia_1735837990166.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="552.0" fitWidth="652.0" layoutX="287.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/Digital%20nomad-pana.png" />
-               </image>
-            </ImageView>
-            <Text fill="#050505" layoutX="29.0" layoutY="52.841796875" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Database" wrappingWidth="318.65554624452056">
-               <font>
-                  <Font name="Century Gothic Bold" size="27.0" />
-               </font>
-            </Text>
-            <Button layoutX="26.0" layoutY="165.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="74.0" prefWidth="234.0" stylesheets="@../Styles/AdminStyle.css" text="Add Employee">
-               <font>
-                  <Font name="Century Gothic Bold" size="23.0" />
-               </font>
-            </Button>
-            <Button layoutX="26.0" layoutY="355.0" mnemonicParsing="false" onAction="#controlEmployee" prefHeight="74.0" prefWidth="234.0" stylesheets="@../Styles/AdminStyle.css" text="Control" />
-            <ImageView fitHeight="78.0" fitWidth="64.0" layoutX="872.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
-               <image>
-                  <Image url="@../Images/11541959.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="886.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
-               <font>
-                  <Font name="Century Gothic" size="13.0" />
-               </font>
-            </Text>
-         </children>
-      </Group>
-      <Group fx:id="addEmployee" layoutX="250.0" layoutY="23.0" visible="false">
-         <children>
-            <TableView fx:id="tableViewEmp" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="344.0" prefWidth="943.0" stylesheets="@../Styles/employeeStyle.css" tableMenuButtonVisible="true">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </TableView>
-            <HBox layoutY="353.0" prefHeight="161.0" prefWidth="935.0" spacing="50.0">
-               <children>
-                  <VBox prefHeight="161.0" prefWidth="199.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="66.51043701171875">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="nameEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="131.0">
-                                 <font>
-                                    <Font name="Cairo Regular" size="12.0" />
-                                 </font></MFXTextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="69.26116943359375">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="addressEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="125.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="54.77362060546875">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="emailEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="136.0" />
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="161.0" prefWidth="199.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BOD">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <DatePicker fx:id="bodEmp" prefHeight="27.0" prefWidth="100.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Advisor">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="advisor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="119.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="phoneEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="133.0" />
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="161.0" prefWidth="152.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Salary" wrappingWidth="55.7769775390625">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="salaryEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="94.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXComboBox fx:id="genderEmp" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="94.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="H.Date" wrappingWidth="58.4019775390625">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <DatePicker fx:id="hireDateEmp" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="102.0" />
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="161.0" prefWidth="253.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="90.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Role">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="roleEmp" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="71.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="127.0" spacing="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Work Shift Time">
-                                 <font>
-                                    <Font name="Century Gothic" size="17.0" />
-                                 </font>
-                              </Text>
-                              <MFXTextField fx:id="shiftEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="73.0" />
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <MFXButton fx:id="deleteEmp" layoutX="325.0" layoutY="519.0" onAction="#deleteEmpHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: red; -fx-font-family: Century Gothic;" text="Delete">
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor></MFXButton>
-            <MFXButton fx:id="updateEmp" layoutX="450.0" layoutY="520.0" onAction="#updateEmpHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: gray; -fx-font-family: Century Gothic;" text="Update">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></MFXButton>
-            <MFXButton fx:id="addEmp" layoutX="576.0" layoutY="520.0" onAction="#addEmplHandle" prefHeight="41.0" prefWidth="69.0" style="-fx-background-color: green; -fx-font-family: Century Gothic;" text="Add">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></MFXButton>
-            <ImageView fitHeight="48.0" fitWidth="110.0" layoutX="869.0" layoutY="514.0" onMouseClicked="#backToAli" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/ArrowRight.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="813.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
-               <font>
-                  <Font name="Century Gothic" size="17.0" />
-               </font>
-            </Text>
-         </children>
-      </Group>
-   </children>
+      </AnchorPane>
+    </children>
 </AnchorPane>
