@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="264.0" style="-fx-background-radius: 30;" styleClass="custom-anchor-pane" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.ProductController">
+    <children>
+        <VBox layoutX="23.0" layoutY="39.0" prefHeight="343.0" prefWidth="264.0" style="-fx-background-radius: 30;" styleClass="vbox" stylesheets="@../Styles/style.css" AnchorPane.bottomAnchor="-18.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="productImg" fitHeight="178.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true" styleClass="product-image" translateX="4.0">
+                    <image>
+                        <Image url="https://raw.githubusercontent.com/404AliOnFire/ShiniGo-Prj/refs/heads/main/src/main/resources/Shini/Images/%20(8).png" />
+                    </image>
+                </ImageView>
+                <Text fx:id="txtDesc" strokeType="OUTSIDE" strokeWidth="0.0" text="تمر" textAlignment="RIGHT" wrappingWidth="239.86399841308594">
+                    <font>
+                        <Font name="Cairo Black" size="18.0" />
+                    </font>
+                </Text>
+                <Text fx:id="txtSize" strokeType="OUTSIDE" strokeWidth="0.0" text="500 غم" textAlignment="RIGHT" wrappingWidth="242.18599700927734">
+                    <font>
+                        <Font name="Cairo Black" size="18.0" />
+                    </font>
+                </Text>
+                <Text fx:id="txtCalorie" strokeType="OUTSIDE" strokeWidth="0.0" text="100 cal" textAlignment="RIGHT" wrappingWidth="246.248046875">
+                    <font>
+                        <Font name="Cairo Medium" size="11.0" />
+                    </font>
+                </Text>
+                <Text fx:id="txtIsBoycott" fill="#a80a0a" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" translateY="-6.0" underline="true" wrappingWidth="245.37600708007812">
+                    <font>
+                        <Font name="Cairo Black" size="13.0" />
+                    </font>
+                </Text>
+                <HBox prefHeight="29.0" prefWidth="278.0" translateY="-8.0">
+                    <children>
+                        <ImageView fx:id="btAddProduct" fitHeight="32.0" fitWidth="39.0" onMouseClicked="#addProductToMyCart" pickOnBounds="true" preserveRatio="true" translateX="12.0">
+                            <image>
+                                <Image url="@../Images/icons8-add-50.png" />
+                            </image>
+                        </ImageView>
+                        <Text fx:id="txtBarCode" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" />
+                        <Text fx:id="txtPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="20.00 ILS" textAlignment="RIGHT" translateX="1.0" translateY="1.0" wrappingWidth="194.98046875">
+                            <font>
+                                <Font name="Cairo ExtraBold" size="16.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox fx:id="discountBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="242.0" style="-fx-background-color: D7CFCFFF; -fx-background-radius: 30;" translateY="-4.0">
+                    <children>
+                        <Text fx:id="txtDiscountPer" strokeType="OUTSIDE" strokeWidth="0.0" text="15%" wrappingWidth="44.7578125">
+                            <HBox.margin>
+                                <Insets top="3.0" />
+                            </HBox.margin></Text>
+                        <Text fx:id="txtDiscountPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="19.99 ILS" textAlignment="RIGHT" wrappingWidth="129.4765625">
+                            <HBox.margin>
+                                <Insets top="3.0" />
+                            </HBox.margin></Text>
+                    </children>
+                    <opaqueInsets>
+                        <Insets left="50.0" right="50.0" />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets bottom="5.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

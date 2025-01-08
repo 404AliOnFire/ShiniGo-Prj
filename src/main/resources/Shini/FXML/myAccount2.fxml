@@ -7,296 +7,222 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="499.0" style="-fx-background-color: light gray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="myaccount2pane" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="659.0" style="-fx-background-color: light gray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.MyAccountController">
    <children>
-      <VBox layoutX="3.0" layoutY="-1.0" prefHeight="595.0" prefWidth="499.0">
+      <HBox alignment="CENTER_RIGHT" layoutY="7.0" prefHeight="65.0" prefWidth="659.0">
          <children>
-            <Pane prefHeight="515.0" prefWidth="499.0">
-               <children>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="490.0">
-                     <children>
-                        <Button fx:id="maga1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets right="378.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-left-arrow-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="magalab" text="المجلة">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="magabutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="7.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-magazine-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" layoutY="77.0" prefHeight="70.0" prefWidth="490.0">
-                     <children>
-                        <Button fx:id="bran1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="369.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-left-arrow-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="branlab" text="فروعنا">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="branbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-market-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" layoutY="152.0" prefHeight="77.0" prefWidth="490.0">
-                     <children>
-                        <Button fx:id="term1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="330.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-left-arrow-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="termlab" text="الشروط والأحكام">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="termbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="7.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-to-do-list-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" layoutY="229.0" prefHeight="77.0" prefWidth="490.0">
-                     <children>
-                        <Button fx:id="priv1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="319.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-left-arrow-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="privlab" text="سياسة الخصوصية">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="privbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="7.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-shield-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" layoutY="306.0" prefHeight="77.0" prefWidth="490.0">
-                     <children>
-                        <Button fx:id="help1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="340.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-left-arrow-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="helplab" text="مركز المساعدة">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="helpbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <padding>
-                              <Insets right="7.0" />
-                           </padding>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-question-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" layoutY="383.0" prefHeight="77.0" prefWidth="490.0">
-                     <children>
-                        <Button fx:id="tech1button" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-left-arrow-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets right="350.0" />
-                           </padding>
-                        </Button>
-                        <Label fx:id="techlab" text="الدعم الفني">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="techbutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../Images/icons8-last-24-hours-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <padding>
-                              <Insets right="7.0" />
-                           </padding>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" layoutY="438.0" prefHeight="77.0" prefWidth="499.0">
-                     <children>
-                        <Button fx:id="lobutton" mnemonicParsing="false" stylesheets="@../Styles/ButtonsStyle.css" text="تسجيل الدخول">
-                           <font>
-                              <Font name="Arial Narrow" size="12.0" />
-                           </font>
-                           <padding>
-                              <Insets left="100.0" right="100.0" />
-                           </padding>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </Pane>
-            <HBox layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="499.0" spacing="25.0" styleClass="hbox" translateY="10.0">
-               <children>
-                  <VBox fx:id="account" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/black-user-32.png" />
-                           </image>
-                        </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="حسابي">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-                  <VBox fx:id="order" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/icons8-box-50 (1).png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="طلباتي">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-                  <VBox fx:id="cart" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/icons8-shopping-cart-48.png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="سلتي">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-                  <VBox fx:id="main" accessibleRole="BUTTON" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/icons8-home-32.png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#b2a1a1" strokeType="OUTSIDE" strokeWidth="0.0" text="الرئيسية">
-                           <font>
-                              <Font name="Cairo Black" size="12.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </HBox>
+            <Button fx:id="maga1button" mnemonicParsing="false" onAction="#magacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="545.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="magalab" text="المجلة">
+               <font>
+                  <Font name="Cairo Black" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="magabutton" mnemonicParsing="false" onAction="#magacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-magazine-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
-      </VBox>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="72.0" prefHeight="65.0" prefWidth="659.0">
+         <children>
+            <Button fx:id="bran1button" mnemonicParsing="false" onAction="#brnacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="537.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="branlab" text="فروعنا">
+               <font>
+                  <Font name="Cairo Black" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="branbutton" mnemonicParsing="false" onAction="#brnacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-market-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="137.0" prefHeight="65.0" prefWidth="659.0">
+         <children>
+            <Button fx:id="term1button" mnemonicParsing="false" onAction="#teracchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="498.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="termlab" text="الشروط والأحكام">
+               <font>
+                  <Font name="Cairo Black" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="termbutton" mnemonicParsing="false" onAction="#teracchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-to-do-list-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="202.0" prefHeight="65.0" prefWidth="659.0">
+         <children>
+            <Button fx:id="priv1button" mnemonicParsing="false" onAction="#priacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="486.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="privlab" text="سياسة الخصوصية">
+               <font>
+                  <Font name="Cairo Black" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="privbutton" mnemonicParsing="false" onAction="#priacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-shield-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="267.0" prefHeight="65.0" prefWidth="659.0">
+         <children>
+            <Button fx:id="help1button" mnemonicParsing="false" onAction="#helacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="505.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="helplab" text="مركز المساعدة">
+               <font>
+                  <Font name="Cairo Black" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="helpbutton" mnemonicParsing="false" onAction="#helacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-question-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="332.0" prefHeight="65.0" prefWidth="659.0">
+         <children>
+            <Button fx:id="tech1button" mnemonicParsing="false" onAction="#tecacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-left-arrow-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="519.0" />
+               </padding>
+            </Button>
+            <Label fx:id="techlab" text="الدعم الفني">
+               <font>
+                  <Font name="Cairo Black" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="techbutton" mnemonicParsing="false" onAction="#tecacchandle" prefHeight="30.0" prefWidth="25.0" stylesheets="@../Styles/ButtonsStyle.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@../Images/icons8-last-24-hours-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="386.0" prefHeight="65.0" prefWidth="659.0">
+         <children>
+            <Button fx:id="lobutton" mnemonicParsing="false" onAction="#logoutacchandle" stylesheets="@../Styles/ButtonsStyle.css" text="تسجيل الدخول">
+               <font>
+                  <Font name="Arial Narrow" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="100.0" right="100.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

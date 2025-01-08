@@ -54,23 +54,23 @@ public class CreateController implements Initializable {
         adressCB.getItems().addAll("+972", "+970");
         // Customizing the color of items in the ComboBox
         genderTF.setCellFactory(param -> new ListCell<String>() {
-                    @Override
-                    protected void updateItem(String item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (empty || item == null) {
-                            setText(null);
-                            setStyle("");
-                        } else {
-                            setText(item);
-                            // Set the color based on the item value
-                            if (item.equals("M")) {
-                                setStyle("-fx-text-fill: blue;");
-                            } else if (item.equals("F")) {
-                                setStyle("-fx-text-fill: pink;");
-                            }
-                        }
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setText(null);
+                    setStyle("");
+                } else {
+                    setText(item);
+                    // Set the color based on the item value
+                    if (item.equals("M")) {
+                        setStyle("-fx-text-fill: blue;");
+                    } else if (item.equals("F")) {
+                        setStyle("-fx-text-fill: pink;");
                     }
-                });
+                }
+            }
+        });
         passwordTF.addEventFilter(KeyEvent.KEY_TYPED, event -> {
             String currentText = passwordTF.getText();
             String input = event.getCharacter();

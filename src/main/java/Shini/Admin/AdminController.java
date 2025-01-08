@@ -10,10 +10,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -96,11 +92,6 @@ public class AdminController {
 
     @FXML
     void initialize() throws IOException {
-        loadEmployees();
-        setupColumns();
-        setupTableView();
-        setupTableViewListener();
-        loadEmployeesInTableView();
     }
 
     @FXML
@@ -146,7 +137,6 @@ public class AdminController {
     void controlEmployee(ActionEvent event) {
 
     }
-
 
 
     private void updateTableViewColumn(String selectedColumn) {

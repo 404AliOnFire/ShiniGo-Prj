@@ -4,10 +4,9 @@ import Shini.Admin.Employee;
 import javafx.scene.chart.PieChart;
 
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class DatabaseHelper {
 
@@ -305,6 +304,162 @@ public class DatabaseHelper {
 
     }
 
+    public static List<Product> getAllProducts() {
+        List<Product> allProducts = new ArrayList<>();
+//        List<Map<String, Object>> allProducts = new ArrayList<>();
+        String query = "Select * from Product";
+
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt= con.prepareStatement(query)){
+
+            ResultSet rs = pstmt.executeQuery();
+
+
+            while (rs.next()) {
+                allProducts.add(new Product(rs.getInt("barcode"),
+                        rs.getString("name"),
+                        rs.getString("type"),
+                        rs.getDate("endD"),
+                        rs.getDate("startD"),
+                        rs.getDouble("price"),
+                        rs.getInt("calories"),
+                        rs.getString("size"),
+                        rs.getString("description"),
+                        rs.getBoolean("boycott"),
+                        rs.getBoolean("isEdible"),
+                        rs.getInt("subcategory_ID"),
+                        rs.getObject("offer_ID") != null ? rs.getInt("offer_ID") : null, rs.getString("image_path")));
+            }
+
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return allProducts;
+    }
+
+    public static void deleteProduct(int barcode) {
+        String query = "DELETE FROM Product WHERE barcode = ?";
+        try (Connection conn = DatabaseConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, barcode);
+
+            int rowsDeleted = stmt.executeUpdate();
+//            return rowsDeleted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+//            return false;
+        }
+    }
+
+    public static List<Integer> getAllSubCategoriesId() {
+        List<Integer> subCategoriesId = new ArrayList<>();
+
+        String query = "select ID from subCategory";
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)) {
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next()){
+                subCategoriesId.add(rs.getInt("ID"));
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return subCategoriesId;
+    }
+
+    public static List<Integer> getAllOfferId() {
+        List<Integer> offerId = new ArrayList<>();
+
+        String query = "select offer_ID from Offer";
+        try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)) {
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next()){
+                offerId.add(rs.getInt(1));
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return offerId;
+    }
+
+    public static void addProduct(Product newProduct) {
+//        (String name, String type, Date endD, Date startD, double price, int calories,
+//        String size, String description, boolean boycott, boolean isEdible, int subcategoryId,
+//        Integer offerId, String imagePath, boolean shown)
+        String query = "INSERT INTO Product (name, type, endD, startD, price, calories, size, description, boycott, isEdible, subcategory_Id, offer_Id, image_Path, shown) " + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)";
+        try (Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+
+            pstmt.setString(1, newProduct.getName());
+            pstmt.setString(2, newProduct.getType());
+            pstmt.setDate(3, newProduct.getEndD());
+            pstmt.setDate(4, newProduct.getStartD());
+            pstmt.setDouble(5, newProduct.getPrice());
+            pstmt.setInt(6, newProduct.getCalories());
+            pstmt.setString(7, newProduct.getSize());
+            pstmt.setString(8, newProduct.getDescription());
+            pstmt.setBoolean(9, newProduct.isBoycott());
+            pstmt.setBoolean(10, newProduct.isEdible());
+            pstmt.setInt(11, newProduct.getSubcategoryId());
+            pstmt.setInt(12, newProduct.getOfferId());
+            pstmt.setString(13, newProduct.getImagePath());
+            pstmt.setBoolean(14, newProduct.getShown());
+
+            int rowsInserted = pstmt.executeUpdate();
+
+            if (rowsInserted > 0) {
+                try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        int barCode = generatedKeys.getInt(1);
+                        newProduct.setBarcode(barCode);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void updateProduct(Product updatedProduct) {
+//        (String name, String type, Date endD, Date startD, double price, int calories,
+//        String size, String description, boolean boycott, boolean isEdible, int subcategoryId,
+//        Integer offerId, String imagePath, boolean shown)
+        String query = "UPDATE Product SET name = ?, type = ?, endD = ?, startD = ?, price = ?, calories = ?, " +
+                "size = ?, description = ?, boycott = ?, isEdible = ?, subcategory_Id = ?, offer_Id = ? ,image_Path = ? , shown = ? WHERE barcode = ?";
+        try (Connection conn = DatabaseConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+
+            stmt.setString(1, updatedProduct.getName());
+            stmt.setString(2, updatedProduct.getType());
+            stmt.setDate(3, updatedProduct.getEndD());
+            stmt.setDate(4, updatedProduct.getStartD());
+            stmt.setDouble(5, updatedProduct.getPrice());
+            stmt.setInt(6, updatedProduct.getCalories());
+            stmt.setString(7, updatedProduct.getSize());
+            stmt.setString(8, updatedProduct.getDescription());
+            stmt.setBoolean(9, updatedProduct.isBoycott());
+            stmt.setBoolean(10, updatedProduct.isEdible());
+            stmt.setInt(11, updatedProduct.getSubcategoryId());
+            stmt.setInt(12, updatedProduct.getOfferId());
+            stmt.setString(13, updatedProduct.getImagePath());
+            stmt.setBoolean(14, updatedProduct.getShown());
+            stmt.setInt(15, updatedProduct.getBarcode());
+
+            stmt.executeUpdate();
+            System.out.println("updated successfully");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     public List<Order> getOrders(String phone) {
         List<Order> orders = new ArrayList<Order>();
@@ -338,12 +493,11 @@ public class DatabaseHelper {
         return orders;
     }
 
-    public List<Category> getAllCategories() {
+    public static List<Category> getAllCategories() {
         List<Category> categories = new ArrayList<Category>();
 //        Category(String name, String type, int numOfSubcategory, String imagePath)
-        try (Connection con = DatabaseConnection.getConnection()) {
+        try (Connection con = DatabaseConnection.getConnection(); Statement stmt = con.createStatement();) {
             String query = "select * from category";
-            Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
             while (rs.next()) {
@@ -361,7 +515,7 @@ public class DatabaseHelper {
         List<Product> products = new ArrayList<Product>();
 //        Product(int barcode, String name, String type, String endD, String srtartD, double price, int calories,
 //                   String description, boolean boycott, boolean isEdible, int subcategoryID, Integer offerID, String imagePath)
-        String query = "SELECT P.barcode, P.name, P.type, P.endD, P.startD, P.price, P.calories, P.size ,P.description, " + "P.boycott, P.isEdible, P.subcategory_ID, P.offer_ID, P.image_path " + "FROM Category C " + "JOIN SubCategory SC ON C.ID = SC.category_ID " + "JOIN Product P ON SC.ID = P.subcategory_ID " + "WHERE SC.name LIKE ?;";
+        String query = "SELECT P.barcode, P.name, P.type, P.endD, P.startD, P.price, P.calories, P.size ,P.description, " + "P.boycott, P.isEdible, P.subcategory_ID, P.offer_ID, P.image_path " + "FROM Category C " + "JOIN SubCategory SC ON C.ID = SC.category_ID " + "JOIN Product P ON SC.ID = P.subcategory_ID " + "WHERE SC.name LIKE ? and P.shown = 1;";
 
         try (Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)) {
 
@@ -381,15 +535,11 @@ public class DatabaseHelper {
 
     public List<Product> getAllProductsOfCategory(String categName) {
 
-        System.out.println(categName);
         List<Product> products = new ArrayList<Product>();
 
         if(categName.equals("العروض")){
-            System.out.println("Horjksjfbjlvhfhggggggggggggggggggggggggggggg");
             products = getAllProductHaveOffer();
-            for (int i = 0; i < products.size(); i++) {
-                System.out.println(products.get(i));
-            }
+
             return products;
         }
 
@@ -399,7 +549,8 @@ public class DatabaseHelper {
                 FROM Product P
                 JOIN Subcategory SC ON P.Subcategory_ID = SC.id
                 JOIN Category C ON SC.category_ID = C.ID
-                WHERE C.ID = (SELECT ID FROM Category WHERE name = ?);
+                WHERE C.ID = (SELECT ID FROM Category WHERE name = ?)
+                and P.shown = 1;
                 """;
         try (Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)) {
 
@@ -548,7 +699,7 @@ public class DatabaseHelper {
     public List<Product> getAllProductHaveOffer() {
         List<Product> productsWithOffer = new ArrayList<>();
 
-        String query = "select * from Product where offer_Id > 0";
+        String query = "select * from Product where offer_Id > 0 and P.shown = 1";
         try(Connection con = DatabaseConnection.getConnection(); PreparedStatement pstmt = con.prepareStatement(query)){
 
             ResultSet rs =  pstmt.executeQuery();
@@ -583,9 +734,9 @@ public class DatabaseHelper {
 
         // Choose query based on input type
         if (isTextSearch) {
-            query = "SELECT * FROM Product P WHERE P.name LIKE ? OR P.type LIKE ?";
+            query = "SELECT * FROM Product P WHERE (P.name LIKE ? OR P.type LIKE ?) and P.shown = 1";
         } else {
-            query = "SELECT * FROM Product P WHERE P.calories = ?";
+            query = "SELECT * FROM Product P WHERE P.calories = ? and P.shown = 1";
         }
 
         // Execute query

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.Controller">
+<AnchorPane fx:id="deletepane" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shini.DeleteController">
    <children>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0">
          <children>
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="هل أنت متأكد؟">
                <font>
@@ -24,11 +24,11 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="cancle" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/CancleButton.css" text="الغاء">
+                  <Button fx:id="cancle" mnemonicParsing="false" onAction="#cancel" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/CancleButton.css" text="الغاء">
                      <font>
                         <Font name="Cairo Regular" size="12.0" />
                      </font></Button>
-                  <Button fx:id="confirm" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/ConfirmButton.css" text="تأكيد">
+                  <Button fx:id="confirm7" mnemonicParsing="false" onAction="#confirmm7" prefHeight="35.0" prefWidth="70.0" stylesheets="@../Styles/ConfirmButton.css" text="تأكيد">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
