@@ -53,65 +53,70 @@ public class ProductController {
     private Text txtSize;
 
     private boolean added = false;
-    private Controller controller = new Controller();
+    private Controller controller;
 
     public void setData(Product product) {
 
         DatabaseHelper databaseHelper = new DatabaseHelper();
 
         productImg.setImage(new Image(product.getImagePath()));
-        txtCalorie.setText(product.getCalories() + " cal");
+        txtCalorie.setText(product.getCalories()+" cal");
 
         txtDesc.setText(product.getDescription());
 
         txtSize.setText(product.getSize());
 
-        txtBarCode.setText(product.getBarcode() + "");
-        if (product.isBoycott()) txtIsBoycott.setText("مقاطع");
+        txtBarCode.setText(product.getBarcode()+"");
+        if(product.isBoycott())
+            txtIsBoycott.setText("مقاطع");
 
 
-        txtPrice.setText(product.getPrice() + " ILS");
+        txtPrice.setText(product.getPrice()+" ILS");
 
 
-        if (product.getOfferId() != null && product.getOfferId() > 0) {
+
+        if(product.getOfferId() != null && product.getOfferId() > 0){
             LocalDate currentDate = LocalDate.now();
             Offer offer = databaseHelper.getDiscountPercentage(product.getOfferId());
 
-            if (offer.getOfferId() != 0 && currentDate.isBefore(offer.getEndDate().toLocalDate())) {
+            if(offer.getOfferId() != 0 && currentDate.isBefore(offer.getEndDate().toLocalDate())){
                 double prevPrice = product.getPrice();
-                double newPrice = product.getPrice() * (1 - offer.getPercentage() / 100);
+                double newPrice = product.getPrice() *  (1- offer.getPercentage()/100);
 
                 txtPrice.setStyle("-fx-fill: #7a0808; -fx-strikethrough: true;");
 
-                txtDiscountPer.setText(offer.getPercentage() + " %");
-                txtDiscountPrice.setText(String.format("%.2f", newPrice) + " ILS");
+                txtDiscountPer.setText(offer.getPercentage()+" %");
+                txtDiscountPrice.setText(String.format("%.2f", newPrice)+" ILS");
 
             }
-        } else discountBox.setVisible(false);
+        }else
+            discountBox.setVisible(false);
 
 
     }
 
     @FXML
     void addProductToMyCart(MouseEvent event) {
-        if (added) {
-//            System.out.println("added before");
-            return;
+
+
+
+        if(added == true){
+
         }
         int barcode = Integer.parseInt(txtBarCode.getText());
-
         DatabaseHelper databaseHelper = new DatabaseHelper();
         Product product = databaseHelper.getProductByBarcode(barcode);
 
-        if (controller != null && product != null) {
-            try {
-                // Ali here in your method there is something wrong return check it out
-//                controller.addProductToCart(product);
-//                System.out.println("product added");
+//        LoginController.customerId
+
+        if(controller != null && product != null){
+            try{
+
+                controller.addProductToCart(product);
                 databaseHelper.insertProductToCart(LoginController.customerId, product);
-                added = true;
+
             } catch (Exception ex) {
-                ex.printStackTrace();
+                throw new RuntimeException(ex);
             }
 
         }

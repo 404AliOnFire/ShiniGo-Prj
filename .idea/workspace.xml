@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="368ae8d2-25df-4b30-9c64-6a89cc7a7a74" name="Changes" comment="create some statistics for product">
+    <list default="true" id="368ae8d2-25df-4b30-9c64-6a89cc7a7a74" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/DatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shini/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shini/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Shini/FXML/productCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Shini/FXML/productCard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="CSS File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="main" />
@@ -36,16 +36,6 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/404AliOnFire/ShiniGo-Prj&quot;,
     &quot;accountId&quot;: &quot;6eacae18-6768-4763-a291-c9d2302ca06b&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;404AliOnFire&quot;,
-    &quot;repository&quot;: &quot;ShiniGo-Prj&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -57,25 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Driver.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#18 on hanadiBranch",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Hanad/OneDrive/Desktop/DB Driver/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.48045978",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Driver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hanadiBranch&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hanad/OneDrive/Desktop/DB Driver/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.48045978&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -109,35 +98,9 @@
       <option name="presentableId" value="Default" />
       <updated>1735971950907</updated>
       <workItem from="1735971967389" duration="21002000" />
-      <workItem from="1736017311031" duration="12488000" />
-      <workItem from="1736084095058" duration="26704000" />
-      <workItem from="1736160472682" duration="21422000" />
+      <workItem from="1736017311031" duration="9587000" />
     </task>
-    <task id="LOCAL-00003" summary="finally my work completed -&gt; add search action">
-      <option name="closed" value="true" />
-      <created>1736030791462</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1736030791462</updated>
-    </task>
-    <task id="LOCAL-00004" summary="unknown">
-      <option name="closed" value="true" />
-      <created>1736074856091</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1736074856091</updated>
-    </task>
-    <task id="LOCAL-00005" summary="create some statistics for product">
-      <option name="closed" value="true" />
-      <created>1736195318962</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1736195318962</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,9 +120,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix bugs" />
     <MESSAGE value="hanadi works." />
-    <MESSAGE value="finally my work completed -&gt; add search action" />
-    <MESSAGE value="unknown" />
-    <MESSAGE value="create some statistics for product" />
-    <option name="LAST_COMMIT_MESSAGE" value="create some statistics for product" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
